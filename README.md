@@ -1,3 +1,3 @@
 # tomwaddington.dev
 
-Website generator.
+Personal website generator.
