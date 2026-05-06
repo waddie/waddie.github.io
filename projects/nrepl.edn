@@ -1,13 +1,12 @@
-{:description [[:p [:a {:href "https://helix-editor.com/"} "Helix"]
-                " is my favourite text editor. There’s currently "
-                [:a
-                 {:href
-                  "https://github.com/mattwparas/helix/tree/steel-event-system"
-                  :target "_blank"} "fork in progress"]
-                ", adding support for plugins via "
-                [:a {:href "https://github.com/mattwparas/steel"} "Steel"]
-                ", a dialect of Scheme."]
-               [:p "I wrote the " [:b "nREPL.hx"]
-                " client to enable Clojure REPL integration in Helix."]]
- :title       "nREPL.hx"
- :url         "https://github.com/waddie/nrepl.hx"}
+{:description
+ [[:p [:a {:href "https://helix-editor.com/"} "Helix"]
+   " is my favourite text editor. There’s currently "
+   [:a
+    {:href   "https://github.com/mattwparas/helix/tree/steel-event-system"
+     :target "_blank"} "fork in progress"] ", adding support for plugins via "
+   [:a {:href "https://github.com/mattwparas/steel"} "Steel"]
+   ", a dialect of Scheme."]
+  [:p "I wrote the " [:b "nREPL.hx"]
+   " client in Steel and Rust to enable Clojure REPL integration in Helix."]]
+ :title "nREPL.hx"
+ :url "https://github.com/waddie/nrepl.hx"}

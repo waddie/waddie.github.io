@@ -15,10 +15,19 @@
    :overview
    "Real Links is a SaaS B2B startup offering an innovative and multiple award-winning employee referrals
     and brand advocacy platform."
-   :roles [{:achievements ["TODO"]
-            :end-date     "2025-08"
-            :start-date   "2023-03"
-            :title        "Principal Software Engineer"}]
+   :roles
+   [{:achievements
+     ["As Principal Engineer, I led the development of our SaaS platform, initially built
+       in JavaScript and Vue with a MySQL and AWS Lambda backend, then migrated in a major rebuild to TypeScript,
+       React, Next.js and PostgreSQL."
+      "We were an extremely lean startup, and I worked directly with clients on their implementations, including
+       BT, Ericsson, Assurant, Chalhoub, Celonis, Optiver and Hello Fresh."
+      "I built backend integrations with applicant tracking systems, defined standards for LLM-assisted development,
+       and led the business twice through successful ISO 27001:2022 certification, and also launched an AI chat
+       agent built on OpenAI."]
+     :end-date "2025-08"
+     :start-date "2023-03"
+     :title "Principal Software Engineer"}]
    :slug :real-links
    :url "https://www.reallinks.io/"}
   {:arrangement :remote
@@ -34,8 +43,8 @@
       "We built a web app supporting our mail order COVID testing service, allowing customers to submit test results online
        for inspection by our customer services team, then generating and emailing thousands of PDF certificates
        every day."
-      "When the USA opened up for travel with observed tests only, we integrated with Zoom to allow customers to book
-       a slot and allow our staff to observe multiple customers taking their tests simultaneously."
+      "When the USA opened up for travel with observed tests only, we integrated with Zoom to allow customers to
+       book a slot and allow our staff to observe multiple customers taking their tests simultaneously."
       "I also led one of Medicspot’s development squads, built integrations with couriers and the UKHSA."]
      :end-date "2022-11"
      :start-date "2020-11"
@@ -51,7 +60,9 @@
    :roles
    [{:achievements
      ["At City, I managed the Web Development and User Experience teams, with 9 direct reports at peak."
-      "I was heavily hands-on with development throughout my tenure. Major projects I delivered include full rebuilds of the City and Bayes Business school websites, the staff and student intranets, and a bespoke web app and CRM to support the Clearing & Adjustment process."]
+      "I was heavily hands-on with development throughout my tenure. Major projects I delivered include
+       full rebuilds of the City and Bayes Business school websites, the staff and student intranets, and
+       a bespoke web app and CRM to support the Clearing & Adjustment process."]
      :department "Information Technology"
      :end-date "2020-09"
      :start-date "2013-11"
