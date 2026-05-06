@@ -316,8 +316,13 @@ code {
   color: var(--text-header);
   font-family: var(--f-mono);
   font-feature-settings: initial;
+  font-variant-ligatures: none;
   font-weight: 400;
   padding: var(--measure-midget3);
+}
+
+pre {
+  font-size: var(--measure-small4);
 }
 
 html {

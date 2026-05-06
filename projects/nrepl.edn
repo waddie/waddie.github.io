@@ -1,6 +1,6 @@
 {:description
  [[:p [:a {:href "https://helix-editor.com/"} "Helix"]
-   " is my favourite text editor. There’s currently "
+   " is my favourite text editor. There’s currently a "
    [:a
     {:href   "https://github.com/mattwparas/helix/tree/steel-event-system"
      :target "_blank"} "fork in progress"] ", adding support for plugins via "

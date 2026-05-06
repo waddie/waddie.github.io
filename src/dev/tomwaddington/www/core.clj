@@ -25,15 +25,15 @@
 (defn build
   "Build the static site."
   [_]
-  (time (let [posts (get-posts)]
+  (time (let [posts (get-posts)
+              projs (get-projects)]
           (doseq [post posts]
             (write-page (str (name (:slug post)) ".html") (blog posts post)))
-          (let [ps (get-projects)]
-            (write-page "index.html" (projects ps)))
           (write-feed "feed.rss" (feed posts))
           (write-page "about.html" (about))
           (write-page "cv.html" (cv))
-          ; (write-page "index.html" (blog posts))
+          (write-page "index.html" (blog posts))
+          (write-page "projects.html" (projects projs))
           (copy-static-files))))
 
 (defn run-tests

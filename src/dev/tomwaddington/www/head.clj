@@ -11,6 +11,9 @@
      :name    "viewport"}]
    [:link
     {:href "/static/style.css"
+     :rel  "stylesheet"}]
+   [:link
+    {:href "/static/highlight.css"
      :rel  "stylesheet"}] [:title title] [:script {:src "/static/htmx.min.js"}]
    [:link
     {:href "/static/favicon.ico"

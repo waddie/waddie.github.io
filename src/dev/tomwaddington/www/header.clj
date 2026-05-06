@@ -9,16 +9,13 @@
      :src "/static/avatar.png"}] [:p "Tom Waddington"]
    [:nav
     [:ul
-     (comment
-       (if (contains? #{:blog :index} section)
-         [:li.active
-          (if (= section :blog)
-            [:a {:href "/index.html"} "Blog"]
-            [:span "Blog"])]
-         [:li [:a {:href "/index.html"} "Blog"]]))
+     (if (contains? #{:blog :index} section)
+       [:li.active
+        (if (= section :blog) [:a {:href "/index.html"} "Blog"] [:span "Blog"])]
+       [:li [:a {:href "/index.html"} "Blog"]])
      (if (= section :projects)
        [:li.active [:span "Projects"]]
-       [:li [:a {:href "/index.html"} "Projects"]])
+       [:li [:a {:href "/projects.html"} "Projects"]])
      (if (= section :cv)
        [:li.active [:span "CV"]]
        [:li [:a {:href "/cv.html"} "CV"]])
