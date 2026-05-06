@@ -30,8 +30,13 @@
    [{:achievements
      ["I joined Medicspot to work on their online GP consultation service but, by the time I
        started, the pandemic was in full swing and I instead became technical lead on a new
-       COVID testing service."
-      ""]
+       COVID testing service, initially partering with labs and generating certificates based on their testing."
+      "We built a web app supporting our mail order COVID testing service, allowing customers to submit test results online
+       for inspection by our customer services team, then generating and emailing thousands of PDF certificates
+       every day."
+      "When the USA opened up for travel with observed tests only, we integrated with Zoom to allow customers to book
+       a slot and allow our staff to observe multiple customers taking their tests simultaneously."
+      "I also led one of Medicspot’s development squads, built integrations with couriers and the UKHSA."]
      :end-date "2022-11"
      :start-date "2020-11"
      :title "Senior Software Engineer"}]
@@ -43,11 +48,14 @@
    :overview
    "Public research university, comprised of an ever-growing number of schools and centres, including Bayes
     Business School."
-   :roles [{:achievements ["TODO"]
-            :department   "Information Technology"
-            :end-date     "2020-09"
-            :start-date   "2013-11"
-            :title        "Web Development Manager"}]
+   :roles
+   [{:achievements
+     ["At City, I managed the Web Development and User Experience teams, with 9 direct reports at peak."
+      "I was heavily hands-on with development throughout my tenure. Major projects I delivered include full rebuilds of the City and Bayes Business school websites, the staff and student intranets, and a bespoke web app and CRM to support the Clearing & Adjustment process."]
+     :department "Information Technology"
+     :end-date "2020-09"
+     :start-date "2013-11"
+     :title "Web Development Manager"}]
    :slug :city
    :url "https://www.citystgeorges.ac.uk/"}
   {:arrangement :on-site
@@ -55,7 +63,7 @@
    :location "Nottingham, United Kingdom"
    :overview
    "Games Workshop is a vertically-integrated company designing, manufacturing and retailing the best table-top
-    miniatures in the world. The Warhammer company."
+    miniatures in the world. You may know them better as the “Warhammer” company."
    :roles
    [{:achievements
      ["I set up a new team to explore GW’s digital product strategy, as a sort of internal startup."
