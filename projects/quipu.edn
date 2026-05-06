@@ -1,0 +1,13 @@
+{:description
+ [[:p [:b "quipu"]
+   " is a terminal keyboard entry scripting tool written in Rust. I use it to script "
+   [:a
+    {:href   "https://asciinema.org/"
+     :target "_blank"} "asciinema"]
+   " recordings and generate demo GIFs for projects, pull requests, etc."]
+  [:p
+   "There are lots of tools out there like this, but everything else I tried had some problem with my environment, or couldn’t script modified keys, or didn’t work with TUIs. So, I fired up Claude Code and built my own."]
+  [:p
+   "The quipu repo also includes a tree-sitter grammar, so editing the scripts looks nice."]]
+ :title "quipu"
+ :url "https://github.com/waddie/quipu"}

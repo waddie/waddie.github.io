@@ -1,0 +1,13 @@
+{:clojars "dev.tomwaddington/still"
+ :description
+ [[:p [:b "still"]
+   " is a Clojure self-modifying snapshot testing library inspired by Ian Henry’s "
+   [:a
+    {:href   "https://ianthehenry.com/posts/my-kind-of-repl/"
+     :target "_blank"} "My Kind of REPL"] "."]
+  [:p [:code "still/snap!"]
+   " statements will automatically populate with the snapshot result when evaluated in the REPL, behave as an "
+   [:code "assert"] " during runtime, and act like an " [:code "(is (=))"]
+   " test inside " [:code "deftest"] "."]]
+ :title "still"
+ :url "https://github.com/waddie/still"}

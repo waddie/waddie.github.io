@@ -1,0 +1,10 @@
+{:clojars "dev.tomwaddington/bytemap"
+ :description
+ [[:p [:b "bytemap.clj"]
+   " is more or less a Clojure port of Ian Henry’s Janet library, "
+   [:a
+    {:href   "https://github.com/ianthehenry/bytemap"
+     :target "_blank"} "bytemap"]
+   ", a text-based graphics library with functions for plotting graphs."]]
+ :title "bytemap.clj"
+ :url "https://github.com/waddie/bytemap.clj"}

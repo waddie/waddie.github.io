@@ -1,2 +1,3 @@
-# waddie.github.io
-Personal website
+# tomwaddington.dev
+
+Website generator.

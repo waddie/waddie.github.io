@@ -1,0 +1,19 @@
+{:aliases {:dev  {:extra-deps   {io.github.cognitect-labs/test-runner
+                                 {:git/sha "dfb30dd"
+                                  :git/tag "v0.5.1"}}
+                  :extra-paths  ["test"]
+                  :still/config {:colour? false}}
+           :run  {:exec-fn  dev.tomwaddington.www.core/build
+                  :jvm-opts ["-Djava.awt.headless=true"]}
+           :test {:exec-args    {:dirs ["test"]}
+                  :exec-fn      cognitect.test-runner.api/test
+                  :extra-deps   {io.github.cognitect-labs/test-runner
+                                 {:git/sha "dfb30dd"
+                                  :git/tag "v0.5.1"}}
+                  :extra-paths  ["test"]
+                  :still/config {:colour? true}}}
+ :deps    {dev.tomwaddington/bytemap {:mvn/version "0.1.24"}
+           dev.tomwaddington/still {:mvn/version "0.1.30"}
+           hiccup/hiccup {:mvn/version "2.0.0"}
+           org.clojure/core.match {:mvn/version "1.1.0"}}
+ :paths   ["src"]}

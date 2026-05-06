@@ -1,0 +1,112 @@
+{:education
+ [{:degree "BSc (Hons) Computing"
+   :dissertation
+   "Security implications of using intelligent mobile agents for network management"
+   :end-date "2002-05"
+   :grade "2:1 (Upper Second Class Honours)"
+   :institution "Sheffield Hallam University"
+   :slug :shu
+   :start-date "1998-09"
+   :url "https://www.shu.ac.uk/"}]
+ :experience
+ [{:arrangement :hybrid
+   :company "Real Links"
+   :location "London, United Kingdom"
+   :overview
+   "Real Links is a SaaS B2B startup offering an innovative and multiple award-winning employee referrals
+    and brand advocacy platform."
+   :roles [{:achievements ["TODO"]
+            :end-date     "2025-08"
+            :start-date   "2023-03"
+            :title        "Principal Software Engineer"}]
+   :slug :real-links
+   :url "https://www.reallinks.io/"}
+  {:arrangement :remote
+   :company "Medicspot"
+   :location "London, United Kingdom"
+   :overview
+   "Medicspot is a B2C health-tech startup specialising in GP services."
+   :roles
+   [{:achievements
+     ["I joined Medicspot to work on their online GP consultation service but, by the time I
+       started, the pandemic was in full swing and I instead became technical lead on a new
+       COVID testing service."
+      ""]
+     :end-date "2022-11"
+     :start-date "2020-11"
+     :title "Senior Software Engineer"}]
+   :slug :medicspot
+   :url "https://www.medicspot.co.uk/"}
+  {:arrangement :on-site
+   :company "City St George’s, University of London"
+   :location "London, United Kingdom"
+   :overview
+   "Public research university, comprised of an ever-growing number of schools and centres, including Bayes
+    Business School."
+   :roles [{:achievements ["TODO"]
+            :department   "Information Technology"
+            :end-date     "2020-09"
+            :start-date   "2013-11"
+            :title        "Web Development Manager"}]
+   :slug :city
+   :url "https://www.citystgeorges.ac.uk/"}
+  {:arrangement :on-site
+   :company "Games Workshop"
+   :location "Nottingham, United Kingdom"
+   :overview
+   "Games Workshop is a vertically-integrated company designing, manufacturing and retailing the best table-top
+    miniatures in the world. The Warhammer company."
+   :roles
+   [{:achievements
+     ["I set up a new team to explore GW’s digital product strategy, as a sort of internal startup."
+      "We launched a couple of fairly sophisticated iOS apps (an e-reader and a game aid), built tooling for the
+       Design Studio’s EPUB workflow, and made significant headway on a prototype for fully online rules and
+       army builder tools, which remains substantially better than anything the company has released since."
+      "Before the team was disbanded, we also made a fun but brief foray into video game development, before that
+       was sensibly redirected to the Licensing team, and did some early work on what eventually became
+       Warhammer TV."]
+     :department "Design Studio"
+     :end-date "2013-05"
+     :start-date "2010-10"
+     :title "Digital Development Manager"}
+    {:achievements
+     ["I was technical lead on GW’s eCommerce site, which during my tenure transitioned from Microsoft technologies
+       to ATG (now Oracle Commerce) and Java, and typically contributed 10-15% of overall revenue."
+      "Back then, there were usually never more than two programmers employed by the company at any time, so I was
+       also responsible for delivering the more technical elements of online products like global gaming
+       campaigns – for example, the database and API components allowing hundreds of thousands of hobbyists a day to
+       report the results of the table-top games they were playing in real life."
+      "Our “full” stack started from the hardware, which I was involved in specifying and installing in the
+       data centres."
+      "I was Design Studio Employee of the Year in 2005. In a room full of artists, sculptors and game designers
+       I’d idolised since childhood, a proud moment, and probably the most mortifying thing that’s ever happened
+       to me in a professional context. At least while sober."]
+     :department "Global Web"
+     :end-date "2010-09"
+     :start-date "2002-08"
+     :title "Lead Software Engineer"}]
+   :slug :games-workshop
+   :url "https://www.games-workshop.com/"}
+  {:arrangement :on-site
+   :company "Zurich Financial Services"
+   :location "Cheltenham, United Kingdom"
+   :overview
+   "From my perspective at the time, seven insurance companies in a trenchcoat."
+   :roles
+   [{:achievements
+     ["I worked on a project to streamline and accelerate whatever it is actuaries do,
+       in the approximate wake of the Equitable (I think?) collapse and new legislation."
+      "This initially meant figuring out to make a Microsoft SQL Server cluster report receipt of files to an IBM
+       mainframe, via a JCL script. This turned out to be very easy in Perl but very difficult
+       in VB Script, which is what they actually needed it to be written in. I then built the data load pipelines
+       to get those files into the correct tables."
+      "I spent the remainder of the year designing and implementing data transformation components. All the
+       requirements were stored in UML diagrams stored as XML, so I was able to speed up that task massively by
+       writing a code generator to automate the boilerplate."]
+     :department "Atlas Project"
+     :end-date "2001-08"
+     :start-date "2000-09"
+     :title "Trainee IT Developer"
+     :type :industrial-placement}]
+   :slug :zurich
+   :url "https://www.zurich.co.uk/"}]}

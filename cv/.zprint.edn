@@ -1,0 +1,3 @@
+{:binding {:force-nl? true :justify? true}
+ :map     {:comma? false :justify? true :sort? false}
+ :style   :community}
