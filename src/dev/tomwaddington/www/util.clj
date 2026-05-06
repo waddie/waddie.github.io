@@ -36,4 +36,4 @@
   []
   (doseq [f (apply conj (get-static) (get-fonts))]
     (io/copy (io/file f)
-             (io/file (s/replace f #"(\/f\/|\/static\/)" "/target$1")))))
+             (io/file (s/replace f #"(\/f\/|\/static\/)" "/docs$1")))))

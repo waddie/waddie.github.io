@@ -12,12 +12,12 @@
 (defn ^:private write-page
   "Write a page to a filename."
   [filename content]
-  (spit (str "target/" filename) (str (h/raw content))))
+  (spit (str "docs/" filename) (str (h/raw content))))
 
 (defn ^:private write-feed
   "Write a feed to a filename."
   [filename content]
-  (spit (str "target/" filename)
+  (spit (str "docs/" filename)
         (str (h/html {:escape-strings? false
                       :mode :xml}
                      content))))
@@ -45,7 +45,7 @@
   []
   (in-ns 'dev.tomwaddington.www.core)
   (build nil)
-  (println "Built to target/"))
+  (println "Built to docs/"))
 
 (comment
   (run-tests))
