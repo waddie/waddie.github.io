@@ -37,7 +37,8 @@
                                  {:href   (str "https://clojars.org/" clojars)
                                   :target "_blank"}
                                  [:img
-                                  {:src (str "https://img.shields.io/clojars/v/"
+                                  {:alt (str (:title project) " on Clojars")
+                                   :src (str "https://img.shields.io/clojars/v/"
                                              clojars
                                              ".svg")}]]])]
                             (:description project))]))
