@@ -1,4 +1,7 @@
 .highlight {
+  margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
+  max-width: 55ch;
+
   .code pre {
     background-color: #000000;
     padding: 0.5rem;

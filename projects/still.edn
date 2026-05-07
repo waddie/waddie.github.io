@@ -8,6 +8,16 @@
   [:p [:code "still/snap!"]
    " statements will automatically populate with the snapshot result when evaluated in the REPL, behave as an "
    [:code "assert"] " during runtime, and act like an " [:code "(is (=))"]
-   " test inside " [:code "deftest"] "."]]
+   " test inside " [:code "deftest"] "."]
+  [:figure
+   [:img
+    {:alt "An asciinema recording of using still in Helix via nrepl.hx"
+     :height 787
+     :loading "lazy"
+     :src "https://raw.githubusercontent.com/waddie/still/main/images/still.gif"
+     :width 1171}]
+   [:figcaption
+    "An asciinema recording of using " [:i "still"]
+    " in Helix, via nrepl.hx."]]]
  :title "still"
  :url "https://github.com/waddie/still"}

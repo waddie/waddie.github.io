@@ -1,0 +1,23 @@
+(ns www.rss
+  (:require [www.render :refer [format-date-iso]]
+            [www.schema :as schema]))
+
+(defn feed
+  "Render the RSS feed to Hiccup."
+  {:malli/schema [:function
+                  [:=> [:cat [:vector schema/BlogPost]] [:vector :some]]]}
+  [posts]
+  [:feed
+   (map (fn [post]
+          (let [published (format-date-iso (:published post))
+                updated   (if (:updated post)
+                            (format-date-iso (:updated post))
+                            published)]
+            [:entry [:id (name (:slug post))] [:title (:title post)]
+             [:link
+              {:href (str "https://www.tomwaddington.dev/"
+                          (name (:slug post))
+                          ".html")}] [:author [:name "Tom Waddington"]]
+             [:summary (:synopsis post)] [:published published]
+             [:updated updated]]))
+        posts)])

@@ -1,6 +1,5 @@
-{:body      [[:p "TODO"]]
- :published #inst "2025-09-27T21:00:00Z"
- :slug      :grit
- :synopsis  "DOTO"
- :title     "Grit"
- :updated   #inst "2025-09-27T21:00:00Z"}
+{:body     [[:p "TODO"]]
+ ; :published #inst "2025-09-27T21:00:00Z"
+ :slug     :grit
+ :synopsis "On muscle memory, small annoyances, and trying new things."
+ :title    "Grit"}

@@ -350,6 +350,10 @@ html {
   @media (max-width: 1024px) {
     font-size: 14px;
   }
+
+  @media (max-width: 480px) {
+    font-size: 11px;
+  }
 }
 
 body {
@@ -500,6 +504,43 @@ main {
 
   @media (max-width: 1024px) {
     grid-template-rows: auto;
+  }
+
+  img {
+    margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
+  }
+
+  figure {
+    margin-bottom: calc(1 / var(--golden-ratio) * var(--measure-basic));
+    margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
+    max-width: 55ch;
+
+    figcaption {
+      font-size: var(--measure-small5);
+      font-weight: 450;
+      line-height: var(--square-root-two);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
+      max-width: 55ch;
+      text-wrap: pretty;
+      font-family: var(--f-body);
+
+      p {
+        font-size: var(--measure-small5);
+      }
+    }
+
+    img {
+      height: auto;
+      margin: 0 auto;
+    }
+
+    &.small {
+      img {
+        max-width: 66%;
+      }
+    }
   }
 
   nav {
