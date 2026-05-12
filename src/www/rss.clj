@@ -7,7 +7,8 @@
   {:malli/schema [:function
                   [:=> [:cat [:vector schema/BlogPost]] [:vector :some]]]}
   [posts]
-  [:feed
+  [:feed {:xmlns "http://www.w3.org/2005/Atom"}
+   [:id "dev.tomwaddington.www"]
    [:title "Tom Waddington’s Blog"]
    [:link
     {:href "https://www.tomwaddington.dev/feed.rss"
