@@ -9,11 +9,11 @@
   [posts]
   [:feed {:xmlns "http://www.w3.org/2005/Atom"}
    [:id "https://www.tomwaddington.dev/"]
-   [:title "Tom Waddington’s Blog"]
+   [:link {:href "https://www.tomwaddington.dev"}]
    [:link
     {:href "https://www.tomwaddington.dev/feed.atom"
      :rel  "self"}]
-   [:link {:href "https://www.tomwaddington.dev"}]
+   [:title "Tom Waddington’s Blog"]
    [:updated (format-date-iso (java.util.Date.))]
    (map (fn [post]
           (let [published (format-date-iso (:published post))
@@ -24,12 +24,11 @@
                                (name (:slug post))
                                ".html")]
             [:entry
-             [:id url]
-             [:title (:title post)]
-             [:link
-              {:href url}]
              [:author [:name "Tom Waddington"]]
-             [:summary (:synopsis post)]
+             [:id url]
+             [:link {:href url}]
              [:published published]
+             [:summary (:synopsis post)]
+             [:title (:title post)]
              [:updated updated]]))
         posts)])
