@@ -8,6 +8,12 @@
                   [:=> [:cat [:vector schema/BlogPost]] [:vector :some]]]}
   [posts]
   [:feed
+
+   [:title "Tom Waddington’s Blog"]
+   [:link
+    {:href "https://www.tomwaddington.dev/feed.rs"
+     :rel  "self"}]
+   [:link {:href "https://www.tomwaddington.dev"}]
    (map (fn [post]
           (let [published (format-date-iso (:published post))
                 updated   (if (:updated post)
