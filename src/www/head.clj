@@ -25,6 +25,11 @@
    [:link
     {:href "/static/apple-touch-icon.png"
      :rel  "apple-touch-icon"}]
+   [:link
+    {:href  "/feed.rss"
+     :rel   "alternate"
+     :title "Blog Posts"
+     :type  "application/atom+xml"}]
    [:meta
     {:content
      (or

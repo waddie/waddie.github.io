@@ -25,7 +25,9 @@
   [:div
    [:a
     {:data-hx-boost "false"
-     :href "/feed.rss"}
+     :href          "/feed.rss"
+     :rel           "alternate"
+     :type          "application/atom+xml"}
     [:svg
      {:viewBox "0 0 448 512"
       :xmlns   "http://www.w3.org/2000/svg"}
