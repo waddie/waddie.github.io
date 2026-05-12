@@ -25,7 +25,7 @@
   [:div
    [:a
     {:data-hx-boost "false"
-     :href          "/feed.rss"
+     :href          "/feed.atom"
      :rel           "alternate"
      :type          "application/atom+xml"}
     [:svg

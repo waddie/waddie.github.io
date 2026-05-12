@@ -26,7 +26,7 @@
     {:href "/static/apple-touch-icon.png"
      :rel  "apple-touch-icon"}]
    [:link
-    {:href  "/feed.rss"
+    {:href  "/feed.atom"
      :rel   "alternate"
      :title "Tom Waddington’s Blog"
      :type  "application/atom+xml"}]

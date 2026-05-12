@@ -11,7 +11,7 @@
    [:id "https://www.tomwaddington.dev"]
    [:title "Tom Waddington’s Blog"]
    [:link
-    {:href "https://www.tomwaddington.dev/feed.rss"
+    {:href "https://www.tomwaddington.dev/feed.atom"
      :rel  "self"}]
    [:link {:href "https://www.tomwaddington.dev"}]
    [:updated (format-date-iso (java.util.Date.))]

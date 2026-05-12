@@ -37,7 +37,7 @@
           (write-page! "cv.html" (cv))
           (write-page! "index.html" (blog posts))
           (write-page! "projects.html" (projects projs))
-          (write-xml! "feed.rss" (feed posts))
+          (write-xml! "feed.atom" (feed posts))
           (write-xml! "sitemap.xml" (sitemap))
           (write-robots!)
           (copy-static-files!))))
