@@ -8,7 +8,7 @@
                   [:=> [:cat [:vector schema/BlogPost]] [:vector :some]]]}
   [posts]
   [:feed {:xmlns "http://www.w3.org/2005/Atom"}
-   [:id "https://www.tomwaddington.dev"]
+   [:id "https://www.tomwaddington.dev/"]
    [:title "Tom Waddington’s Blog"]
    [:link
     {:href "https://www.tomwaddington.dev/feed.atom"
