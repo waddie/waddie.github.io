@@ -28,7 +28,7 @@
    [:link
     {:href  "/feed.rss"
      :rel   "alternate"
-     :title "Blog Posts"
+     :title "Tom Waddington’s Blog"
      :type  "application/atom+xml"}]
    [:meta
     {:content
