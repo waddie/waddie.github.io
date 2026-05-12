@@ -24,7 +24,7 @@
                                (name (:slug post))
                                ".html")]
             [:entry
-             [:id (name (:slug post))]
+             [:id url]
              [:title (:title post)]
              [:link
               {:href url}]
