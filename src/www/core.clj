@@ -8,7 +8,7 @@
             [www.cv :refer [cv]]
             [www.projects :refer [get-projects projects]]
             [www.robots :refer [write-robots!]]
-            [www.rss :refer [feed]]
+            [www.atom :refer [feed]]
             [www.sitemap :refer [sitemap]]
             [www.util :refer [copy-static-files!]]))
 

@@ -1,9 +1,9 @@
-(ns www.rss
+(ns www.atom
   (:require [www.render :refer [format-date-iso]]
             [www.schema :as schema]))
 
 (defn feed
-  "Render the RSS feed to Hiccup."
+  "Render the Atom feed to Hiccup."
   {:malli/schema [:function
                   [:=> [:cat [:vector schema/BlogPost]] [:vector :some]]]}
   [posts]
