@@ -8,7 +8,7 @@
                   [:=> [:cat [:vector schema/BlogPost]] [:vector :some]]]}
   [posts]
   [:feed {:xmlns "http://www.w3.org/2005/Atom"}
-   [:id "dev.tomwaddington.www"]
+   [:id "https://www.tomwaddington.dev"]
    [:title "Tom Waddington’s Blog"]
    [:link
     {:href "https://www.tomwaddington.dev/feed.rss"
@@ -19,14 +19,16 @@
           (let [published (format-date-iso (:published post))
                 updated   (if (:updated post)
                             (format-date-iso (:updated post))
-                            published)]
+                            published)
+                url       (str "https://www.tomwaddington.dev/"
+                               (name (:slug post))
+                               ".html")]
             [:entry
              [:id (name (:slug post))]
              [:title (:title post)]
              [:link
-              {:href (str "https://www.tomwaddington.dev/"
-                          (name (:slug post))
-                          ".html")}] [:author [:name "Tom Waddington"]]
+              {:href url}]
+             [:author [:name "Tom Waddington"]]
              [:summary (:synopsis post)]
              [:published published]
              [:updated updated]]))
