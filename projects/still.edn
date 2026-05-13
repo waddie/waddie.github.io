@@ -11,11 +11,11 @@
    " test inside " [:code "deftest"] "."]
   [:figure
    [:img
-    {:alt "An asciinema recording of using still in Helix via nrepl.hx"
-     :height 787
+    {:alt     "An asciinema recording of using still in Helix via nrepl.hx"
+     :height  787
      :loading "lazy"
-     :src "https://raw.githubusercontent.com/waddie/still/main/images/still.gif"
-     :width 1171}]
+     :src     "/static/still.gif"
+     :width   1171}]
    [:figcaption
     "An asciinema recording of using " [:i "still"]
     " in Helix, via nrepl.hx."]]]

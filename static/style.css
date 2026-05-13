@@ -322,6 +322,17 @@ li {
   text-wrap: pretty;
 }
 
+.embed {
+  margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
+  max-width: 55ch;
+  overflow-x: hidden;
+
+  iframe {
+    border: 0;
+    width: 100%;
+  }
+}
+
 pre,
 code {
   background-color: var(--abs);

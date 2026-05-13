@@ -26,6 +26,7 @@
     [:a
      {:href   "https://davidgriffith.gitlab.io/frotz/"
       :target "_blank"} " Frotz"] ", a terminal Z-code interpreter."]]
+  [:h2 "You are standing at the end of a road"]
   [:p
    "On Saturday the 12" [:sup "th"] ", on "
    [:a
@@ -98,15 +99,16 @@
      :target "_blank"} "Inform"]
    ". All the infrastructure and world rules are provided, you only need to
    code the locations, objects, and logic unique to the story you want to tell."]
+  [:h2 "Twisty little passages"]
   [:p
    "In 2000/01, I was working my internship year at Zurich Financial Services, living alone for the first
     time in my life in a strange flat, in a weird building in Cheltenham."]
   [:p
-   "I think it had once been the backstage
-    area of a theatre or something. All the walls were bright golden yellow, except the navy blue bedroom with
-    built-in wardrobe doors painted a garish, gloss industrial orange, and I don’t think there was a single straight
-    line or right angle in the building. The hall curved so severely and unexpectedly, I would invariably
-    bounce off the wall on the way to the bathroom or kitchen in the middle of the night."]
+   "I think it had once been the backstage area of a theatre or something. All the walls were bright golden yellow,
+    except the navy blue bedroom with built-in wardrobe doors painted a garish, gloss industrial orange. I don’t
+    think there was a single straight line or right angle in the building. The hall curved so severely and
+    unexpectedly, I would invariably bounce off the wall on the way to the bathroom or kitchen in the middle of the
+    night."]
   [:figure
    [:img
     {:alt     "A photo of the author in Cheltenham in September 2000"
@@ -118,8 +120,7 @@
     [:p
      "A tiny child moving into a Cheltenham flat in September 2000, laser-focused on the priorities."]
     [:p
-     "I still keep cables in one of those blue storage boxes,
-     and that copy of "
+     "I still keep cables in one of those blue storage boxes, and that copy of "
      [:cite "The Art of Computer Programming"]
      " is still on my shelf, joined by the first two parts of "
      [:cite "Combinatorial Algorithms"]
@@ -130,14 +131,14 @@
    "Between a Payroll cock-up and me having no clue whatsoever about tax codes, I was paying about three times
     as much tax as I should have been, on an already low salary."]
   [:p
-   "After rent, food, utilities, and getting my only suit dry-cleaned, I had just about enough money left at the
-    end of the month to buy a book (usually a fantasy doorstop from Steven Erikson, Robin Hobb, or the collected
-    works of one of the old greats like Vance or Zelazny) or a blister of miniatures from the local Games Workshop
-    (Iyanden Ghost Warriors for 3"
+   "After rent, food, utilities, and getting my only suit dry-cleaned, I’d have maybe £10-20 left at the end of the
+    month. Usually enough to buy a novel, typically a fantasy doorstop from Steven Erikson, Robin Hobb, or the collected
+    works of one of the old greats like Vance or Zelazny. Or a blister of miniatures from the local Games Workshop –
+    Iyanden Ghost Warriors for 3"
    [:sup "rd"] " edition " [:cite "Warhammer 40,000"]
    " that year: the time and effort required to paint a 40 point, metal Eldar Wraithguard bright yellow offering
-    surprisingly good bang for buck). I also worked my way through every "
-   [:cite "Calvin and Hobbes"] " collection."]
+    surprisingly good bang for buck. I also worked my way through all 11 "
+   [:cite "Calvin and Hobbes"] " collections."]
   [:p
    "So my first year away from home, I was poor as a church mouse, rarely socialised, and spent most evenings
     and weekends reading, painting, and programming alone in my absurd flat."]
@@ -145,7 +146,7 @@
    "Admittedly, a quarter of a century on, that remains pretty much my idea of a good time anyway."]
   [:figure
    [:img
-    {:alt     "A photo of the author in Cheltenham sometime in 2000-2001"
+    {:alt     "A photo of the author in Cheltenham, sometime in 2000-2001"
      :height  730
      :loading "lazy"
      :src     "static/cheltenham2.jpg"
@@ -156,41 +157,103 @@
      IDE hard drive at his fingertips."]
     [:p
      "For my final year, I finally succumbed and spent my tax refund on a PC, dual booting Win98SE and SuSE
-      Linux, but that Amiga is the computer I used to teach myself C, Perl, Vim, 68k assembly, Inform, HTML, JavaScript…
-      the list goes on. Not a bad run for a machine designed as a budget stopgap and bought in 1992."]
+      Linux, so this was really the end of an era. But that Amiga is the computer I used to teach myself C, Perl,
+      Vim, 68k assembly, HTML, JavaScript, of course Inform… the list goes on. Not a bad run for a machine
+      designed as a budget stopgap, bought in 1992."]
     [:p "I doubt that setup would pass a DSE assessment though."]
     [:p
      "You can tell this photo was taken before May 2001 because the keycaps don’t have
      Dvorak legends written on the front in black felt tip."]]]
-  ; [:p "I’ve always had a soft spot for "
-  ;  [:cite "So Long, and Thanks for All the Fish"] ". 25&deg;C"]
+  [:h2 "In the beginning the Universe was created"]
   [:p
-   "At the time, I don’t remember any reaction by anyone to any of the entries, although I think Gunther told
-    me it was “a lovely tribute” when I submitted it. And two and a half decades later, I find myself cringing at
-    some of my 21 year old self’s insufferable prose. To me now, all the good bits are obvious and minor riffs on
-    Adams’ original text."]
+   "With the typical first-timer’s grandiose vision of writing an Infocom/Level 9 sized adventure, Inform 6
+   was one of the things I taught myself that year. I loved text adventures as a kid, growing up with "
+   [:cite "The Hobbit"]
+   " from Melbourne House and Level 9 Computing’s
+    wonderfully atmospheric games like "
+   [:cite "Red Moon"] ", " [:cite "The Worm in Paradise"]
+   " and their version of " [:cite "ADVENT"] ", " [:cite "Colossal Adventure"]
+   " on the Oric Atmos and MSX (a Toshiba HX-10 in my case – these computers probably give you some idea of
+   my dad’s ability to pick a winner when it comes to technology)."]
+  [:p "Graham Nelson’s superb "
+   [:cite]
+   [:a
+    {:href   "https://inform-fiction.org/manual/index.html"
+     :target "_blank"} "Inform Designer’s Manual"]
+   ", then in its third edition, provided a comprehensive grounding in not just the how but also the why of
+    crafting text adventures."]
+  [:p "Predictably, I never finished any of the big ideas I’d once had. "
+   [:cite "How Many Roads Must a Man Walk Down?"] " is my only completed game."]
+  [:p
+   "I’ve always had a soft spot for "
+   [:cite "So Long, and Thanks for All the Fish"]
+   ". I’ve always found the, oft-criticised, “abrupt authorial intrusions” funny and, outside those pages, it felt
+    to me like Adams is having more fun writing a sweet, gentle romance than he’d had with some of the wackier sci-fi
+    adventures of the original trilogy. Even though, famously, he in fact wasn’t. At all."]
+  [:p
+   "My copy of the novel was back home in Sheffield that day, so I ventured into the town centre to track down a new one.
+   Consulting historical weather records online, it seems it only hit 25&deg;C on that sunny day in Cheltenham. Maybe it
+   was negotiating the crowds, but I was absolutely dripping with sweat by the time I made it home."]
+  [:p
+   "As I recall, I rattled off the entire development in a single session just shy of the two hour limit."]
+  [:p
+   "At the time, I don’t remember seeing much reaction by anyone to any of the entries, although I think Gunther
+    told me it was “a lovely tribute” when I submitted it. And two and a half decades later, I find myself
+    cringing at some of my 21 year old self’s insufferable prose. To me now, any good bits are obvious and minor
+    riffs on Adams’ original text."]
   [:p
    "But I discovered today that, 20+ years later, Andrew Schultz in Chicago wrote "
    [:a
     {:href   "https://ifdb.org/viewgame?id=zg8p9khmmhtqwavu&review=74384"
      :target "_blank"} "a very sweet review"]
-   ". Just occasionally, the internet can still be as magical a technology
-   as Douglas believed it to be."]
+   ". Just occasionally, the internet can still be as magical a technology as Douglas believed it to be."]
   [:p
-   "But this post isn’t really about my daft little game either."]
-  ; [:p
-  ; "It’s hard to imagine writin a great prompt."]
+   "But this post isn’t about my daft little game either. Not really."]
+  [:h2
+   "I may not have gone where I intended to go"]
   [:p
-   "Anyway. I suspect I still have the source code backed up somewhere, most likely in the depths of
-    some long-forgotten S3 bucket. But if you’d like to play my old game, you can "
-   [:a {:href "static/42.z5"} "download it here"]
+   "I’ve been thinking a lot lately about meaningful work. For better or worse, I’ve spent the last 7-8 years of my career
+    working on one neverending death march of a project after another. They’ve been critically important to their
+    respective organisations, and in many ways satisfying to deliver. But in each case, "
+   [:em "the process"]
+   " has passed in a numb blur."]
+  [:p
+   "There’s definitely something about short, sharp periods of creative activity that engenders equally intense memories of
+    everything surrounding them. I have similarly vivid reminiscences of the weekend I was inspired to rewrite an ecommerce
+    frontend in XHTML, of an evening kit-bashing a Space Marine Librarian, of a mad 36 hour straight crunch responding to a
+    change in COVID-19 testing regulations."]
+  [:p
+   "These aren’t all the most impactful projects I’ve ever worked on by any means (though some were). Sometimes they were
+    incredibly stressful experiences."]
+  [:p
+   "It already feels clichéd to state it aloud but, in particular, I can’t imagine ever having this experience from
+    that day I wrote a really fantastic LLM prompt. What they share are clear boundaries. A beginning, a middle, and
+    something to point at when I’m done. We obviously can’t abandon the long marches entirely, but I hope to be more
+    deliberate about breaking them up. To insist on carving out more afternoons like that Sunday in Cheltenham,
+    rather than sleepwalking through months and years waiting for the next one to happen by accident."]
+  [:p
+   "Anyway."]
+  [:p
+   "I suspect I still have the original source code backed up somewhere, but most likely in the depths of
+    some long-forgotten S3 bucket. If you’d like to play my old game though, you can "
+   [:a {:href "/static/42.z5"} "download it here"]
    ". You’ll need a Z-code interpreter, they’re "
    [:a
     {:href   "https://www.ifwiki.org/FAQ#How_can_I_download_and_play_IF.3F"
      :target "_blank"}
-    "freely available for almost every device under the sun."]]]
+    "freely available for almost every device under the sun."]]
+  [:div.embed
+   [:iframe
+    {:height 42
+     :seamless true
+     :src
+     "https://bandcamp.com/EmbeddedPlayer/album=1732516609/size=small/bgcol=333333/linkcol=2ebd35/track=4134774452/transparent=true/"}
+    [:a
+     {:href "https://amoteofdustofficial.bandcamp.com/album/a-mote-of-dust-2"}
+     "A Mote of Dust by A Mote of Dust"]]]]
  :published #inst "2026-05-13T00:03:00Z"
  :slug :how-many-roads-must-a-man-walk-down
  :synopsis
  "It’s 25 years and two days since Douglas Adams died. That Sunday is among my most vivid memories."
- :title "How Many Roads Must a Man Walk Down?"}
+ :title "How Many Roads Must a Man Walk Down?"
+ :updated #inst "2026-05-13T19:26:45Z"}

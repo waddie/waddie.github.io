@@ -13,8 +13,7 @@
     {:alt "An asciinema recording of interacting with a Clojure nREPL in Helix"
      :height 787
      :loading "lazy"
-     :src
-     "https://raw.githubusercontent.com/waddie/nrepl.hx/refs/heads/main/images/nrepl.gif"
+     :src "/static/nrepl.gif"
      :width 1171}]
    [:figcaption
     "An asciinema recording of interacting with a Clojure nREPL in Helix."]]]

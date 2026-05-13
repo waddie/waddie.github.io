@@ -44,7 +44,7 @@
         0-11.175-4.882-11.427-11.038-5.598-136.535-115.204-246.161-251.76-251.76C68.882
         152.949 64 147.935 64 141.774V107.44c0-6.454 5.338-11.664 11.787-11.432 167.83
         6.025 302.21 141.191 308.205 308.205.232 6.449-4.978 11.787-11.432 11.787z"}]]
-    [:span "RSS Feed"]]])
+    [:span "Atom Feed"]]])
 
 (def github-link
   "GitHub profile."
@@ -105,7 +105,7 @@
   [:div
    [:a
     {:data-hx-boost "false"
-     :href "https://tangled.org/waddie.tngl.sh"}
+     :href "https://tangled.org/tomwaddington.dev"}
     [:svg
      {:height  "23.274"
       :viewBox "0 0 24.122 23.274"

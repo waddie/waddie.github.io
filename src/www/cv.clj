@@ -45,7 +45,8 @@
                          [:h3
                           [:a
                            {:data-hx-boost "false"
-                            :href (:url company)} (:company company)]]
+                            :href          (:url company)
+                            :target        "_blank"} (:company company)]]
                          [:p (:location company) " ("
                           (arrangements (:arrangement company)) ")"]
                          [:p (:overview company)] (roles company)])
