@@ -239,7 +239,8 @@
    [:a
     {:download true
      :filename "42.z5"
-     :href     "/static/42.z5"} "download it here"]
+     :href     "/static/42.z5"
+     :type     "application/octet-stream"} "download it here"]
    ". You’ll need a Z-code interpreter, they’re "
    [:a
     {:href   "https://www.ifwiki.org/FAQ#How_can_I_download_and_play_IF.3F"
