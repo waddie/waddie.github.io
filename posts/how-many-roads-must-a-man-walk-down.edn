@@ -10,7 +10,7 @@
   [:p "I grew up with " [:cite "Hitchhiker’s"]
    ". Read all the books multiple times, listened to the radio series on cassette,
     watched the endless reruns of the TV series on UK Gold when we got cable TV in the early 90s."]
-  [:p "This post isn’t really about Adams."]
+  [:p "This post isn’t about Adams."]
   [:figure
    [:img
     {:alt
