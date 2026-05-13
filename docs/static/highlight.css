@@ -4,6 +4,7 @@
 
   .code pre {
     background-color: #000000;
+    overflow-x: scroll;
     padding: 0.5rem;
   }
   pre {
