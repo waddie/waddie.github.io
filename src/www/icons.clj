@@ -21,7 +21,7 @@
     [:span "Email"]]])
 
 (def feed-link
-  "RSS feed."
+  "Atom feed."
   [:div
    [:a
     {:data-hx-boost "false"
@@ -51,7 +51,8 @@
   [:div
    [:a
     {:data-hx-boost "false"
-     :href "https://github.com/waddie"}
+     :href          "https://github.com/waddie"
+     :target        "_blank"}
     [:svg
      {:viewBox "0 0 448 512"
       :xmlns   "http://www.w3.org/2000/svg"}
@@ -85,7 +86,8 @@
   [:div
    [:a
     {:data-hx-boost "false"
-     :href "https://www.linkedin.com/in/waddie"}
+     :href          "https://www.linkedin.com/in/waddie"
+     :target        "_blank"}
     [:svg
      {:viewBox "0 0 448 512"
       :xmlns   "http://www.w3.org/2000/svg"}
@@ -105,7 +107,8 @@
   [:div
    [:a
     {:data-hx-boost "false"
-     :href "https://tangled.org/tomwaddington.dev"}
+     :href          "https://tangled.org/tomwaddington.dev"
+     :target        "_blank"}
     [:svg
      {:height  "23.274"
       :viewBox "0 0 24.122 23.274"
