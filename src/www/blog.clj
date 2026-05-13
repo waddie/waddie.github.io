@@ -54,7 +54,9 @@
    (let [title "Blog"]
      (render-page
       {:body    [:main {:class "index"}
-                 [:article {:class "blog"} [:h1 title]
+                 [:article {:class "blog"}
+                  [:h1 title]
+                  [:p "Always end on a song."]
                   [:ol
                    {:class    "post-list"
                     :reversed true}
@@ -68,9 +70,18 @@
        :section :index
        :title   title})))
   ([posts post]
-   (let [title   (:title post)
-         article [:article {:class "blog"} [:h1 title]
-                  (format-date-long (:published post))]]
+   (let [title (:title post)
+         published
+         (format-date-long (:published post))
+         updated (when (:updated post) (format-date-long (:updated post)))
+         updated-notif
+         (when (and updated (not= published updated))
+           (list " (updated: " (format-date-long (:updated post)) ")"))
+         article
+         [:article {:class "blog"} [:h1 title]
+          `[:p.publication-date
+            ~@(list published updated-notif)
+           ]]]
      (render-page {:body    [:main {:class "blog"}
                              (reduce conj article (:body post))
                              (nav posts post)]

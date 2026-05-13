@@ -246,6 +246,7 @@
     {:href   "https://www.ifwiki.org/FAQ#How_can_I_download_and_play_IF.3F"
      :target "_blank"}
     "freely available for almost every device under the sun."]]
+  [:hr {:noshade true}]
   [:div.embed
    [:iframe
     {:height 42

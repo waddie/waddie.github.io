@@ -114,13 +114,15 @@
   []
   (let [title "Curriculum Vitae"
         data  (fetch-cv-data)]
-    (render-page
-     {:body    [:main {:class "cv"}
-                [:article {:class "cv"} [:h1 title]
-                 [:div {:class "experience"}
-                  [:h2 {:id "experience"} "Experience"]
-                  [:p "Never twice the same industry."] (experience data)]
-                 [:div {:class "education"} [:h2 {:id "education"} "Education"]
-                  (education data)]] (nav data)]
-      :section :cv
-      :title   title})))
+    (render-page {:body    [:main {:class "cv"}
+                            [:article {:class "cv"}
+                             [:h1 title]
+                             [:div {:class "experience"}
+                              [:h2 {:id "experience"} "Experience"]
+                              [:p "Never twice the same industry."]
+                              (experience data)]
+                             [:div {:class "education"}
+                              [:h2 {:id "education"} "Education"]
+                              (education data)]] (nav data)]
+                  :section :cv
+                  :title   title})))

@@ -1,7 +1,221 @@
-{:body [[:p "TODO"]]
- ; :published #inst "2025-11-09T17:21:46Z"
+{:body
+ [[:p
+   "[INTRO]"]
+  [:p
+   "Note that, where it would be helpful for you to see exactly what I’m typing, I’ve enabled the "
+   [:a
+    {:href   "https://github.com/HeitorAugustoLN/showkeys.hx"
+     :target "_blank"} "showkeys.hx"] " plugin in Helix and "
+   [:a {:href "https://github.com/nstefan002/screenkey.nvim"} "Screenkey"]
+   " in NeoVim to display the keystrokes in the recordings. I don’t have that active in daily use."]
+  [:h2 "A post-modern text editor"]
+  [:p
+   "Helix is a modal text editor inspired by vi (via the earlier "
+   [:a
+    {:href   "https://kakoune.org/"
+     :target "_blank"} "Kakoune"]
+   ", which pioneered most of the big ideas in Helix). Kakoune and Helix make at least two major departures from
+    the vi lineage."]
+  [:p
+   "In vi, commands are entered in the form verb-noun. That is, you ordinarily specify what you want to do, then
+    what you want to do it "
+   [:em "to"] "."]
+  [:p
+   "Helix inverts this arrangement to noun-verb. In Helix, you create (and can see) a selection, then enter the
+    command to operate on that selection."]
+  [:figure
+   [:img
+    {:alt    "Deleting four words in NeoVim"
+     :height 403
+     :src    "/static/nvim_grim.gif"
+     :width  595}]
+   [:figcaption
+    "In a traditional vi, the verb (in this case delete) comes first…"]]
+  [:figure
+   [:figcaption
+    "…whereas in Helix, we first select the text we want to operate on."]
+   [:img
+    {:alt    "Deleting the same four words in Helix"
+     :height 403
+     :src    "/static/hx_grim.gif"
+     :width  595}]]
+  [:p
+   "The (potential) benefit of this is that in Helix, you will always see "
+   [:em "what"]
+   " your command will operate on before you action it. If you find that your mental
+    model of motions and actions often gets out of sync with the actual content of the buffer you’re editing,
+    that can be a great boon. Moving the state out of your head and onto the screen can greatly reduce how
+    regularly you need to undo and retry."]
+  [:p
+   "The trade-off is that Helix typically requires more keystrokes than vi to achieve the same end. If you’re
+     currently thinking “actually no, that never happens to me, I didn’t even know vi "
+   [:em "had"]
+   " an undo” then, at least in terms of typing efficiency, Helix would be a significant retrograde step and
+    probably has little to offer you."]
+  [:p
+   "I don’t mean to suggest either approach is strictly superior. Rather, I think most people (among those who
+    jibe with modal editing to begin with) will naturally grok one approach more than the other. Personally,
+    I had been using Vim almost daily since its inclusion on a "
+   [:a
+    {:href   "https://en.wikipedia.org/wiki/Fred_Fish"
+     :target "_blank"} "Fish Disk"]
+   " in the 90s, yet Helix immediately felt more natural and reliable when I tried it. You too might discover
+    that your brain isn’t wired exactly how you always thought."]
+  [:p
+   "The second big idea in Kakoune and Helix is that they were designed from the ground up around multi-selection
+    editing. Of course, they’re very far from the only editors with multi-cursor functionality, but creating,
+    narrowing, and splitting selections is exceptionally easy and intuitive in Helix, with every command that makes
+    sense operating across all of them simultaneously."]
+  [:figure
+   [:img
+    {:alt    "Helix’s multi-cursor editing"
+     :height 595
+     :src    "/static/multi.gif"
+     :width  787}]
+   [:figcaption "An extract from Helix’s built-in " [:code ":tutor"]
+    ", demonstrating basic editing with multiple cursors."]]
+  [:p
+   "Besides this fundamental editing paradigm, Helix leverages built-in support for "
+   [:a
+    {:href   "https://tree-sitter.github.io/tree-sitter/"
+     :target "_blank"} "tree-sitter"] " grammars and "
+   [:a
+    {:href   "https://microsoft.github.io/language-server-protocol/"
+     :target "_blank"} "Language Server Protocol"]
+   " (LSP) for programming language support."]
+  [:h3 "tree-sitter"]
+  [:p
+   "tree-sitter is an incremental parser generator, enabling fast, efficient syntax highlighting. Helix ships
+    with the "
+   [:a
+    {:href   "https://github.com/sogaiu/tree-sitter-clojure"
+     :target "_blank"} "tree-sitter-clojure grammar"] " bundled."]
+  [:p
+   "Perhaps more interestingly, because tree-sitter parses code to a syntax tree, it also enables syntax-aware
+    editing. With "
+   [:a
+    {:href   "https://github.com/helix-editor/helix/pull/14524"
+     :target "_blank"} "text object queries"]
+   " included in Helix’s standard distribution, Helix is effectively aware of Clojure forms. You can expand and
+    contract selection by forms, or select entire functions, data structures or tests at once."]
+  [:p
+   "Obviously, this matching works with multiple cursors."]
+  [:figure
+   [:img
+    {:alt    "tree-sitter matching in Helix"
+     :height 595
+     :src    "/static/hx-text-objects.gif"
+     :width  787}]
+   [:figcaption
+    "Making selections by tree-sitter text objects in Helix: expanding and contracting the selection by forms, and "
+    [:b "m"] "atching " [:b "a"] "round multiple " [:b "f"]
+    "unctions simultaneously, recognising both a " [:code "defn"] " and "
+    [:code "#()"] " shorthand."]]
+  [:h3 "Language servers"]
+  [:p
+   "If you have "
+   [:a
+    {:href   "https://clojure-lsp.io/"
+     :target "_blank"} "clojure-lsp"]
+   " installed, Helix is configured to use it by default, providing a whole range of code actions, static
+    analysis, and refactoring functionality."]
+  [:figure
+   [:img
+    {:alt    "clojure-lsp features in Helix"
+     :height 595
+     :src    "/static/hx-lsp.gif"
+     :width  787}]
+   [:figcaption
+    "Autocomplete, symbol renaming, and namespace cleaning in Helix, driven by "
+    [:code "clojure-lsp"] "."]]
+  [:p
+   "Of course, as cool as all of this is, it’s no use to "
+   [:span {:title "I will never, ever say the word “Clojurian”"}
+    "Clojurers"]
+   " without REPL integration and, thus far, there’s been no way to achieve that in Helix."]
+  [:h2 "Steel and nREPL.hx"]
+  [:p "So now the exciting bit."]
+  [:p
+   "Matthew Paras has been working on an embeddable Scheme interpreter for Rust called "
+   [:a
+    {:href   "https://github.com/mattwparas/steel"
+     :target "_blank"} "Steel"]
+   ", and a fork of Helix that uses Steel to provide a "
+   [:a
+    {:href   "https://github.com/mattwparas/helix/tree/steel-event-system"
+     :target "_blank"} "plugin system"]
+   ", which has been blessed by the Helix team as the official
+   solution."]
+  [:p
+   "While there’s currently no ETA for it to be merged to the mainline releases, Matthew is making steady
+   progress, it’s already very stable and fully featured, and building it from source is barely any harder than
+   installing Helix from a package manager."]
+  [:p
+   "Steel gives you an almost complete Scheme R5RS implementation plus FFI to Rust dynamic libraries. With some
+    assistance from Claude Code with the Rust, I’ve used it to build "
+   [:a
+    {:href   "https://github.com/waddie/nrepl.hx"
+     :target "_blank"} "nREPL.hx"] "."]
+  [:p
+   "nREPL.hx can connect to an already running nREPL instance, or spawn and jack-in to a new one based on your
+    project file (with support for "
+   [:code "deps.edn"] ", " [:code "project.clj"] ", or " [:code "bb.edn"]
+   ") and alias selection with preview pickers and persistence between sessions."]
+  [:figure
+   [:img
+    {:alt    "nREPL.hx jack-in flow"
+     :height 787
+     :src    "/static/nrepl-jack-in.gif"
+     :width  1171}] [:figcaption "Let’s ‘jack’ into ‘the matrix’."]]
+  [:p
+   "It can eval via prompt, selection, multiple selections, entire buffer or by loading a file."]
+  [:figure
+   [:img
+    {:alt    "Evaluating code in nREPL.hx"
+     :height 787
+     :src    "/static/nrepl-eval.gif"
+     :width  1171}] [:figcaption "Evaluating code in nREPL.hx."]]
+  [:p
+   "(Note that, in keeping with Helix’s noun-verb editing model, nREPL.hx always evaluates selections rather than
+    a form you‘re currently somewhere inside, as is common in many other editors.)"]
+  [:p
+   "And, via " [:code "cider-nrepl"]
+   " middleware, it has a symbol lookup picker, with docstring preview."]
+  [:figure
+   [:img
+    {:alt    "nREPL.hx’s lookup picker"
+     :height 787
+     :src    "/static/nrepl-lookup.gif"
+     :width  1171}] [:figcaption "Looking up symbols with docstring preview."]]
+  [:p
+   "Obviously there’s a long way to go to match the functionality available in the more established Clojure editors.
+    But there’s already enough of a foundation here for me to use it as my daily driver. The biggest known flaw
+    is that there is currently no way to interrupt an in-progress request, but there is a configurable timeout,
+    so I haven’t really missed it so far."]
+  [:p
+   "Note that you can find links to this and to other early Helix plugins at "
+   [:a
+    {:href   "https://www.helix-plugins.com/"
+     :target "_blank"} "Helix Plugins"] "."]
+  [:hr {:noshade true}]
+  [:div.embed
+   [:iframe
+    {:allow
+     "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     :allowfullscreen true
+     :frameborder "0"
+     :height "315"
+     :referrerpolicy "strict-origin-when-cross-origin"
+     :src "https://www.youtube-nocookie.com/embed/qBx2aeoNeqg"
+     :title "YouTube video player"
+     :width "560"}]]
+  [:h2 "Post updated on 2026-05-15"]
+  [:p
+   "Migrated from old hosting, updated the examples, reflected merged PRs, etc."]]
+ :published #inst "2025-11-09T17:21:46Z"
  :slug :helix-and-clojure
  :synopsis
  "The Helix editor is now in a pretty good place for Clojure programmers,
  if you don’t mind building from source."
- :title "Helix and Clojure"}
+ :title "Helix and Clojure"
+ :updated #inst "2026-05-15T07:21:00Z"}

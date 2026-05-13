@@ -322,6 +322,14 @@ li {
   text-wrap: pretty;
 }
 
+hr {
+  background-color: var(--text);
+  border-color: var(--text);
+  margin-top: calc(1 / var(--golden-ratio) * var(--measure-medium3));
+  margin-bottom: calc(1 / var(--golden-ratio) * var(--measure-medium3));
+  max-width: 55ch;
+}
+
 .embed {
   margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
   max-width: 55ch;

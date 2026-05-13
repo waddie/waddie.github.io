@@ -3,16 +3,20 @@
 (defn header
   "Render the page header to Hiccup. Nav link to the current page should be disabled if appropriate."
   {:malli/schema [:function
-                  [:=> [:cat [:enum :about :blog :cv :index :projects]]
+                  [:=>
+                   [:cat [:enum :about :blog :cv :index :projects]]
                    [:vector :some]]]}
   [section]
   [:header
    [:img
-    {:alt           ""
+    {:alt ""
      :fetchpriority "high"
-     :height        1080
-     :src           "/static/avatar.png"
-     :width         1080}] [:p "Tom Waddington"]
+     :height 1080
+     :src "/static/avatar.png"
+     :title
+     "If you’re putting your actual face on the public internet nowadays, for anyone with genAI to abuse, you must be out of your goddamn mind."
+     :width 1080}]
+   [:p "Tom Waddington"]
    [:nav
     [:ul
      (if (contains? #{:blog :index} section)

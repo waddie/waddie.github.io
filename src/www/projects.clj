@@ -23,7 +23,9 @@
         list  [:ol {:class "project-list"}]]
     (render-page
      {:body    [:main {:class "index"}
-                [:article {:class "projects"} [:h1 title]
+                [:article {:class "projects"}
+                 [:h1 title]
+                 [:p "Free and open source software that I build and maintain."]
                  (reduce (fn [list project]
                            (conj
                             list

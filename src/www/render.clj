@@ -78,8 +78,7 @@
         month-name (month-names month)
         year       (+ 1900 (.getYear date))]
     [:time
-     {:class    "publication-date"
-      :datetime (format-date-YMD date)} day [:sup (number-suffix day)] " "
+     {:datetime (format-date-YMD date)} day [:sup (number-suffix day)] " "
      month-name " " year]))
 
 (defmulti format-date-iso "Format a date for ISO." class)
@@ -123,5 +122,4 @@
   (snap! (format-date-iso date) "2026-01-28T19:02:00.000Z")
   (snap! (format-date-long date)
          [:time
-          {:class    "publication-date"
-           :datetime "2026-01-28"} 28 [:sup "th"] " " "January" " " 2026]))
+          {:datetime "2026-01-28"} 28 [:sup "th"] " " "January" " " 2026]))

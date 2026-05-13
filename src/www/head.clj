@@ -35,7 +35,10 @@
      (or
       (first rest)
       "Tom Waddington is a computer programmer based in London, United Kingdom.")
-     :name "description"}]])
+     :name "description"}]
+   [:meta
+    {:content "https://github.com/waddie/waddie.github.io/"
+     :name    "generator"}]])
 
 (defn head
   "Render the head section as Hiccup, appropriately for the type of page.
