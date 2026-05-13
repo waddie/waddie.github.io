@@ -237,9 +237,10 @@
    "I suspect I still have the original source code backed up somewhere, but most likely in the depths of
     some long-forgotten S3 bucket. If you’d like to play my old game though, you can "
    [:a
-    {:download "42.z5"
-     :href     "/static/42.z5"
-     :type     "application/octet-stream"} "download it here"]
+    {:data-hx-boost "false"
+     :download      "42.z5"
+     :href          "/static/42.z5"
+     :type          "application/octet-stream"} "download it here"]
    ". You’ll need a Z-code interpreter, they’re "
    [:a
     {:href   "https://www.ifwiki.org/FAQ#How_can_I_download_and_play_IF.3F"
