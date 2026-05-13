@@ -237,8 +237,7 @@
    "I suspect I still have the original source code backed up somewhere, but most likely in the depths of
     some long-forgotten S3 bucket. If you’d like to play my old game though, you can "
    [:a
-    {:download true
-     :filename "42.z5"
+    {:download "42.z5"
      :href     "/static/42.z5"
      :type     "application/octet-stream"} "download it here"]
    ". You’ll need a Z-code interpreter, they’re "
