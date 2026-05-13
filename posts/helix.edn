@@ -1,5 +1,5 @@
 {:body [[:p "TODO"]]
- :published #inst "2025-11-09T17:21:46Z"
+ ; :published #inst "2025-11-09T17:21:46Z"
  :slug :helix-and-clojure
  :synopsis
  "The Helix editor is now in a pretty good place for Clojure programmers,
