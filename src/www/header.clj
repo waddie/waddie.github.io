@@ -8,8 +8,11 @@
   [section]
   [:header
    [:img
-    {:alt ""
-     :src "/static/avatar.png"}] [:p "Tom Waddington"]
+    {:alt           ""
+     :fetchpriority "high"
+     :height        1080
+     :src           "/static/avatar.png"
+     :width         1080}] [:p "Tom Waddington"]
    [:nav
     [:ul
      (if (contains? #{:blog :index} section)
