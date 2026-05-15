@@ -489,6 +489,10 @@ header {
           font-size: var(--measure-basic);
         }
 
+        @media (max-width: 400px) {
+          font-size: var(--measure-small5);
+        }
+
         a {
           color: var(--text-header);
           text-decoration-line: none;
