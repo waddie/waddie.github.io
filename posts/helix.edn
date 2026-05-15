@@ -189,7 +189,7 @@
      :width  1171}] [:figcaption "Evaluating code in nREPL.hx."]]
   [:p
    "(Note that, in keeping with Helix’s noun-verb editing model, nREPL.hx always evaluates selections rather than
-    a form you‘re currently somewhere inside, as is common in many other editors.)"]
+    a form you’re currently somewhere inside, as is common in many other editors.)"]
   [:p
    "And, via " [:code "cider-nrepl"]
    " middleware, it has a symbol lookup picker, with docstring preview."]
