@@ -838,6 +838,7 @@ main {
 
           time {
             display: block;
+            margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
           }
 
           .description a {
