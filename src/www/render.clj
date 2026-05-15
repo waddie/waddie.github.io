@@ -25,7 +25,7 @@
               (head {:post  post
                      :title title})
               [:body {:data-hx-boost "true"} (header section) body
-               (if (:published post) (footer post) (footer))]))
+               (if (coll? post) (footer post) (footer))]))
 
 (def month-names
   ["January" "February" "March" "April" "May" "June" "July" "August" "September"
