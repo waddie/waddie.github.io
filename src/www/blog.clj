@@ -121,5 +121,5 @@
                                                  (neighbour-link next "next")]]
                                  :else (throw (Exception. "Impossible post")))))
                  (nav posts post)]
-       :curr    curr
+       :post    curr
        :section :blog}))))
