@@ -436,7 +436,7 @@ header {
     height: var(--measure-large2);
     border-radius: 50%;
     object-fit: cover;
-    grid-row: 1 / 3;
+    grid-row: 1 / 6;
     border: var(--measure-small0) solid var(--text-header);
 
     @media (max-width: 800px) {
@@ -529,7 +529,7 @@ header {
 
 main {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(24, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0;
 
@@ -575,7 +575,7 @@ main {
   }
 
   nav {
-    grid-column-end: span 3;
+    grid-column-end: span 6;
     grid-column-start: 2;
     grid-row: 1;
     height: fit-content;
@@ -589,7 +589,7 @@ main {
     }
 
     @media (max-width: 1024px) {
-      grid-column-end: span 10;
+      grid-column-end: span 22;
       grid-column-start: 2;
 
       &.blog {
@@ -721,18 +721,18 @@ main {
   }
 
   article {
-    grid-column-start: 5;
-    grid-column-end: span 8;
+    grid-column-start: 8;
+    grid-column-end: span 16;
     grid-row: 1;
 
     @media (max-width: 1280px) {
-      grid-column-start: 5;
-      grid-column-end: span 8;
+      grid-column-start: 8;
+      grid-column-end: span 16;
     }
 
     @media (max-width: 1024px) {
       grid-column-start: 2;
-      grid-column-end: span 10;
+      grid-column-end: span 22;
 
       &.blog {
         grid-row: 1;
@@ -846,7 +846,7 @@ main {
 
 footer {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(24, 1fr);
   grid-column-gap: 0;
   background-color: var(--abs);
   color: var(--text-header);
@@ -858,7 +858,7 @@ footer {
     margin-top: var(--measure-medium3);
     margin-bottom: var(--measure-medium3);
     grid-column-start: 1;
-    grid-column-end: span 12;
+    grid-column-end: span 24;
     text-align: center;
   }
 }
