@@ -1,0 +1,22 @@
+
+{:description
+ [[:p [:b "http.hx"]
+   " is a plugin for "
+   [:a
+    {:href   "https://helix-editor.com/"
+     :target "_blank"} "Helix"] " that lets you trigger http requests via "
+   [:code "curl"]
+   ", getting the response back in a " [:code "*scratch*"]
+   " buffer. It effectively mimics VSCode’s REST client
+    plugin and uses the same syntax, without needing its own backend."]
+  [:figure
+   [:img
+    {:alt     "An asciinema recording of interacting with an HTTP API in Helix"
+     :height  787
+     :loading "lazy"
+     :src     "/static/http.gif"
+     :width   1171}]
+   [:figcaption
+    "An asciinema recording of interacting with an HTTP API in Helix"]]]
+ :title "http.hx"
+ :url "https://github.com/waddie/http.hx"}
