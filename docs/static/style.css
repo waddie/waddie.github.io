@@ -606,10 +606,12 @@ main {
         border-bottom: var(--measure-midget1) solid var(--text);
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         margin-bottom: var(--measure-medium3);
 
         div {
           margin-top: 0;
+          padding-top: var(--measure-basic);
         }
       }
     }
