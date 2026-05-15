@@ -486,7 +486,7 @@ header {
         margin-right: var(--measure-medium1);
 
         @media (max-width: 800px) {
-          font-size: var(--measure-small5);
+          font-size: var(--measure-basic);
         }
 
         a {
