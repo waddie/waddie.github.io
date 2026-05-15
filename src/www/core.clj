@@ -32,7 +32,9 @@
   (time (let [posts (get-posts)
               projs (get-projects)]
           (doseq [post posts]
-            (write-page! (str (name (:slug post)) ".html") (blog posts post)))
+            (let [[_ curr _] post]
+              (write-page! (str (name (:slug curr)) ".html")
+                           (blog posts post))))
           (write-page! "about.html" (about))
           (write-page! "cv.html" (cv))
           (write-page! "index.html" (blog posts))

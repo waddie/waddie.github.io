@@ -61,3 +61,11 @@
   (doseq [f (apply conj (get-static) (get-fonts))]
     (io/copy (io/file f)
              (io/file (s/replace f #"(\/f\/|\/static\/)" "/docs$1")))))
+
+(defn with-neighbours
+  {:malli/schema [:function
+                  [:=>
+                   [:cat [:sequential :any]]
+                   [:sequential [:vector [:maybe :any]]]]]}
+  [xs]
+  (map vector (cons nil xs) xs (concat (rest xs) [nil])))

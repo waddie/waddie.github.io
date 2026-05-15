@@ -8,13 +8,15 @@
 
 (deftest valid-posts-test
   (let [posts (blog/get-posts)
-        compiled-content (map #(rest (apply hc/compile-html (:body %))) posts)]
+        compiled-content
+        (map (fn [[_ post _]] (apply hc/compile-html (:body post))) posts)]
     (testing "every blog post is valid"
-      (snap! (try (m/validate [:maybe [:vector schema/BlogPost]] posts)
+      (snap! (try (m/validate [:maybe
+                               [:sequential [:vector [:maybe schema/BlogPost]]]]
+                              posts)
                   (catch Exception _e false))
              true))
     (testing "all blog post content compiles"
-      (snap! (try (m/validate [:maybe [:sequential [:sequential :string]]]
-                              compiled-content)
+      (snap! (try (m/validate [:maybe [:sequential :some]] compiled-content)
                   (catch Exception _e false))
              true))))

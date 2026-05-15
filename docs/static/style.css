@@ -394,8 +394,11 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: var(--f-body);
   font-weight: 450;
+  min-height: 100dvh;
 
   b,
   strong {
@@ -535,6 +538,7 @@ header {
 
 main {
   display: grid;
+  flex: 1;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0;
@@ -580,7 +584,7 @@ main {
     }
   }
 
-  nav {
+  > nav {
     grid-column-end: span 6;
     grid-column-start: 2;
     grid-row: 1;
@@ -746,6 +750,46 @@ main {
 
       &.cv {
         grid-row: 2;
+      }
+    }
+
+    nav {
+      margin-top: calc(1 / var(--golden-ratio) * var(--measure-medium3));
+
+      ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 55ch;
+
+        li,
+        li + li {
+          margin-top: 0;
+
+          &.prev {
+            text-align: left;
+
+            span::before {
+              content: "← Previous: ";
+              visibility: visible;
+            }
+          }
+
+          &.next {
+            margin-left: auto;
+            text-align: right;
+
+            span::before {
+              content: "Next: ";
+              visibility: visible;
+            }
+
+            &.next span::after {
+              content: " →";
+              visibility: visible;
+            }
+          }
+        }
       }
     }
 

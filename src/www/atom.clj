@@ -5,7 +5,9 @@
 (defn feed
   "Render the Atom feed to Hiccup."
   {:malli/schema [:function
-                  [:=> [:cat [:vector schema/BlogPost]] [:vector :some]]]}
+                  [:=>
+                   [:cat [:sequential [:vector [:maybe schema/BlogPost]]]]
+                   [:vector :some]]]}
   [posts]
   [:feed {:xmlns "http://www.w3.org/2005/Atom"}
    [:id "https://www.tomwaddington.dev/"]
@@ -15,7 +17,7 @@
      :rel  "self"}]
    [:title "Tom Waddington’s Blog"]
    [:updated (format-date-iso (java.util.Date.))]
-   (map (fn [post]
+   (map (fn [[_ post _]]
           (let [published (format-date-iso (:published post))
                 updated   (if (:updated post)
                             (format-date-iso (:updated post))
