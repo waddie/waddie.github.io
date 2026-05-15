@@ -211,8 +211,7 @@
    [:a
     {:href   "https://www.helix-plugins.com/"
      :target "_blank"} "Helix Plugins"] "."]
-  [:hr {:noshade true}]
-  [:div.embed
+  [:div.embed.end
    [:iframe
     {:allow
      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
