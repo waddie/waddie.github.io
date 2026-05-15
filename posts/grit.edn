@@ -1,5 +1,5 @@
 {:body
- [[:p "TODO"]
+ [[:p "testing"]
   [:div.embed.end
    [:iframe
     {:allow
@@ -9,7 +9,7 @@
      :height 315
      :referrerpolicy "strict-origin-when-cross-origin"
      :src "https://www.youtube-nocookie.com/embed/rBb3CVn7ZeI"
-     :title "Διόδια - Μαρίζα Ριζου @ VOX / Μαρτ 23"
+     :title "Διόδια - Μαρίζα Ρίζου @ VOX / Μαρτ 23"
      :width 560}]]]
  ; :published #inst "2025-09-27T21:00:00Z"
  :slug :grit

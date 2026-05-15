@@ -327,12 +327,12 @@ hr {
   border-color: var(--text);
   margin-top: calc(1 / var(--golden-ratio) * var(--measure-medium3));
   margin-bottom: calc(1 / var(--golden-ratio) * var(--measure-medium3));
-  max-width: 55ch;
+  max-width: 60ch;
 }
 
 .embed {
   margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
-  max-width: 55ch;
+  max-width: 60ch;
   overflow-x: hidden;
 
   &.end {
@@ -554,7 +554,7 @@ main {
   figure {
     margin-bottom: calc(1 / var(--golden-ratio) * var(--measure-basic));
     margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
-    max-width: 55ch;
+    max-width: 60ch;
 
     figcaption {
       font-size: var(--measure-small5);
@@ -563,7 +563,7 @@ main {
       margin-left: auto;
       margin-right: auto;
       margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
-      max-width: 55ch;
+      max-width: 60ch;
       text-wrap: pretty;
       font-family: var(--f-body);
 
@@ -759,7 +759,7 @@ main {
       ol {
         display: flex;
         flex-direction: row;
-        max-width: 55ch;
+        max-width: 60ch;
 
         li,
         li + li {
@@ -800,7 +800,7 @@ main {
     ol,
     p,
     ul {
-      max-width: 55ch;
+      max-width: 60ch;
     }
 
     .publication-date {
