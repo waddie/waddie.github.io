@@ -1,5 +1,6 @@
 (ns www.core
   "Functions for testing and building."
+  (:gen-class)
   (:require [cognitect.test-runner.api :as test-runner]
             [hiccup.page :as page]
             [hiccup2.core :as h]

@@ -1,5 +1,17 @@
-{:body     [[:p "TODO"]]
+{:body
+ [[:p "TODO"]
+  [:div.embed.end
+   [:iframe
+    {:allow
+     "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     :allowfullscreen true
+     :frameborder 0
+     :height 315
+     :referrerpolicy "strict-origin-when-cross-origin"
+     :src "https://www.youtube-nocookie.com/embed/rBb3CVn7ZeI"
+     :title "Διόδια - Μαρίζα Ριζου @ VOX / Μαρτ 23"
+     :width 560}]]]
  ; :published #inst "2025-09-27T21:00:00Z"
- :slug     :grit
+ :slug :grit
  :synopsis "On muscle memory, small annoyances, and trying new things."
- :title    "Grit"}
+ :title "Grit"}

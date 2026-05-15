@@ -38,7 +38,7 @@
               [:span (:title current-post)]
               (format-date-long (:published current-post))]])
           posts)] feed-link])
-  ([posts post]
+  ([posts [_ post _]]
    [:nav {:class "blog"}
     [:ol {:reversed true}
      (map (fn [[_ current-post _]]

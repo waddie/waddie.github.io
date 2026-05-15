@@ -216,12 +216,12 @@
     {:allow
      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
      :allowfullscreen true
-     :frameborder "0"
-     :height "315"
+     :frameborder 0
+     :height 315
      :referrerpolicy "strict-origin-when-cross-origin"
      :src "https://www.youtube-nocookie.com/embed/qBx2aeoNeqg"
-     :title "YouTube video player"
-     :width "560"}]]
+     :title "On the Halfway Line – School is Cool"
+     :width 560}]]
   [:h2 "Post updated on 2026-05-15"]
   [:p
    "Migrated from old hosting, updated the examples, reflected merged PRs, etc."]]

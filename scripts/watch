@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+watchman watch .
+
+watchman -- trigger . clj-rebuild \
+  'src/www/**' 'posts/**' 'about/**' 'cv/**' 'projects/**' 'f/**' 'static/**' \
+  -- clojure -X:run

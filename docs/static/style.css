@@ -722,7 +722,7 @@ main {
       li.active {
         a,
         > span {
-          span:first-child::after {
+          > span::after {
             visibility: visible;
           }
         }
@@ -759,7 +759,6 @@ main {
       ol {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         max-width: 55ch;
 
         li,

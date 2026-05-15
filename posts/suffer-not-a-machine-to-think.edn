@@ -1,7 +1,19 @@
 {:body
  [[:p
    "I’ll level with you. The very last thing I’ve ever wanted in my career is another
-    thousand-line pull request to code review."]]
+    thousand-line pull request to code review."]
+  [:p ""]
+  [:div.embed.end
+   [:iframe
+    {:allow
+     "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     :allowfullscreen true
+     :frameborder 0
+     :height 315
+     :referrerpolicy "strict-origin-when-cross-origin"
+     :src "https://www.youtube-nocookie.com/embed/lqG_HDApCrw"
+     :title "Nevermind the End – Tei Shi"
+     :width 60}]]]
  ; :published #inst "2025-08-30T15:23:00Z"
  :slug :suffer-not-a-machine-to-think
  :synopsis
