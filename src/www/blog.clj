@@ -105,21 +105,16 @@
                             ]]]
      (render-page
       {:body    [:main {:class "blog"}
-                 (reduce conj
-                         article
-                         (conj (:body curr)
-                               (match [(nil? prev) (nil? next)]
-                                 [true false] [:nav
-                                               [:ol
-                                                (neighbour-link next "next")]]
-                                 [false true] [:nav
-                                               [:ol
-                                                (neighbour-link prev "prev")]]
-                                 [false false] [:nav
-                                                [:ol
-                                                 (neighbour-link prev "prev")
-                                                 (neighbour-link next "next")]]
-                                 :else (throw (Exception. "Impossible post")))))
+                 (reduce conj article (:body curr))
+                 [:nav.neighbours
+                  [:ul
+                   (match [(nil? prev) (nil? next)]
+                     [true false] (list (neighbour-link next "next"))
+                     [false true] (list (neighbour-link prev "prev"))
+                     [false false] (list (neighbour-link prev "prev")
+                                         (neighbour-link next "next"))
+                     :else (throw (Exception. "Impossible post")))
+                  ]]
                  (nav posts post)]
        :post    curr
        :section :blog}))))

@@ -582,7 +582,8 @@ main {
     }
   }
 
-  > nav {
+  nav.blog,
+  nav.cv {
     grid-column-end: span 6;
     grid-column-start: 2;
     grid-row: 1;
@@ -730,6 +731,74 @@ main {
     }
   }
 
+  nav.neighbours {
+    grid-column-start: 8;
+    grid-column-end: span 16;
+    grid-row: 2;
+    margin-top: calc(1 / var(--golden-ratio) * var(--measure-medium3));
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      padding-left: 0;
+      max-width: var(--max-text-width);
+
+      li,
+      li + li {
+        margin-top: 0;
+
+        &.prev {
+          text-align: left;
+
+          span::before {
+            color: var(--link-visited);
+            content: "← Previous: ";
+            font-size: var(--measure-small5);
+            text-transform: uppercase;
+            visibility: visible;
+          }
+        }
+
+        &.next {
+          margin-left: auto;
+          text-align: right;
+
+          span::before {
+            color: var(--link-visited);
+            content: "Next: ";
+            font-size: var(--measure-small5);
+            text-transform: uppercase;
+            visibility: visible;
+          }
+
+          &.next span::after {
+            color: var(--link-visited);
+            content: " →";
+            font-size: var(--measure-small5);
+            text-transform: uppercase;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    a {
+      color: var(--article-link);
+      text-decoration-line: none;
+
+      &:active,
+      &:focus,
+      &:hover {
+        text-decoration-line: underline;
+      }
+
+      &:visited {
+        color: var(--article-link-visited);
+      }
+    }
+  }
+
   article {
     grid-column-start: 8;
     grid-column-end: span 16;
@@ -750,45 +819,6 @@ main {
 
       &.cv {
         grid-row: 2;
-      }
-    }
-
-    nav {
-      margin-top: calc(1 / var(--golden-ratio) * var(--measure-medium3));
-
-      ol {
-        display: flex;
-        flex-direction: row;
-        max-width: var(--max-text-width);
-
-        li,
-        li + li {
-          margin-top: 0;
-
-          &.prev {
-            text-align: left;
-
-            span::before {
-              content: "← Previous: ";
-              visibility: visible;
-            }
-          }
-
-          &.next {
-            margin-left: auto;
-            text-align: right;
-
-            span::before {
-              content: "Next: ";
-              visibility: visible;
-            }
-
-            &.next span::after {
-              content: " →";
-              visibility: visible;
-            }
-          }
-        }
       }
     }
 
