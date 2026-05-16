@@ -8,9 +8,8 @@
    [:a
     {:href   "https://helix-editor.com"
      :target "_blank"} "Helix"]
-   ", a modal editor, with tree-sitter and LSP support at its core, and a batteries-included
-   approach that feels like a natural fit with how I like to work. And it’s finally reached a
-   point where it’s viable for day-to-day Clojure development."]
+   ", a batteries-included modal editor that felt a more natural fit to me than Vim, despite decades of experience with the
+   latter. It’s finally reached a point where it’s viable for day-to-day Clojure development."]
   [:p
    "This post is about why I like it, and how I’m using it to write Clojure."]
   [:p
