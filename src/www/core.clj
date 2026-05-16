@@ -12,6 +12,7 @@
             [www.projects :refer [get-projects projects]]
             [www.robots :refer [write-robots!]]
             [www.atom :refer [feed]]
+            [www.cname :refer [write-cname!]]
             [www.sitemap :refer [sitemap]]
             [www.util :refer [copy-static-files!]]))
 
@@ -50,6 +51,7 @@
               (write-xml! "feed.atom" (feed posts))
               (write-xml! "sitemap.xml" (sitemap))
               (write-robots!)
+              (write-cname!)
               (copy-static-files!)))))
 
 (defn run-tests [] (time (test-runner/test nil)))
