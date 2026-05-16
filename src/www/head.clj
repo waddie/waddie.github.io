@@ -19,6 +19,7 @@
      :rel  "stylesheet"}]
    [:title title]
    [:script {:src "/static/htmx.min.js"}]
+   [:script {:src "/static/transition.js"}]
    [:link
     {:href "/static/favicon.ico"
      :rel  "icon"}]

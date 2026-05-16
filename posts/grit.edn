@@ -1,5 +1,5 @@
 {:body
- [[:p "testing"]
+ [[:p ""]
   [:div.embed.end
    [:iframe
     {:allow
