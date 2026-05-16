@@ -59,8 +59,9 @@
   {:malli/schema [:function [:=> :cat :nil]]}
   []
   (doseq [f (apply conj (get-static) (get-fonts))]
-    (io/copy (io/file f)
-             (io/file (s/replace f #"(\/f\/|\/static\/)" "/docs$1")))))
+    (let [destination (s/replace f #"(\/f\/|\/static\/)" "/docs$1")]
+      (io/make-parents destination)
+      (io/copy (io/file f) (io/file destination)))))
 
 (defn with-neighbours
   {:malli/schema [:function
