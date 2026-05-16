@@ -737,6 +737,11 @@ main {
     grid-row: 2;
     margin-top: calc(1 / var(--golden-ratio) * var(--measure-medium3));
 
+    @media (max-width: 1024px) {
+      grid-column-start: 2;
+      grid-column-end: span 22;
+    }
+
     ul {
       display: flex;
       flex-direction: row;
