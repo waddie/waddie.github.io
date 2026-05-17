@@ -134,6 +134,17 @@ select {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-new(root) {
+    animation: none;
+  }
+
+  ::view-transition-old(root) {
+    animation: none;
+
+  }
+}
+
 @font-face {
   font-display: swap;
   font-family: ibm-plex-sans;
