@@ -100,6 +100,7 @@ select {
   }
 }
 
+/*
 @view-transition {
   navigation: auto;
 }
@@ -144,6 +145,7 @@ select {
 
   }
 }
+*/
 
 @font-face {
   font-display: swap;
