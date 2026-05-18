@@ -1,0 +1,35 @@
+{:clojars "dev.skivi/skivi"
+ :description
+ [[:p [:b "skivi"]
+   " is a Clojure/PostgreSQL job scheduling library, a bit like "
+   [:a
+    {:href   "https://worker.graphile.org/"
+     :target "_blank"} "Graphile Worker"] " but for Clojure."]
+  [:p
+   "The code started life in 2012 as the mailer component of an application I was
+    building at Games Workshop, called Bernard. It was called Bernard for ease of
+    handwaving out of conversations with my non-technical line manager, who neither
+    wanted nor needed to hear the specific details of how our backend was going
+    to work, beyond “how’s Bernard coming along?”"]
+  [:p
+   "That project never saw the light of day, but I’ve been copying these 3 "
+   [:code ".clj"] " and " [:code ".sql"]
+   " files from one side-project to another ever since, migrating it from Oracle to
+   PostgreSQL and gradually modifying and extending it to various mail services along
+   the way."]
+  [:p
+   "At Medicspot, we used Graphile Worker pretty extensively to run our COVID-19
+   operation. I realised last year that my old mailer component was actually most of
+   the way to being a generic job scheduling library and started refactoring it as
+   a "
+   [:a
+    {:href   "https://polylith.gitbook.io/polylith"
+     :target "_blank"} "Polylith"] " library."]
+  [:p "I used Claude Code with the "
+   [:a
+    {:href   "https://github.com/juxt/allium"
+     :target "_blank"} [:code "juxt/allium skill"]]
+   " to get it over the line."]
+ ]
+ :title "skivi"
+ :url "https://github.com/waddie/skivi"}
