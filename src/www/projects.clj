@@ -1,6 +1,6 @@
 (ns www.projects
   "Functions for rendering the project page."
-  (:require [clojure.java.io :as io]
+  (:require [babashka.fs :as fs]
             [www.render :refer [render-page]]
             [www.schema :as schema]
             [www.util :refer [fetch-file-data]]))
@@ -11,9 +11,9 @@
   []
   (into []
         (sort #(compare (:title %1) (:title %2))
-              (map #(fetch-file-data (.getCanonicalPath %))
-                   (filter #(not= \. (first (.getName %)))
-                           (.listFiles (io/file "projects")))))))
+              (map #(fetch-file-data (str (fs/canonicalize %)))
+                   (filter #(not= \. (first (str (fs/file-name %))))
+                           (fs/list-dir "projects"))))))
 
 (defn projects
   "Render the projects index."

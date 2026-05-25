@@ -1,20 +1,16 @@
 (ns www.util
   "Utility functions."
-  (:require [clojure.edn :as edn]
-            [clojure.java.io :as io]
+  (:require [babashka.fs :as fs]
+            [clojure.edn :as edn]
             [clojure.string :as s]
-            [still.core :refer [snap!]])
-  (:import [java.io File FilenameFilter]))
+            [still.core :refer [snap!]]))
 
 (defn list-files
   "List files with suffix from directory."
   {:malli/schema [:function
                   [:=> [:cat :string :string] [:maybe [:sequential :file]]]]}
   [dir suffix]
-  (seq (.listFiles (File. dir)
-                   (reify
-                    FilenameFilter
-                      (accept [_this _dir name] (.endsWith name suffix))))))
+  (seq (fs/list-dir dir (str "*" suffix))))
 
 (defn fetch-file-data
   "Retrieve and parse an EDN file."
@@ -43,16 +39,16 @@
   "Fetch a list of fonts from the filesystem."
   {:malli/schema [:function [:=> :cat [:vector :string]]]}
   []
-  (into [] (map #(.getCanonicalPath %) (list-files "f" ".woff2"))))
+  (into [] (map #(str (fs/canonicalize %)) (list-files "f" ".woff2"))))
 
 (defn get-static
   "Fetch the static from the filesystem."
   {:malli/schema [:function [:=> :cat [:vector :string]]]}
   []
   (into []
-        (map #(.getCanonicalPath %)
-             (filter #(not= \. (first (.getName %)))
-                     (.listFiles (io/file "static"))))))
+        (map #(str (fs/canonicalize %))
+             (filter #(not= \. (first (str (fs/file-name %))))
+                     (fs/list-dir "static")))))
 
 (defn copy-static-files!
   "Copy static files to the target folder."
@@ -60,8 +56,8 @@
   []
   (doseq [f (apply conj (get-static) (get-fonts))]
     (let [destination (s/replace f #"(\/f\/|\/static\/)" "/docs$1")]
-      (io/make-parents destination)
-      (io/copy (io/file f) (io/file destination)))))
+      (fs/create-dirs (fs/parent (fs/path destination)))
+      (fs/copy (fs/path f) (fs/path destination)))))
 
 (defn with-neighbours
   {:malli/schema [:function

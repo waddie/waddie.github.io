@@ -1,8 +1,8 @@
 (ns www.core
   "Functions for testing and building."
   (:gen-class)
-  (:require [clojure.tools.build.api :as b]
-            [clojure.java.io :refer [make-parents]]
+  (:require [babashka.fs :as fs]
+            [clojure.tools.build.api :as b]
             [cognitect.test-runner.api :as test-runner]
             [hiccup.page :as page]
             [hiccup2.core :as h]
@@ -20,14 +20,14 @@
   "Write a page to a filename."
   [filename content]
   (let [path (str "docs/" filename)]
-    (make-parents path)
+    (fs/create-dirs (fs/parent (fs/path path)))
     (spit path content)))
 
 (defn write-xml!
   "Write a feed to a filename."
   [filename content]
   (let [path (str "docs/" filename)]
-    (make-parents path)
+    (fs/create-dirs (fs/parent (fs/path path)))
     (spit path
           (str (page/xml-declaration "UTF-8")
                (h/html {:escape-strings? false

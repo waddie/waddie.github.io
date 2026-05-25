@@ -22,8 +22,9 @@
                    :string]]}
   [{:keys [title post section body]}]
   (page/html5 {:lang "en-GB"}
-              (head {:post  post
-                     :title title})
+              (head {:post    post
+                     :section section
+                     :title   title})
               [:body {:data-hx-boost "true"} (header section) body
                (if (coll? post) (footer post) (footer))]))
 

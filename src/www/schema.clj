@@ -3,7 +3,7 @@
             [malli.registry :as mr]
             [malli.util :as mu]))
 
-(defn file? [x] (instance? java.io.File x))
+(defn file? [x] (instance? java.nio.file.Path x))
 
 (def BlogPost
   (-> [:map

@@ -1,5 +1,6 @@
 (ns www.sitemap
-  (:require [www.render :refer [format-date-iso]]
+  (:require [babashka.fs :as fs]
+            [www.render :refer [format-date-iso]]
             [www.util :refer [list-files]]))
 
 (defn get-html
@@ -7,7 +8,7 @@
   {:malli/schema [:function [:=> :cat [:vector :file]]]}
   []
   (into []
-        (sort #(compare (.getName %1) (.getName %2))
+        (sort #(compare (str (fs/file-name %1)) (str (fs/file-name %2)))
               (list-files "docs" ".html"))))
 
 (defn sitemap
@@ -17,10 +18,11 @@
   [:urlset {:xmlns "http://www.sitemaps.org/schemas/sitemap/0.9"}
    (map (fn [page] [:url
                     [:loc
-                     (str "https://www.tomwaddington.dev/" (.getName page))]
+                     (str "https://www.tomwaddington.dev/" (fs/file-name page))]
                     [:lastmod
                      (format-date-iso
                       (java.time.ZonedDateTime/ofInstant
-                       (java.time.Instant/ofEpochMilli (.lastModified page))
+                       (java.time.Instant/ofEpochMilli
+                        (fs/file-time->millis (fs/last-modified-time page)))
                        (java.time.ZoneId/of "Europe/London")))]])
         (get-html))])

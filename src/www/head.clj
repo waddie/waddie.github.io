@@ -5,7 +5,11 @@
 
 (defn head-html
   "Render the head section."
-  [title & rest]
+  [title
+   {:keys [section description]
+    :or
+    {description
+     "Tom Waddington is a computer programmer based in London, United Kingdom."}}]
   [:head
    [:meta {:charset "utf-8"}]
    [:meta
@@ -31,12 +35,16 @@
      :rel   "alternate"
      :title "Tom Waddington’s Blog"
      :type  "application/atom+xml"}]
+   (when (= :index section)
+     [:link
+      {:href "https://www.tomwaddington.dev/"
+       :rel  "canonical"}])
+   [:link
+    {:href "https://www.tomwaddington.dev/"
+     :rel  "home"}]
    [:meta
-    {:content
-     (or
-      (first rest)
-      "Tom Waddington is a computer programmer based in London, United Kingdom.")
-     :name "description"}]
+    {:content description
+     :name    "description"}]
    [:meta
     {:content "https://github.com/waddie/waddie.github.io/"
      :name    "generator"}]])
@@ -52,11 +60,11 @@
                      [:title {:optional true} [:maybe :string]]
                      [:post {:optional true} [:maybe schema/BlogPost]]]]
                    [:vector :some]]]}
-  [{:keys [title post]}]
+  [{:keys [title post section]}]
   (match [(some? title) (some? (:title post))]
     [true true] (head-html (str (:title post) " | Blog | Tom Waddington")
                            (:synopsis post))
     [_ true] (head-html (str (:title post) " | Blog | Tom Waddington")
                         (:synopsis post))
-    [true _] (head-html (str title " | Tom Waddington"))
-    :else (head-html "Tom Waddington")))
+    [true _] (head-html (str title " | Tom Waddington") {:section section})
+    :else (head-html "Tom Waddington" {:section section})))

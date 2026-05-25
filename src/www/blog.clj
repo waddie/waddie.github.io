@@ -13,7 +13,7 @@
   []
   (with-neighbours (sort #(compare (:published %2) (:published %1))
                          (filter :published
-                                 (map #(fetch-file-data (.getCanonicalPath %))
+                                 (map #(fetch-file-data (str %))
                                       (list-files "posts" ".edn"))))))
 
 (defn nav

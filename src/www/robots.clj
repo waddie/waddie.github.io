@@ -1,12 +1,12 @@
 (ns www.robots
-  (:require [clojure.java.io :refer [make-parents]]))
+  (:require [babashka.fs :as fs]))
 
 (defn write-robots!
   "Write robots.txt to the target folder."
   {:malli/schema [:function [:=> :cat :nil]]}
   []
   (let [path "docs/robots.txt"]
-    (make-parents path)
+    (fs/create-dirs (fs/parent (fs/path path)))
     (spit
      path
      "User-agent: *
