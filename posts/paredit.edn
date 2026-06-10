@@ -1,6 +1,6 @@
 {:body
  [[:p
-   "I’ll level with you: I’m a long-time Clojurer, but I’ve never been much of a Pareditor."]
+   "I’ll level with you, I’m a long-time Clojurer but I’ve never been much of a Pareditor."]
   [:p
    "Thanks to the first-class tree-sitter support in Helix, much of the functionality provided by Paredit
    plug-ins in other editors has equivalents available by default. As I described in "
