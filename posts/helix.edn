@@ -1,7 +1,7 @@
 {:body
  [
   [:p
-   "Clojure programmers are spoiled for choice when it comes to editors, with mature, featureful plugins available
+   "Clojure programmers are spoiled for choice when it comes to editors, with mature, featureful plug-ins available
    for Emacs, Vim/NeoVim and VSCode, or Cursive for the full-fat IDE experience."]
   [:p
    "But a few years ago, I fell in love with "
@@ -16,7 +16,7 @@
    "Note that, where it would be helpful for you to see exactly what I’m typing, I’ve enabled the "
    [:a
     {:href   "https://github.com/HeitorAugustoLN/showkeys.hx"
-     :target "_blank"} "showkeys.hx"] " plugin in Helix and "
+     :target "_blank"} "showkeys.hx"] " plug-in in Helix and "
    [:a {:href "https://github.com/nstefan002/screenkey.nvim"} "Screenkey"]
    " in NeoVim to display the keystrokes in the recordings. I don’t have that active in daily use."]
   [:h2 "A post-modern text editor"]
@@ -154,7 +154,7 @@
    ", and a fork of Helix that uses Steel to provide a "
    [:a
     {:href   "https://github.com/mattwparas/helix/tree/steel-event-system"
-     :target "_blank"} "plugin system"]
+     :target "_blank"} "plug-in system"]
    ", which has been blessed by the Helix team as the official
    solution."]
   [:p
@@ -206,9 +206,9 @@
     to ensure each RE and P would arrive in the order of submission that I didn’t think through properly), but it
     does have a configurable timeout, so I haven’t really missed it so far."]
   [:p
-   "Note that you can find links to this and to other early Helix plugins at "
+   "Note that you can find links to this and to other early Helix plug-ins at "
    [:a
-    {:href   "https://www.helix-plugins.com/"
+    {:href   "https://www.helix-plug-ins.com/"
      :target "_blank"} "Helix Plugins"] "."]
   [:div.embed.end
    [:iframe

@@ -3,7 +3,7 @@
  [[:p
    "A Paredit implementation for "
    [:a {:href "https://helix-editor.com/"} "Helix"]
-   " (with the Steel plugin system), inspired by "
+   " (with the Steel plug-in system), inspired by "
    [:a
     {:href   "https://github.com/julienvincent/nvim-paredit"
      :target "_blank"} "nvim-paredit"]

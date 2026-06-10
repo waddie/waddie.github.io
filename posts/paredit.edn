@@ -1,4 +1,3 @@
-
 {:body
  [[:p
    "I’ll level with you: I’m a long-time Clojurer, but I’ve never been much of a Pareditor."]
@@ -45,17 +44,16 @@
      :width  787}]
    [:figcaption
     "Slurp your barf to your heart’s content."]]
-
   [:p
    "As with my "
    [:a
     {:href   "https://github.com/waddie/nrepl.hx"
-     :target "_blank"} "nREPL.hx"] " plugin, you will need to be running "
+     :target "_blank"} "nREPL.hx"] " plug-in, you will need to be running "
    [:a
     {:href   "https://github.com/mattwparas/helix/tree/steel-event-system"
      :target "_blank"} "the Helix Steel plug-in fork"]
    " to use this. But the latest word is that Steel will be landing in Helix master imminently, as soon as the
-    ongoing workspace trust work is finished and released."]
+    ongoing and urgent workspace trust piece is finished and released."]
   [:p
    "Like I say, I’ve never been much for Paredit in the past. Previously, my preferred editor has never supported
     it well. So, please raise an issue if something isn’t working or I’ve missed the point of what any of these
