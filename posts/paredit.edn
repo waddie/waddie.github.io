@@ -1,6 +1,60 @@
 
 {:body
- [[:p ""]
+ [[:p
+   "I’ll level with you: I’m a long-time Clojurer, but I’ve never been much of a pareditor."]
+  [:p
+   "Thanks to the first-class tree-sitter support in Helix, much of the functionality provided by Paredit
+   plug-ins in other editors has equivalents available by default. As I described in "
+   [:a {:href "./helix-and-clojure.html"}
+    "my previous post about Helix and Clojure"]
+   ", there are built-in motion and selection commands for navigating about the syntax tree parsed by
+   tree-sitter."]
+  [:p
+   "What Helix lacks are the structural editing commands provided by Paredit – slurping, barfing, dragging,
+    raising and splicing. Until now!"]
+  [:p
+   "Julien Vincent’s "
+   [:a
+    {:href   "https://github.com/julienvincent/nvim-paredit"
+     :target "_blank"} "nvim-paredit for NeoVim"]
+   " demonstrates a comparatively lightweight approach to Paredit, leaning on tree-sitter for parsing. Since
+    Helix already relies on tree-sitter, this looked like a promising solution. I made an initial attempt at
+    adding the functionality last year but, at that time, the Steel Scheme plug-in branch didn’t expose any
+    tree-sitter bindings. Implementing everything from scratch, knowing a much simpler solution would probably
+    be viable someday, seemed like a waste of effort, so I abandoned it."]
+  [:p
+   "The Steel branch gained a full set of tree-sitter bindings in February and this week I finally got around to
+   revisiting the idea."]
+  [:p
+   [:a
+    {:href   "https://github.com/waddie/paredit.hx"
+     :target "_blank"} "paredit.hx"]
+   " is a Helix plug-in that completes the set of Paredit operations in what I hope is a suitably Helix-ish
+    fashion. Support is currently built-in for Clojure, Common Lisp, Fennel, Janet and Scheme."]
+  [:p
+   "I’ve provided suggested keybindings for normal and select modes that puts these operations under "
+   [:code "&lt;space&gt;.&lt;"] " and " [:code "&lt;space&gt;.&gt;"]
+   ", for backwards and forwards operations respectively, with the direction-agnostic operations duplicated
+    in both. But they’re completely regular Helix commands that can be bound to any key combination you prefer,
+    if you already have muscle memory built up from another editor."]
+  [:figure
+   [:img
+    {:alt    "Barfing and slurping in Helix with paredit.hx"
+     :height 1171
+     :src    "/static/hx-barf.gif"
+     :width  787}]
+   [:figcaption
+    "Slurp your barf to your heart’s content."]]
+  [:p
+   "As with my "
+   [:a
+    {:href   "https://github.com/waddie/nrepl.hx"
+     :target "_blank"} "nREPL.hx"] " plugin, you will need to be running "
+   [:a
+    {:href   "https://github.com/mattwparas/helix/tree/steel-event-system"
+     :target "_blank"} "the Helix Steel plug-in fork"]
+   " to use this. But the latest word is that Steel will be landing in Helix master imminently, as soon as the
+    ongoing workspace trust work is finished and released."]
   [:div.embed.end
    [:iframe
     {:allow
@@ -12,7 +66,7 @@
      :src "https://www.youtube-nocookie.com/embed/JrhS-HCYq_M"
      :title "Drag Days – Guided by Voices"
      :width 560}]]]
- ; :published #inst "2026-06-10T21:00:00Z"
+ :published #inst "2026-06-10T21:00:00Z"
  :slug :paredit-helix
  :synopsis "Barfing and slurping."
  :title "Parediting in Helix"}
