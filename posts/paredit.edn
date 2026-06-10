@@ -1,7 +1,7 @@
 
 {:body
  [[:p
-   "I’ll level with you: I’m a long-time Clojurer, but I’ve never been much of a pareditor."]
+   "I’ll level with you: I’m a long-time Clojurer, but I’ve never been much of a Pareditor."]
   [:p
    "Thanks to the first-class tree-sitter support in Helix, much of the functionality provided by Paredit
    plug-ins in other editors has equivalents available by default. As I described in "
@@ -45,6 +45,7 @@
      :width  787}]
    [:figcaption
     "Slurp your barf to your heart’s content."]]
+
   [:p
    "As with my "
    [:a
@@ -55,6 +56,10 @@
      :target "_blank"} "the Helix Steel plug-in fork"]
    " to use this. But the latest word is that Steel will be landing in Helix master imminently, as soon as the
     ongoing workspace trust work is finished and released."]
+  [:p
+   "Like I say, I’ve never been much for Paredit in the past. Previously, my preferred editor has never supported
+    it well. So, please raise an issue if something isn’t working or I’ve missed the point of what any of these
+    operations are intended to achieve in other editors."]
   [:div.embed.end
    [:iframe
     {:allow
