@@ -31,5 +31,6 @@
      :target "_blank"} [:code "juxt/allium skill"]]
    " to get it over the line."]
  ]
+ :slug :skivi
  :title "skivi"
  :url "https://github.com/waddie/skivi"}

@@ -59,7 +59,7 @@
                     [:map
                      [:title {:optional true} [:maybe :string]]
                      [:post {:optional true} [:maybe schema/BlogPost]]]]
-                   [:vector :some]]]}
+                   [:vector [:maybe :some]]]]}
   [{:keys [title post section]}]
   (match [(some? title) (some? (:title post))]
     [true true] (head-html (str (:title post) " | Blog | Tom Waddington")

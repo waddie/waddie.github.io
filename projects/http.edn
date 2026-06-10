@@ -18,5 +18,6 @@
      :width   1171}]
    [:figcaption
     "An asciinema recording of interacting with an HTTP API in Helix"]]]
+ :slug :http
  :title "http.hx"
  :url "https://github.com/waddie/http.hx"}

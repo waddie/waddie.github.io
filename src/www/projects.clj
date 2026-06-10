@@ -15,6 +15,15 @@
                    (filter #(not= \. (first (str (fs/file-name %))))
                            (fs/list-dir "projects"))))))
 
+; (defn nav
+;   "Render shortcut nav."
+;   {:malli/schema [:function
+;                   [:=> [:cat [:vector schema/Project]] [:vector :some]]]}
+;   [projects]
+;   [:nav {:class "cv"} github-link tangled-link linkedin-link email-link
+;    [:ul {:class "quicklinks"} (experience-quicklinks data)
+;     (education-quicklinks data)]])
+
 (defn projects
   "Render the projects index."
   {:malli/schema [:function [:=> [:cat [:vector schema/Project]] :string]]}
@@ -32,6 +41,7 @@
                             [:li
                              [:a
                               {:href   (:url project)
+                               :id     (name (:slug project))
                                :target "_blank"} [:span (:title project)]]
                              (reduce
                               conj

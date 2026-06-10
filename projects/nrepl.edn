@@ -17,5 +17,6 @@
      :width 1171}]
    [:figcaption
     "An asciinema recording of interacting with a Clojure nREPL in Helix."]]]
+ :slug :nrepl
  :title "nREPL.hx"
  :url "https://github.com/waddie/nrepl.hx"}

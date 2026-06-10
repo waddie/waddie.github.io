@@ -19,5 +19,6 @@
    [:figcaption
     "An asciinema recording of using " [:i "still"]
     " in Helix, via nrepl.hx."]]]
+ :slug :still
  :title "still"
  :url "https://github.com/waddie/still"}

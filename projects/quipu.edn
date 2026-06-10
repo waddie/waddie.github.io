@@ -9,5 +9,6 @@
    "There are lots of tools out there like this, but everything else I tried had some problem with my environment, or couldn’t script modified keys, or didn’t work with TUIs. So, I fired up Claude Code and built my own."]
   [:p
    "The quipu repo also includes a tree-sitter grammar, so editing the scripts looks nice."]]
+ :slug :quipu
  :title "quipu"
  :url "https://github.com/waddie/quipu"}

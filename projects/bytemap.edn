@@ -6,5 +6,6 @@
     {:href   "https://github.com/ianthehenry/bytemap"
      :target "_blank"} "bytemap"]
    ", a text-based graphics library with functions for plotting graphs."]]
+ :slug :bytemap
  :title "bytemap.clj"
  :url "https://github.com/waddie/bytemap.clj"}

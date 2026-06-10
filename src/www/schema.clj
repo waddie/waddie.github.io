@@ -18,6 +18,7 @@
 (def Project
   (-> [:map
        [:description [:vector :some]]
+       [:slug :keyword]
        [:title :string]
        [:url :string]
        [:clojars {:optional true} :string]]

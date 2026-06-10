@@ -1,0 +1,8 @@
+
+{:description
+ [[:p
+   "A paredit implementation for Helix (with the Steel plugin system). Just the bits Helix doesn’t already do with tree-sitter textobjects."]
+ ]
+ :slug :paredit
+ :title "paredit.hx"
+ :url "https://github.com/waddie/paredit.hx"}
