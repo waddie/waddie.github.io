@@ -15,14 +15,17 @@
                    (filter #(not= \. (first (str (fs/file-name %))))
                            (fs/list-dir "projects"))))))
 
-; (defn nav
-;   "Render shortcut nav."
-;   {:malli/schema [:function
-;                   [:=> [:cat [:vector schema/Project]] [:vector :some]]]}
-;   [projects]
-;   [:nav {:class "cv"} github-link tangled-link linkedin-link email-link
-;    [:ul {:class "quicklinks"} (experience-quicklinks data)
-;     (education-quicklinks data)]])
+(defn nav
+  "Render shortcut nav."
+  {:malli/schema [:function
+                  [:=> [:cat [:vector schema/Project]] [:vector :some]]]}
+  [projects]
+  [:nav {:class "projects"}
+   [:ul {:class "quicklinks"}
+    (map (fn [project] [:li
+                        [:a {:href (str "#" (name (:slug project)))}
+                         (:title project)]])
+         projects)]])
 
 (defn projects
   "Render the projects index."
@@ -60,6 +63,6 @@
                                            ".svg")}]]])]
                               (:description project))]))
                          list
-                         projects)]]
+                         projects)] (nav projects)]
       :section :projects
       :title   title})))

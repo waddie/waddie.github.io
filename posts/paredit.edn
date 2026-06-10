@@ -1,0 +1,18 @@
+
+{:body
+ [[:p ""]
+  [:div.embed.end
+   [:iframe
+    {:allow
+     "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     :allowfullscreen true
+     :frameborder 0
+     :height 315
+     :referrerpolicy "strict-origin-when-cross-origin"
+     :src "https://www.youtube-nocookie.com/embed/JrhS-HCYq_M"
+     :title "Drag Days – Guided by Voices"
+     :width 560}]]]
+ ; :published #inst "2026-06-10T21:00:00Z"
+ :slug :paredit-helix
+ :synopsis "Barfing and slurping."
+ :title "Parediting in Helix"}

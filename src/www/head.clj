@@ -63,8 +63,10 @@
   [{:keys [title post section]}]
   (match [(some? title) (some? (:title post))]
     [true true] (head-html (str (:title post) " | Blog | Tom Waddington")
-                           (:synopsis post))
+                           {:description (:synopsis post)
+                            :section     section})
     [_ true] (head-html (str (:title post) " | Blog | Tom Waddington")
-                        (:synopsis post))
+                        {:description (:synopsis post)
+                         :section     section})
     [true _] (head-html (str title " | Tom Waddington") {:section section})
     :else (head-html "Tom Waddington" {:section section})))
