@@ -456,7 +456,7 @@
    pulling elements into/out of the front/back of the current list), splitting/joining lists or strings, and
    splicing (a shorter way of achieving the match/delete operation above)."]
   [:p
-   "These operations all help you edit code without having to manually edit or move and parentheses:"]
+   "These operations all help you edit code without having to manually edit or move parentheses:"]
   [:figure
    [:img
     {:alt    "Slurping a form in Helix"
