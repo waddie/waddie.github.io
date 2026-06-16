@@ -23,7 +23,7 @@
      :width  1498}] [:figcaption "heard you like parentheses"]]
   [:h2 "Prerequisites"]
   [:ul
-   [:li "I assume you already have " [:code "git"] "installed."]
+   [:li "I assume you already have " [:code "git"] " installed."]
    [:li "You’ll need to have the "
     [:a
      {:href   "https://rust-lang.org/tools/install/"
@@ -274,7 +274,7 @@
    [:pre
     [:code
      [:span {:class "comment comment-line"}
-      "; the operator comes first, inside the parens"] "\n"
+      "; the function comes first, inside the parens"] "\n"
      [:span {:class "punctuation punctuation-bracket"} "("]
      [:span {:class "operator"} "+"] " "
      [:span {:class "constant constant-numeric"} "1"] " "
