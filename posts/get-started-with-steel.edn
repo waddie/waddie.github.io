@@ -407,7 +407,7 @@
    "(Strictly speaking, " [:code "->"] " and " [:code "->>"]
    " are aliases for macros called "
    [:code "~>"] " and " [:code "~>>"]
-   ". The hyphenated aliases are standard in languages like Clojure and, in my opinion, slightly easier
+   ". The hyphenated aliases are standard in languages like Clojure and are, in my opinion, slightly easier
    to type.)"]
   [:h2 "Structural editing"]
   [:p
