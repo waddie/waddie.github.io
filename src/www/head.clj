@@ -10,44 +10,45 @@
     :or
     {description
      "Tom Waddington is a computer programmer based in London, United Kingdom."}}]
-  [:head
-   [:meta {:charset "utf-8"}]
-   [:meta
-    {:content "width=device-width,initial-scale=1.0"
-     :name    "viewport"}]
-   [:link
-    {:href "/static/style.css"
-     :rel  "stylesheet"}]
-   [:link
-    {:href "/static/highlight.css"
-     :rel  "stylesheet"}]
-   [:title title]
-   [:script {:src "/static/htmx.min.js"}]
-   ; [:script {:src "/static/transition.js"}]
-   [:link
-    {:href "/static/favicon.ico"
-     :rel  "icon"}]
-   [:link
-    {:href "/static/apple-touch-icon.png"
-     :rel  "apple-touch-icon"}]
-   [:link
-    {:href  "/feed.atom"
-     :rel   "alternate"
-     :title "Tom Waddington’s Blog"
-     :type  "application/atom+xml"}]
-   (when (= :index section)
+  (let [cachebuster (quot (System/currentTimeMillis) 1000)]
+    [:head
+     [:meta {:charset "utf-8"}]
+     [:meta
+      {:content "width=device-width,initial-scale=1.0"
+       :name    "viewport"}]
+     [:link
+      {:href (str "/static/style.css?v=" cachebuster)
+       :rel  "stylesheet"}]
+     [:link
+      {:href (str "/static/highlight.css?v=" cachebuster)
+       :rel  "stylesheet"}]
+     [:title title]
+     [:script {:src (str "/static/htmx.min.js?v=" cachebuster)}]
+     ; [:script {:src "/static/transition.js"}]
+     [:link
+      {:href "/static/favicon.ico"
+       :rel  "icon"}]
+     [:link
+      {:href "/static/apple-touch-icon.png"
+       :rel  "apple-touch-icon"}]
+     [:link
+      {:href  "/feed.atom"
+       :rel   "alternate"
+       :title "Tom Waddington’s Blog"
+       :type  "application/atom+xml"}]
+     (when (= :index section)
+       [:link
+        {:href "https://www.tomwaddington.dev/"
+         :rel  "canonical"}])
      [:link
       {:href "https://www.tomwaddington.dev/"
-       :rel  "canonical"}])
-   [:link
-    {:href "https://www.tomwaddington.dev/"
-     :rel  "home"}]
-   [:meta
-    {:content description
-     :name    "description"}]
-   [:meta
-    {:content "https://github.com/waddie/waddie.github.io/"
-     :name    "generator"}]])
+       :rel  "home"}]
+     [:meta
+      {:content description
+       :name    "description"}]
+     [:meta
+      {:content "https://github.com/waddie/waddie.github.io/"
+       :name    "generator"}]]))
 
 (defn head
   "Render the head section as Hiccup, appropriately for the type of page.

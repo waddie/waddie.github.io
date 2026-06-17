@@ -1,20 +1,17 @@
 .dathan {
-  background-color: var(--code-bg);
   margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
   max-width: var(--max-text-width);
   overflow-y: scroll;
 
-  pre,
-  code {
-    background-color: var(--code-bg);
-  }
-
   pre {
+    background-color: var(--code-bg);
     line-height: 1.5;
     padding: var(--measure-small1);
+    min-width: fit-content;
   }
 
   code {
+    background-color: unset;
     padding: 0;
   }
 
