@@ -4,8 +4,7 @@
    [:a {:href "https://helix-editor.com/"} "Helix"]
    " (with the Steel plug-in system), inspired by "
    [:a
-    {:href   "https://github.com/julienvincent/nvim-paredit"
-     :target "_blank"} "nvim-paredit"]
+    {:href "https://github.com/julienvincent/nvim-paredit"} "nvim-paredit"]
    "."]
   [:p
    "Just the bits Helix doesn’t already do with tree-sitter nodes and textobjects: slurping, barfing, dragging,

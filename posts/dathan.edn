@@ -1,0 +1,165 @@
+{:body
+ [[:p
+   "I like syntax highlighting. No subtlety for me. Make it garish. Make it look like an
+    explosion in a sweet shop."]
+  [:p
+   "I don’t like most of the common ways to get syntax highlighted code onto the web: pygments,
+    chroma, highlight.js, etc. Their lexers always do things at least slightly differently
+    from the way it looks in my editor. And different is obviously worse."]
+  [:p
+   [:a {:href "https://helix-editor.com/"} "Helix"]
+   " ships with tree-sitter support and highlight queries for hundreds
+    of languages, and with hundreds of themes. I spend all day looking at it. That’s the way things
+    are supposed to look. tree-sitter parsing even gives us semantic classes for every symbol. Nearly
+    all the relevant Helix functionality is already packaged as a crate. Why can’t we use all this
+    painstakingly-wrought machinery outside the editor?"]
+  [:p
+   "Turns out, we can."]
+  [:p
+   [:a
+    {:href "https://github.com/waddie/dathan"}
+    [:code
+     {:title
+      "It’s Scots Gaelic for “colours”, pronounced a bit like “da-han”, not like “nathan” with a “d”"}
+     "dathan"]]
+   " is a command-line utility for syntax highlighting code exactly the same way
+    Helix does it, by piggybacking on Helix’s comprehensive runtime folder (plus any
+    additions or customisations in your "
+   [:code ".config"]
+   ")."]
+  [:p "By default, it will output ANSI escape codes to the terminal:"]
+  [:figure
+   [:img
+    {:alt
+     "Opening a file in Helix, then outputting it to terminal with the same theme using dathan"
+     :height 595
+     :src "static/dathan.gif"
+     :width 787}]
+   [:figcaption
+    "Viewing the same file with the same theme in Helix and with "
+    [:code "dathan"] ". " [:code "asciinema"]
+    " doesn’t record the background colour for some reason,
+    so you’ll have to take my word for it, but all three versions are identical."]]
+  [:p
+   "Or you can output in HTML or Hiccup, with either semantic classes or inline styles:"]
+  [:div.dathan
+   [:pre
+    [:code [:span {:class "cli function"} "dathan"] " "
+     [:span {:class "variable variable-parameter"} "fizzbuzz.clj"] " \\\n  "
+     [:span {:class "variable variable-parameter"} "--theme"] " "
+     [:span {:class "variable variable-parameter"} "hazyland"] " "
+     [:span {:class "variable variable-parameter"} "--format"] " "
+     [:span {:class "variable variable-parameter"} "edn-hiccup"] " "
+     [:span {:class "variable variable-parameter"} "--inline"] " "
+     [:span {:class "operator"} "|"] " " [:span {:class "function"} "pbcopy"]]]]
+  [:p
+   "That gives me Hiccup ready to paste directly into a post, which renders like this:"]
+  [:div.dathan
+   [:pre {:style "color: #eee4ff; background-color: #171219"}
+    [:code [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #eee4ff"} "ns"] " "
+     [:span {:style "color: #ff8fc4"} "fizzbuzz"] "\n  "
+     [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #f9bbff"} ":require"] " "
+     [:span {:style "color: #cbbcd3"} "["]
+     [:span {:style "color: #eee4ff"} "clojure.core.match"] " "
+     [:span {:style "color: #f9bbff"} ":refer"] " "
+     [:span {:style "color: #cbbcd3"} "["]
+     [:span {:style "color: #eee4ff"} "match"]
+     [:span {:style "color: #cbbcd3"} "]" "]" ")" ")"] "\n\n"
+     [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #eee4ff"} "defn"] " "
+     [:span {:style "color: #ff8fc4"} "fizzbuzz"] "\n  "
+     [:span {:style "color: #f9bbff"} "\"Calculate FizzBuzz\""] "\n  "
+     [:span {:style "color: #cbbcd3"} "{"]
+     [:span {:style "color: #f9bbff"} ":malli/schema"] " "
+     [:span {:style "color: #cbbcd3"} "["]
+     [:span {:style "color: #f9bbff"} ":function"] " "
+     [:span {:style "color: #cbbcd3"} "["]
+     [:span {:style "color: #f9bbff"} ":=>"] " "
+     [:span {:style "color: #cbbcd3"} "["]
+     [:span {:style "color: #f9bbff"} ":cat"] " "
+     [:span {:style "color: #f9bbff"} ":int"]
+     [:span {:style "color: #cbbcd3"} "]"] " "
+     [:span {:style "color: #f9bbff"} ":string"]
+     [:span {:style "color: #cbbcd3"} "]" "]" "}"] "\n  "
+     [:span {:style "color: #cbbcd3"} "["] [:span {:style "color: #eee4ff"} "n"]
+     [:span {:style "color: #cbbcd3"} "]"] "\n  "
+     [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #ff8fc4"} "match"] " "
+     [:span {:style "color: #cbbcd3"} "[" "("]
+     [:span {:style "color: #ff8fc4"} "mod"] " "
+     [:span {:style "color: #eee4ff"} "n"] " "
+     [:span {:style "color: #eee4ff"} "3"] [:span {:style "color: #cbbcd3"} ")"]
+     " " [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #ff8fc4"} "mod"] " "
+     [:span {:style "color: #eee4ff"} "n"] " "
+     [:span {:style "color: #eee4ff"} "5"]
+     [:span {:style "color: #cbbcd3"} ")" "]"] "\n    "
+     [:span {:style "color: #cbbcd3"} "["] [:span {:style "color: #eee4ff"} "0"]
+     " " [:span {:style "color: #eee4ff"} "0"]
+     [:span {:style "color: #cbbcd3"} "]"] " "
+     [:span {:style "color: #f9bbff"} "\"FizzBuzz\""] "\n    "
+     [:span {:style "color: #cbbcd3"} "["] [:span {:style "color: #eee4ff"} "0"]
+     " " [:span {:style "color: #eee4ff"} "_"]
+     [:span {:style "color: #cbbcd3"} "]"] " "
+     [:span {:style "color: #f9bbff"} "\"Fizz\""] "\n    "
+     [:span {:style "color: #cbbcd3"} "["] [:span {:style "color: #eee4ff"} "_"]
+     " " [:span {:style "color: #eee4ff"} "0"]
+     [:span {:style "color: #cbbcd3"} "]"] " "
+     [:span {:style "color: #f9bbff"} "\"Buzz\""] "\n    "
+     [:span {:style "color: #f9bbff"} ":else"] " "
+     [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #ff8fc4"} "str"] " "
+     [:span {:style "color: #eee4ff"} "n"]
+     [:span {:style "color: #cbbcd3"} ")" ")" ")"] "\n\n"
+     [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #eee4ff"} "doseq"] " "
+     [:span {:style "color: #cbbcd3"} "["] [:span {:style "color: #eee4ff"} "n"]
+     " " [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #ff8fc4"} "range"] " "
+     [:span {:style "color: #eee4ff"} "1"] " "
+     [:span {:style "color: #eee4ff"} "101"]
+     [:span {:style "color: #cbbcd3"} ")" "]"] "\n  "
+     [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #ff8fc4"} "println"] " "
+     [:span {:style "color: #cbbcd3"} "("]
+     [:span {:style "color: #ff8fc4"} "fizzbuzz"] " "
+     [:span {:style "color: #eee4ff"} "n"]
+     [:span {:style "color: #cbbcd3"} ")" ")" ")"] "\n"]]]
+  [:p
+   "All the heavy lifting in " [:code "dathan"]
+   " is being done by the Helix tree-sitter crate, "
+   [:a
+    {:href "https://github.com/helix-editor/tree-house"} [:code "tree-house"]]
+   ", and the grammars and queries of the Helix runtime. " [:code "dathan"]
+   " itself is a couple of thousand lines of relatively trivial code mostly concerned
+    with resolving your environment and spitting out the results wrapped in the
+    appropriate tags – a fairly direct translation from tree-sitter’s abstract syntax tree."]
+  [:p
+   [:code "dathan"]
+   " currently has backends for outputting ANSI escape codes, HTML, and EDN
+    or JSON flavoured Hiccup. HTML/Hiccup can have inline styles or classes with
+    separately emitted CSS."]
+  [:p
+   "Strictly speaking you don’t even need to have Helix installed, you just need
+    the runtime folder. But installing Helix is the easiest way to get that."]
+  [:p
+   "Anyway, if it’s useful to anyone else, "
+   [:a {:href "https://github.com/waddie/dathan"} "the repo is here"] "."]
+  [:div.embed.end
+   [:iframe
+    {:allow
+     "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     :allowfullscreen true
+     :frameborder 0
+     :height 315
+     :referrerpolicy "strict-origin-when-cross-origin"
+     :src "https://www.youtube-nocookie.com/embed/voZkof_c7aI"
+     :title "Ρίξε Κόκκινο Στην Νύχτα – Λαυρέντης Μαχαιρίτσας"
+     :width 560}]]]
+ :published #inst "2026-06-19T04:30:00+01:00"
+ :slug :dathan
+ :synopsis
+ "Inflict your taste in chintz on other people with the power of Helix’s runtime."
+ :title "Syntax highlighting with dathan"}

@@ -24,20 +24,18 @@
     [:cite "HOW MANY ROADS MUST A MAN WALK DOWN?"]
     " in "
     [:a
-     {:href   "https://davidgriffith.gitlab.io/frotz/"
-      :target "_blank"} " Frotz"] ", a terminal Z-code interpreter."]]
+     {:href "https://davidgriffith.gitlab.io/frotz/"} " Frotz"]
+    ", a terminal Z-code interpreter."]]
   [:h2 "You are standing at the end of a road"]
   [:p
    "On Saturday the 12" [:sup "th"] ", on "
    [:a
-    {:href   "https://en.wikipedia.org/wiki/IfMUD"
-     :target "_blank"} "ifMUD"] ", "
+    {:href "https://en.wikipedia.org/wiki/IfMUD"} "ifMUD"] ", "
    [:a
-    {:href   "https://www.ifwiki.org/Gunther_Schmidl"
-     :target "_blank"} "Gunther Schmidl"] " announced the "
+    {:href "https://www.ifwiki.org/Gunther_Schmidl"} "Gunther Schmidl"]
+   " announced the "
    [:a
-    {:href   "https://www.ifwiki.org/DNA_Tribute_Speed-IF"
-     :target "_blank"} "DNA Tribute SpeedIF"]
+    {:href "https://www.ifwiki.org/DNA_Tribute_Speed-IF"} "DNA Tribute SpeedIF"]
    ". And then on Sunday morning UK time, posted it to the "
    [:code "rec.arts.int-fiction"] " newsgroup, which is where I saw it:"]
   [:div.highlight
@@ -74,13 +72,11 @@
      like "
    [:cite
     [:a
-     {:href   "https://en.wikipedia.org/wiki/Colossal_Cave_Adventure"
-      :target "_blank"} "ADVENT"]]
+     {:href "https://en.wikipedia.org/wiki/Colossal_Cave_Adventure"} "ADVENT"]]
    ", "
    [:cite
     [:a
-     {:href   "https://en.wikipedia.org/wiki/Zork"
-      :target "_blank"} "Zork"]] " and, indeed, "
+     {:href "https://en.wikipedia.org/wiki/Zork"} "Zork"]] " and, indeed, "
    [:cite
     [:a
      {:href
@@ -95,8 +91,7 @@
    "Writing a game in two hours was (and remains) possible due to the availability of  dedicated, free IF tools
     with excellent standard libraries, such as Graham Nelson’s "
    [:a
-    {:href   "https://inform-fiction.org/"
-     :target "_blank"} "Inform"]
+    {:href "https://inform-fiction.org/"} "Inform"]
    ". All the infrastructure and world rules are provided, you only need to
    code the locations, objects, and logic unique to the story you want to tell."]
   [:h2 "Twisty little passages"]
@@ -178,8 +173,8 @@
   [:p "Graham Nelson’s superb "
    [:cite]
    [:a
-    {:href   "https://inform-fiction.org/manual/index.html"
-     :target "_blank"} "Inform Designer’s Manual"]
+    {:href "https://inform-fiction.org/manual/index.html"}
+    "Inform Designer’s Manual"]
    ", then in its third edition, provided a comprehensive grounding in not just the how but also the why of
     crafting text adventures."]
   [:p "Predictably, I never finished any of the big ideas I’d once had. "
@@ -204,8 +199,8 @@
   [:p
    "But I discovered today that, 20+ years later, Andrew Schultz in Chicago wrote "
    [:a
-    {:href   "https://ifdb.org/viewgame?id=zg8p9khmmhtqwavu&review=74384"
-     :target "_blank"} "a very sweet review"]
+    {:href "https://ifdb.org/viewgame?id=zg8p9khmmhtqwavu&review=74384"}
+    "a very sweet review"]
    ". Just occasionally, the internet can still be as magical a technology as Douglas believed it to be."]
   [:p
    "But this post isn’t about my daft little game either. Not really."]
@@ -243,8 +238,7 @@
      :type          "application/octet-stream"} "download it here"]
    ". You’ll need a Z-code interpreter, they’re "
    [:a
-    {:href   "https://www.ifwiki.org/FAQ#How_can_I_download_and_play_IF.3F"
-     :target "_blank"}
+    {:href "https://www.ifwiki.org/FAQ#How_can_I_download_and_play_IF.3F"}
     "freely available for almost every device under the sun."]]
   [:div.embed.end
    [:iframe

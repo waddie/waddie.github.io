@@ -6,8 +6,7 @@
   [:p
    "But a few years ago, I fell in love with "
    [:a
-    {:href   "https://helix-editor.com"
-     :target "_blank"} "Helix"]
+    {:href "https://helix-editor.com"} "Helix"]
    ", a batteries-included modal editor that felt a more natural fit to me than Vim, despite decades of experience with the
    latter. It’s finally reached a point where it’s viable for day-to-day Clojure development."]
   [:p
@@ -15,16 +14,15 @@
   [:p
    "Note that, where it would be helpful for you to see exactly what I’m typing, I’ve enabled the "
    [:a
-    {:href   "https://github.com/HeitorAugustoLN/showkeys.hx"
-     :target "_blank"} "showkeys.hx"] " plug-in in Helix and "
+    {:href "https://github.com/HeitorAugustoLN/showkeys.hx"} "showkeys.hx"]
+   " plug-in in Helix and "
    [:a {:href "https://github.com/nstefan002/screenkey.nvim"} "Screenkey"]
    " in NeoVim to display the keystrokes in the recordings. I don’t have that active in daily use."]
   [:h2 "A post-modern text editor"]
   [:p
    "Helix is a modal text editor inspired by vi (via the earlier "
    [:a
-    {:href   "https://kakoune.org/"
-     :target "_blank"} "Kakoune"]
+    {:href "https://kakoune.org/"} "Kakoune"]
    ", which pioneered most of the big ideas in Helix). Kakoune and Helix make at least two major departures from
     the vi lineage."]
   [:p
@@ -68,8 +66,7 @@
     jibe with modal editing to begin with) will naturally grok one approach more than the other. Personally,
     I had been using Vim almost daily since its inclusion on a "
    [:a
-    {:href   "https://en.wikipedia.org/wiki/Fred_Fish"
-     :target "_blank"} "Fish Disk"]
+    {:href "https://en.wikipedia.org/wiki/Fred_Fish"} "Fish Disk"]
    " in the 90s, yet Helix immediately felt more natural and reliable when I tried it. You too might discover
     that your brain isn’t wired exactly how you always thought."]
   [:p
@@ -88,25 +85,25 @@
   [:p
    "Besides this fundamental editing paradigm, Helix leverages built-in support for "
    [:a
-    {:href   "https://tree-sitter.github.io/tree-sitter/"
-     :target "_blank"} "tree-sitter"] " grammars and "
+    {:href "https://tree-sitter.github.io/tree-sitter/"} "tree-sitter"]
+   " grammars and "
    [:a
-    {:href   "https://microsoft.github.io/language-server-protocol/"
-     :target "_blank"} "Language Server Protocol"]
+    {:href "https://microsoft.github.io/language-server-protocol/"}
+    "Language Server Protocol"]
    " (LSP) for programming language support."]
   [:h3 "tree-sitter"]
   [:p
    "tree-sitter is an incremental parser generator, enabling fast, efficient syntax highlighting. Helix ships
     with the "
    [:a
-    {:href   "https://github.com/sogaiu/tree-sitter-clojure"
-     :target "_blank"} "tree-sitter-clojure grammar"] " bundled."]
+    {:href "https://github.com/sogaiu/tree-sitter-clojure"}
+    "tree-sitter-clojure grammar"] " bundled."]
   [:p
    "Perhaps more interestingly, because tree-sitter parses code to a syntax tree, it also enables syntax-aware
     editing. With "
    [:a
-    {:href   "https://github.com/helix-editor/helix/pull/14524"
-     :target "_blank"} "text object queries"]
+    {:href "https://github.com/helix-editor/helix/pull/14524"}
+    "text object queries"]
    " included in Helix’s standard distribution, Helix is effectively aware of Clojure forms. You can expand and
     contract selection by forms, or select entire functions, data structures or tests at once."]
   [:p
@@ -126,8 +123,7 @@
   [:p
    "If you have "
    [:a
-    {:href   "https://clojure-lsp.io/"
-     :target "_blank"} "clojure-lsp"]
+    {:href "https://clojure-lsp.io/"} "clojure-lsp"]
    " installed, Helix is configured to use it by default, providing a whole range of code actions, static
     analysis, and refactoring functionality."]
   [:figure
@@ -149,12 +145,11 @@
   [:p
    "Matthew Paras has been working on an embeddable Scheme interpreter for Rust called "
    [:a
-    {:href   "https://github.com/mattwparas/steel"
-     :target "_blank"} "Steel"]
+    {:href "https://github.com/mattwparas/steel"} "Steel"]
    ", and a fork of Helix that uses Steel to provide a "
    [:a
-    {:href   "https://github.com/mattwparas/helix/tree/steel-event-system"
-     :target "_blank"} "plug-in system"]
+    {:href "https://github.com/mattwparas/helix/tree/steel-event-system"}
+    "plug-in system"]
    ", which has been blessed by the Helix team as the official
    solution."]
   [:p
@@ -165,8 +160,7 @@
    "Steel gives you an almost complete Scheme R5RS implementation plus FFI to Rust dynamic libraries. With some
     assistance from Claude Code with the Rust, I’ve used it to build "
    [:a
-    {:href   "https://github.com/waddie/nrepl.hx"
-     :target "_blank"} "nREPL.hx"] "."]
+    {:href "https://github.com/waddie/nrepl.hx"} "nREPL.hx"] "."]
   [:p
    "nREPL.hx can connect to an already running nREPL instance, or spawn and jack-in to a new one based on your
     project file (with support for "
@@ -208,8 +202,7 @@
   [:p
    "Note that you can find links to this and to other early Helix plug-ins at "
    [:a
-    {:href   "https://www.helix-plug-ins.com/"
-     :target "_blank"} "Helix Plugins"] "."]
+    {:href "https://www.helix-plug-ins.com/"} "Helix Plugins"] "."]
   [:div.embed.end
    [:iframe
     {:allow

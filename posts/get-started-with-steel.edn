@@ -1,8 +1,8 @@
 {:body
  [[:p "As the "
    [:a
-    {:href   "https://github.com/helix-editor/helix/pull/8675"
-     :target "_blank"} "Steel Scheme plug-ins"]
+    {:href "https://github.com/helix-editor/helix/pull/8675"}
+    "Steel Scheme plug-ins"]
    " pull request for Helix crawls ever closer to release (it’ll all be over by Christmas…), I thought
     it might be useful to write a short tutorial for Helix users who now find themselves fledgling Scheme
     programmers."]
@@ -26,8 +26,8 @@
    [:li "I assume you already have " [:code "git"] " installed."]
    [:li "You’ll need to have the "
     [:a
-     {:href   "https://rust-lang.org/tools/install/"
-      :target "_blank"} "Rust"] " toolchain installed to build Helix."]
+     {:href "https://rust-lang.org/tools/install/"} "Rust"]
+    " toolchain installed to build Helix."]
    [:li
     "And you need to be comfortable in the shell, building software from source
      and potentially cleaning up afterwards manually."]]
@@ -91,8 +91,8 @@
   [:p "If you want to go back to mainline Helix, you can simply switch to "
    [:code "origin/master"] " and follow the "
    [:a
-    {:href   "https://docs.helix-editor.com/building-from-source.html"
-     :target "_blank"} "build instructions on the website"] "."]
+    {:href "https://docs.helix-editor.com/building-from-source.html"}
+    "build instructions on the website"] "."]
   [:h2 "Additional tools"]
   [:p "Next, we’ll install some tools to help with Scheme development:"]
   [:div.dathan
@@ -121,22 +121,19 @@
   [:ul
    [:li
     [:a
-     {:href   "https://github.com/raviqqe/schemat"
-      :target "_blank"} [:code "schemat"]] " is a formatter for Scheme code."]
+     {:href "https://github.com/raviqqe/schemat"} [:code "schemat"]]
+    " is a formatter for Scheme code."]
    [:li
     [:a
-     {:href   "https://github.com/waddie/nrepl-steel"
-      :target "_blank"} [:code "nrepl-steel"]]
+     {:href "https://github.com/waddie/nrepl-steel"} [:code "nrepl-steel"]]
     " is my nREPL server for Steel."]
    [:li
     [:a
-     {:href   "https://github.com/waddie/nrepl.hx"
-      :target "_blank"} [:code "nrepl.hx"]]
+     {:href "https://github.com/waddie/nrepl.hx"} [:code "nrepl.hx"]]
     " is my Helix nREPL client plug-in."]
    [:li
     [:a
-     {:href   "https://github.com/waddie/paredit.hx"
-      :target "_blank"} [:code "paredit.hx"]]
+     {:href "https://github.com/waddie/paredit.hx"} [:code "paredit.hx"]]
     " is my Helix plug-in providing structural editing operations for Lisp-like languages, including Scheme."]]
   [:h2 "Helix config"]
   [:p
@@ -155,8 +152,8 @@
   [:p
    "I’ve created "
    [:a
-    {:href   "https://github.com/waddie/helix-steel-demo"
-     :target "_blank"} "a repo with a minimal Steel Scheme config for Helix"]
+    {:href "https://github.com/waddie/helix-steel-demo"}
+    "a repo with a minimal Steel Scheme config for Helix"]
    ". It initialises the plug-ins we installed
     above, and sets up the default key bindings. Copy "
    [:code "helix.scm"] ", " [:code "init.scm"] " and the " [:code "cogs"]
@@ -200,8 +197,7 @@
     interact with the REPL too."]
   [:p
    [:a
-    {:href   "https://nrepl.org/"
-     :target "_blank"} "nREPL"]
+    {:href "https://nrepl.org/"} "nREPL"]
    " is a standard protocol enabling REPL-like integrations between clients and servers.
     The "
    [:code "nrepl-steel"] " server and " [:code "nrepl.hx"]
@@ -471,40 +467,38 @@
    " for forward and backward operations respectively. But that’s mainly for discoverability. If you like
    them, you may want faster access. Check out "
    [:a
-    {:href   "https://github.com/waddie/paredit.hx"
-     :target "_blank"} "the repo"] " for another possible setup."]
+    {:href "https://github.com/waddie/paredit.hx"} "the repo"]
+   " for another possible setup."]
   [:h2 "Further reading"]
   [:p
    "These are the main resources I learned from:"]
   [:ul
    [:li "Dorai Sitaram’s "
     [:a
-     {:href   "https://ds26gte.github.io/tyscheme/index-Z-H-1.html"
-      :target "_blank"} "Teach Yourself Scheme in Fixnum Days"]
+     {:href "https://ds26gte.github.io/tyscheme/index-Z-H-1.html"}
+     "Teach Yourself Scheme in Fixnum Days"]
     " is a free introductory book for the Scheme language."]
    [:li "Daniel P. Friedman and Matthias Felleisen’s "
     [:a
-     {:href   "https://mitpress.mit.edu/9780262560993/the-little-schemer/"
-      :target "_blank"} "The Little Schemer"]
+     {:href "https://mitpress.mit.edu/9780262560993/the-little-schemer/"}
+     "The Little Schemer"]
     " is a gentle but rapidly escalating introduction to recursion
     in the form of a Socratic dialogue. It may not prove super-helpful when you’re writing your Helix config,
     but it’s one of those rare books that can change the way your brain works."]
    [:li "I’m not sure how much of the code in "
     [:a
-     {:href   "https://htdp.org/"
-      :target "_blank"} "How to Design Programs, 2nd. Ed."]
+     {:href "https://htdp.org/"} "How to Design Programs, 2nd. Ed."]
     " will work with Steel. I think back in the day I worked through the first edition in Racket, before it was
      even called Racket. But whatever version of Racket it uses now, most of the skills will transfer."]
    [:li
     "The "
     [:a
-     {:href   "https://github.com/mattwparas/steel/tree/master/steel-examples"
-      :target "_blank"} "main Steel repository"]
+     {:href "https://github.com/mattwparas/steel/tree/master/steel-examples"}
+     "main Steel repository"]
     " has a great collection of example code to learn from."]
    [:li
     [:a
-     {:href   "https://helix-plugins.com/"
-      :target "_blank"} "Helix Plugins"]
+     {:href "https://helix-plugins.com/"} "Helix Plugins"]
     " maintains a list of plug-ins that have been built for the new system."]]
   [:div.embed.end
    [:iframe

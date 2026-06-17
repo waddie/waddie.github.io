@@ -38,22 +38,20 @@
                 [:article {:class "projects"}
                  [:h1 title]
                  [:p "Free and open source software that I build and maintain."]
-                 (reduce (fn [list project]
-                           (conj
-                            list
-                            [:li
-                             [:a
-                              {:href   (:url project)
-                               :id     (name (:slug project))
-                               :target "_blank"} [:span (:title project)]]
-                             (reduce
-                              conj
+                 (reduce
+                  (fn [list project]
+                    (conj
+                     list
+                     [:li
+                      [:a
+                       {:href (:url project)
+                        :id   (name (:slug project))} [:span (:title project)]]
+                      (reduce conj
                               [:div {:class "description"}
                                (when-let [clojars (:clojars project)]
                                  [:p
                                   [:a
-                                   {:href   (str "https://clojars.org/" clojars)
-                                    :target "_blank"}
+                                   {:href (str "https://clojars.org/" clojars)}
                                    [:img
                                     {:alt (str (:title project) " on Clojars")
                                      :height 20
@@ -62,7 +60,7 @@
                                            clojars
                                            ".svg")}]]])]
                               (:description project))]))
-                         list
-                         projects)] (nav projects)]
+                  list
+                  projects)] (nav projects)]
       :section :projects
       :title   title})))

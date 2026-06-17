@@ -3,6 +3,7 @@
   (:require [clojure.edn :as edn]
             [clojure.string :as s]
             [hiccup.page :as page]
+            [hiccup2.core :as h]
             [still.core :refer [snap!]]
             [www.footer :refer [footer]]
             [www.head :refer [head]]
@@ -21,12 +22,12 @@
                      [:body [:vector :some]]]]
                    :string]]}
   [{:keys [title post section body]}]
-  (page/html5 {:lang "en-GB"}
-              (head {:post    post
-                     :section section
-                     :title   title})
-              [:body {:data-hx-boost "true"} (header section) body
-               (if (coll? post) (footer post) (footer))]))
+  (page/html5 (h/html {:lang "en-GB"}
+                      (head {:post    post
+                             :section section
+                             :title   title})
+                      [:body {:data-hx-boost "true"} (header section) body
+                       (if (coll? post) (footer post) (footer))])))
 
 (def month-names
   ["January" "February" "March" "April" "May" "June" "July" "August" "September"

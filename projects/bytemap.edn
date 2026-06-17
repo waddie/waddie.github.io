@@ -3,8 +3,7 @@
  [[:p [:b "bytemap.clj"]
    " is more or less a Clojure port of Ian Henry’s Janet library, "
    [:a
-    {:href   "https://github.com/ianthehenry/bytemap"
-     :target "_blank"} "bytemap"]
+    {:href "https://github.com/ianthehenry/bytemap"} "bytemap"]
    ", a text-based graphics library with functions for plotting graphs."]]
  :slug :bytemap
  :title "bytemap.clj"

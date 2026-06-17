@@ -2,8 +2,8 @@
  [[:p [:a {:href "https://helix-editor.com/"} "Helix"]
    " is my favourite text editor. There’s currently a "
    [:a
-    {:href   "https://github.com/mattwparas/helix/tree/steel-event-system"
-     :target "_blank"} "fork in progress"] ", adding support for plug-ins via "
+    {:href "https://github.com/mattwparas/helix/tree/steel-event-system"}
+    "fork in progress"] ", adding support for plug-ins via "
    [:a {:href "https://github.com/mattwparas/steel"} "Steel"]
    ", a dialect of Scheme."]
   [:p "I wrote the " [:b "nREPL.hx"]

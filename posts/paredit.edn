@@ -14,8 +14,8 @@
   [:p
    "Julien Vincent’s "
    [:a
-    {:href   "https://github.com/julienvincent/nvim-paredit"
-     :target "_blank"} "nvim-paredit for NeoVim"]
+    {:href "https://github.com/julienvincent/nvim-paredit"}
+    "nvim-paredit for NeoVim"]
    " demonstrates a comparatively lightweight approach to Paredit, leaning on tree-sitter for parsing. Since
     Helix already relies on tree-sitter, this looked like a promising solution. I made an initial attempt at
     adding the functionality last year but, at that time, the Steel Scheme plug-in branch didn’t expose any
@@ -26,8 +26,7 @@
    revisiting the idea."]
   [:p
    [:a
-    {:href   "https://github.com/waddie/paredit.hx"
-     :target "_blank"} "paredit.hx"]
+    {:href "https://github.com/waddie/paredit.hx"} "paredit.hx"]
    " is a Helix plug-in that completes the set of Paredit operations in what I hope is a suitably Helix-ish
     fashion. Support is currently built-in for Clojure, Common Lisp, Fennel, Janet and Scheme."]
   [:p
@@ -47,11 +46,11 @@
   [:p
    "As with my "
    [:a
-    {:href   "https://github.com/waddie/nrepl.hx"
-     :target "_blank"} "nREPL.hx"] " plug-in, you will need to be running "
+    {:href "https://github.com/waddie/nrepl.hx"} "nREPL.hx"]
+   " plug-in, you will need to be running "
    [:a
-    {:href   "https://github.com/mattwparas/helix/tree/steel-event-system"
-     :target "_blank"} "the Helix Steel plug-in fork"]
+    {:href "https://github.com/mattwparas/helix/tree/steel-event-system"}
+    "the Helix Steel plug-in fork"]
    " to use this. But the latest word is that Steel will be landing in Helix master imminently, as soon as the
     ongoing and urgent workspace trust piece is finished and released."]
   [:p

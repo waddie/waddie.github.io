@@ -3,8 +3,8 @@
  [[:p [:b "skivi"]
    " is a Clojure/PostgreSQL job scheduling library, a bit like "
    [:a
-    {:href   "https://worker.graphile.org/"
-     :target "_blank"} "Graphile Worker"] " but for Clojure."]
+    {:href "https://worker.graphile.org/"} "Graphile Worker"]
+   " but for Clojure."]
   [:p
    "The code started life in 2012 as the mailer component of an application I was
     building at Games Workshop, called Bernard. It was called Bernard for ease of
@@ -23,12 +23,10 @@
    the way to being a generic job scheduling library and started refactoring it as
    a "
    [:a
-    {:href   "https://polylith.gitbook.io/polylith"
-     :target "_blank"} "Polylith"] " library."]
+    {:href "https://polylith.gitbook.io/polylith"} "Polylith"] " library."]
   [:p "I used Claude Code with the "
    [:a
-    {:href   "https://github.com/juxt/allium"
-     :target "_blank"} [:code "juxt/allium skill"]]
+    {:href "https://github.com/juxt/allium"} [:code "juxt/allium skill"]]
    " to get it over the line."]
  ]
  :slug :skivi
