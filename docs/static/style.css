@@ -400,7 +400,6 @@ hr {
 }
 
 code {
-  color: var(--text-header);
   font-family: var(--f-mono);
   font-feature-settings: initial;
   font-variant-ligatures: none;
