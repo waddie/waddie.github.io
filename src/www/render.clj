@@ -22,8 +22,8 @@
                      [:body [:vector :some]]]]
                    :string]]}
   [{:keys [title post section body]}]
-  (page/html5 (h/html {:lang "en-GB"}
-                      (head {:post    post
+  (page/html5 {:lang "en-GB"}
+              (h/html (head {:post    post
                              :section section
                              :title   title})
                       [:body {:data-hx-boost "true"} (header section) body
