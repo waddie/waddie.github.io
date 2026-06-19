@@ -156,9 +156,10 @@
     "a repo with a minimal Steel Scheme config for Helix"]
    ". It initialises the plug-ins we installed
     above, and sets up the default key bindings. Copy "
-   [:code "helix.scm"] ", " [:code "init.scm"] " and the " [:code "cogs"]
-   " folder to your " [:code "~/.config/helix"]
-   " and restart Helix."]
+   [:code "helix.scm"] " and " [:code "init.scm"] " to your "
+   [:code "~/.config/helix"]
+   " folder (or wherever your " [:code "config.toml"] " lives/"
+   [:code "$HELIX_RUNTIME"] " points to), and then restart Helix."]
   [:p "With that, you should be all set."]
   [:h2 "So, what’s a REPL?"]
   [:p
