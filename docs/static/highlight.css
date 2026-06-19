@@ -33,7 +33,6 @@
     }
   }
 }
-
 .dathan {
   & > pre {
     color: #16161d;
@@ -57,6 +56,9 @@
   }
   .constructor {
     color: #526e88;
+  }
+  .diagnostic-deprecated {
+    text-decoration: line-through;
   }
   .diagnostic-error {
     text-decoration: underline;
@@ -150,13 +152,16 @@
     color: #3b4613;
   }
   .markup-list-unchecked {
-    color: #2b2c33;
+    color: #3f3f47;
   }
   .markup-quote {
     color: #660011;
   }
   .markup-raw {
     color: #3b4613;
+  }
+  .markup-strikethrough {
+    text-decoration: line-through;
   }
   .namespace {
     color: #992a36;
@@ -166,7 +171,7 @@
     color: #6c87a3;
   }
   .punctuation {
-    color: #2b2c33;
+    color: #3f3f47;
   }
   .punctuation-special {
     color: #6c87a3;
@@ -191,6 +196,9 @@
   }
   .type {
     color: #992a36;
+  }
+  .type-builtin {
+    color: #5048af;
   }
   .type-enum-variant {
     color: #b3be84;
@@ -251,7 +259,7 @@
     background-color: #f8de7e;
   }
   .ui-help {
-    color: #2b2c33;
+    color: #3f3f47;
     background-color: #3f3f47;
   }
   .ui-highlight {
@@ -265,7 +273,7 @@
     color: #695ec8;
   }
   .ui-menu {
-    color: #2b2c33;
+    color: #3f3f47;
     background-color: #3f3f47;
   }
   .ui-menu-selected {
@@ -380,6 +388,9 @@
     .constructor {
       color: #6c87a3;
     }
+    .diagnostic-deprecated {
+      text-decoration: line-through;
+    }
     .diagnostic-error {
       text-decoration: underline;
     }
@@ -480,6 +491,9 @@
     .markup-raw {
       color: #d1dba0;
     }
+    .markup-strikethrough {
+      text-decoration: line-through;
+    }
     .namespace {
       color: #ffefef;
       font-style: italic;
@@ -513,6 +527,9 @@
     }
     .type {
       color: #ffefef;
+    }
+    .type-builtin {
+      color: #bdabff;
     }
     .type-enum-variant {
       color: #f1fcbf;
