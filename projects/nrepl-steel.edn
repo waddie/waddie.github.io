@@ -1,0 +1,8 @@
+{:category    :nrepl-server
+ :description [[:p "A minimal nREPL server for the "
+                [:a
+                 {:href "https://github.com/mattwparas/steel"} "Steel Scheme"]
+                " programming language."]]
+ :slug        :nrepl-steel
+ :title       "nrepl-steel"
+ :url         "https://github.com/waddie/nrepl-steel"}

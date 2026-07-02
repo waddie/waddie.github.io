@@ -1,0 +1,22 @@
+{:category :llm-tool
+ :description
+ [[:p [:b "Nautilos"]
+   " is a CLI/MCP server/skill/plugin for coding harnesses, improving nREPL interaction."]
+  [:p
+   "I noticed three persistent issues with how coding harnesses use REPL-y languages:"]
+  [:ul
+   [:li
+    "Running one-off commands repeatedly, with ever-growing state recreated every time."]
+   [:li
+    "Inability to maintain state with servers that scope it to the connection, due to lack of
+    persistence between commands."]
+   [:li "Starting a REPL via " [:code "tmux"]
+    ", typically leaving a trail of abandoned but still-running sessions behind as it goes."]]
+  [:p
+   "Nautilos is a small (~1-2MB depending on platform/architecture), native, Janet binary for macOS/Linux
+    that opens a connection to any nREPL server as a daemon, maintaining the connection between commands."]
+  [:p
+   "The LLM can issue commands as single CLI calls, receiving each response as a single JSON object."]]
+ :slug :nautilos
+ :title "Nautilos"
+ :url "https://github.com/waddie/nautilos"}

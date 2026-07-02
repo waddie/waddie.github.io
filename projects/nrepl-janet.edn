@@ -1,0 +1,8 @@
+{:category :nrepl-server
+ :description
+ [[:p
+   "A reasonably fully-featured nREPL client/server library for the "
+   [:a {:href "https://janet-lang.org/"} "Janet"] " programming language."]]
+ :slug :nrepl-janet
+ :title "nrepl-janet"
+ :url "https://github.com/waddie/nrepl-janet"}

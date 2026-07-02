@@ -1,10 +1,211 @@
-{:clojars "dev.tomwaddington/bytemap"
+{:category :clojure-library
+ :clojars "dev.tomwaddington/bytemap"
  :description
  [[:p [:b "bytemap.clj"]
    " is more or less a Clojure port of Ian Henry’s Janet library, "
    [:a
     {:href "https://github.com/ianthehenry/bytemap"} "bytemap"]
-   ", a text-based graphics library with functions for plotting graphs."]]
+   ", a text-based graphics library with functions for plotting graphs."]
+  [:div.dathan
+   [:pre
+    [:code
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-macro"} "defn"] " "
+     [:span {:class "function"} "golden-spiral"] "\n  "
+     [:span {:class "string"} "\"Draw the golden spiral on a canvas.\""] "\n  "
+     [:span {:class "punctuation punctuation-bracket"} "["]
+     [:span {:class "variable"} "canvas"] " "
+     [:span {:class "punctuation punctuation-bracket"} "{"]
+     [:span {:class "string string-special string-special-symbol"} ":keys"] " "
+     [:span {:class "punctuation punctuation-bracket"} "["]
+     [:span {:class "variable"} "center"] " "
+     [:span {:class "variable"} "scale"] " " [:span {:class "variable"} "max-θ"]
+     " " [:span {:class "variable"} "start-angle"]
+     [:span {:class "punctuation punctuation-bracket"} "]" "}" "]"] "\n  "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-macro"} "let"] " "
+     [:span {:class "punctuation punctuation-bracket"} "["]
+     [:span {:class "variable"} "φ"] "       "
+     [:span {:class "constant constant-numeric"} "1.618033988749895"]
+     "\n        " [:span {:class "punctuation punctuation-bracket"} "["]
+     [:span {:class "variable"} "cx"] " " [:span {:class "variable"} "cy"]
+     [:span {:class "punctuation punctuation-bracket"} "]"] " "
+     [:span {:class "variable"} "center"] "\n        "
+     [:span {:class "variable"} "steps"] "   "
+     [:span {:class "constant constant-numeric"} "1000"]
+     [:span {:class "punctuation punctuation-bracket"} "]"] "\n    "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-macro"} "loop"] " "
+     [:span {:class "punctuation punctuation-bracket"} "["]
+     [:span {:class "variable"} "i"] "          "
+     [:span {:class "constant constant-numeric"} "0"] "\n           "
+     [:span {:class "variable"} "prev-point"] " "
+     [:span {:class "constant constant-builtin"} "nil"] "\n           "
+     [:span {:class "variable"} "canvas"] "     "
+     [:span {:class "variable"} "canvas"]
+     [:span {:class "punctuation punctuation-bracket"} "]"] "\n      "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-macro"} "if"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} ">="] " "
+     [:span {:class "variable"} "i"] " " [:span {:class "variable"} "steps"]
+     [:span {:class "punctuation punctuation-bracket"} ")"] "\n        "
+     [:span {:class "variable"} "canvas"] "\n        "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-macro"} "let"] " "
+     [:span {:class "punctuation punctuation-bracket"} "["]
+     [:span {:class "variable"} "θ"] "      "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "+"] " "
+     [:span {:class "variable"} "start-angle"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "*"] " "
+     [:span {:class "variable"} "max-θ"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "/"] " "
+     [:span {:class "variable"} "i"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "dec"] " "
+     [:span {:class "variable"} "steps"]
+     [:span {:class "punctuation punctuation-bracket"} ")" ")" ")" ")"]
+     "\n              " [:span {:class "variable"} "r"] "      "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "*"] " "
+     [:span {:class "variable"} "scale"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function"} "Math/pow"] " " [:span {:class "variable"} "φ"]
+     " " [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "/"] " "
+     [:span {:class "variable"} "θ"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "/"] " "
+     [:span {:class "variable"} "Math/PI"] " "
+     [:span {:class "constant constant-numeric"} "2"]
+     [:span {:class "punctuation punctuation-bracket"} ")" ")" ")" ")"]
+     "\n              " [:span {:class "variable"} "x"] "      "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "+"] " "
+     [:span {:class "variable"} "cx"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "*"] " "
+     [:span {:class "variable"} "r"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function"} "Math/cos"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "-"] " "
+     [:span {:class "variable"} "θ"]
+     [:span {:class "punctuation punctuation-bracket"} ")" ")" ")" ")"]
+     "\n              " [:span {:class "variable"} "y"] "      "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "+"] " "
+     [:span {:class "variable"} "cy"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "*"] " "
+     [:span {:class "variable"} "r"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function"} "Math/sin"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "-"] " "
+     [:span {:class "variable"} "θ"]
+     [:span {:class "punctuation punctuation-bracket"} ")" ")" ")" ")"]
+     "\n              " [:span {:class "variable"} "point"] "  "
+     [:span {:class "punctuation punctuation-bracket"} "[" "("]
+     [:span {:class "function function-builtin"} "int"] " "
+     [:span {:class "variable"} "x"]
+     [:span {:class "punctuation punctuation-bracket"} ")"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "int"] " "
+     [:span {:class "variable"} "y"]
+     [:span {:class "punctuation punctuation-bracket"} ")" "]"]
+     "\n              " [:span {:class "variable"} "canvas"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-macro"} "if"] " "
+     [:span {:class "variable"} "prev-point"] "\n                       "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function"} "bm/draw-line"] " "
+     [:span {:class "variable"} "canvas"] " "
+     [:span {:class "variable"} "prev-point"] " "
+     [:span {:class "variable"} "point"]
+     [:span {:class "punctuation punctuation-bracket"} ")"]
+     "\n                       " [:span {:class "variable"} "canvas"]
+     [:span {:class "punctuation punctuation-bracket"} ")" "]"] "\n          "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-macro"} "recur"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "inc"] " "
+     [:span {:class "variable"} "i"]
+     [:span {:class "punctuation punctuation-bracket"} ")"] " "
+     [:span {:class "variable"} "point"] " "
+     [:span {:class "variable"} "canvas"]
+     [:span {:class "punctuation punctuation-bracket"} ")" ")" ")" ")" ")" ")"]
+     "\n\n" [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-macro"} "->"] " "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function"} "bm/new-canvas"] " "
+     [:span {:class "constant constant-numeric"} "60"] " "
+     [:span {:class "constant constant-numeric"} "20"]
+     [:span {:class "punctuation punctuation-bracket"} ")"] "\n    "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function"} "golden-spiral"] " "
+     [:span {:class "punctuation punctuation-bracket"} "{"]
+     [:span {:class "string string-special string-special-symbol"} ":center"]
+     "      " [:span {:class "punctuation punctuation-bracket"} "["]
+     [:span {:class "constant constant-numeric"} "60"] " "
+     [:span {:class "constant constant-numeric"} "45"]
+     [:span {:class "punctuation punctuation-bracket"} "]"]
+     "\n                    "
+     [:span {:class "string string-special string-special-symbol"} ":max-θ"]
+     "       " [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "*"] " "
+     [:span {:class "constant constant-numeric"} "6"] " "
+     [:span {:class "variable"} "Math/PI"]
+     [:span {:class "punctuation punctuation-bracket"} ")"]
+     "\n                    "
+     [:span {:class "string string-special string-special-symbol"} ":scale"]
+     "       " [:span {:class "constant constant-numeric"} "0.5"]
+     "\n                    "
+     [:span {:class "string string-special string-special-symbol"}
+      ":start-angle"] " " [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function function-builtin"} "*"] " "
+     [:span {:class "constant constant-numeric"} "0.75"] " "
+     [:span {:class "variable"} "Math/PI"]
+     [:span {:class "punctuation punctuation-bracket"} ")" "}" ")"] "\n    "
+     [:span {:class "punctuation punctuation-bracket"} "("]
+     [:span {:class "function"} "bm/print-canvas!"]
+     [:span {:class "punctuation punctuation-bracket"} ")" ")"] "\n\n"
+     [:span {:class "variable"}
+      "=>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⠤⠔⠒⠒⠒⠒⠒⠒⠒⠒⠤⠤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠔⠒⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠖⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠢⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⠀⠀⠀⢀⠤⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⠀⠀⡔⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⡠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⡰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠞⠉⠀⠀⠈⢳⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡞⠀⠀⠀⢯⣠⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠦⣄⣀⡀⠀⢀⣀⡠⠔⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"
+     [:span {:class "variable"}
+      "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"] "\n"]]]
+
+
+ ]
  :slug :bytemap
  :title "bytemap.clj"
  :url "https://github.com/waddie/bytemap.clj"}

@@ -911,11 +911,11 @@ main {
       &.post-list,
       &.project-list {
         li {
-          margin-top: calc(1 / var(--golden-ratio) * var(--measure-medium2));
+          margin-top: calc(1 / var(--golden-ratio) * var(--measure-medium1));
 
           a {
             font-family: var(--f-header);
-            font-size: var(--measure-medium2);
+            font-size: var(--measure-medium1);
             font-weight: 600;
             line-height: var(--cube-root-two);
             text-wrap: balance;
@@ -926,12 +926,22 @@ main {
             margin-top: calc(1 / var(--golden-ratio) * var(--measure-basic));
           }
 
-          .description a {
-            font-family: var(--f-body);
-            font-size: var(--measure-basic);
-            font-weight: 450;
-            line-height: var(--square-root-two);
-            text-wrap: unset;
+          .description {
+            a {
+              font-family: var(--f-body);
+              font-size: var(--measure-basic);
+              font-weight: 450;
+              line-height: var(--square-root-two);
+              text-wrap: unset;
+            }
+
+            ul {
+              li {
+                margin-top: calc(
+                  1 / var(--golden-ratio) * var(--measure-basic)
+                );
+              }
+            }
           }
         }
       }
@@ -973,7 +983,7 @@ main {
       }
 
       ul {
-        list-style: disc;
+        list-style: square;
         padding-left: var(--measure-basic);
       }
     }

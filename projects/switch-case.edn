@@ -1,0 +1,11 @@
+{:category :helix-plugin
+ :description
+ [[:p
+   "Additional text case conversion commands (kebab/camel/snake case, etc.)"]
+  [:p "Essentially a Scheme port from "
+   [:a {:href "https://github.com/helix-editor/helix/pull/12043"}
+    "an abandoned PR"]
+   " to the core editor, as a demonstration of the plug-in system."]]
+ :slug :switch-case
+ :title "switch-case.hx"
+ :url "https://github.com/waddie/switch-case.hx"}

@@ -1,0 +1,14 @@
+{:cli {:title "Command-line tools"}
+ :clojure-library {:title "Clojure libraries"}
+ :helix-plugin
+ {:description [:p [:a {:href "https://helix-editor.com/"} "Helix"]
+                " is my favourite text editor. There’s currently a "
+                [:a
+                 {:href
+                  "https://github.com/mattwparas/helix/tree/steel-event-system"}
+                 "fork in progress"] ", adding support for plug-ins via "
+                [:a {:href "https://github.com/mattwparas/steel"} "Steel"]
+                ", a dialect of Scheme."]
+  :title       "Helix plug-ins"}
+ :llm-tool {:title "LLM tools"}
+ :nrepl-server {:title "nREPL servers"}}

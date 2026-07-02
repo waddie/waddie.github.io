@@ -1,0 +1,22 @@
+{:category :helix-plugin
+ :description
+ [[:p [:b "Juju"] " is a " [:code "git"] "/" [:code "jj"]
+   " UI. Similar to "
+   [:a {:href "https://magit.vc/"} "Magit"]
+   " for Emacs, but with Helix idioms and support for a VCS I actually
+   like."]
+  [:p
+   "Very early alpha of software that could potentially nobble your repo if there are any bugs,
+    although I haven’t managed to break anything yet in testing."]
+  [:figure
+   [:img
+    {:alt     "Interactive rebase of a git repo with Juju."
+     :height  595
+     :loading "lazy"
+     :src     "/static/juju.gif"
+     :width   979}]
+   [:figcaption
+    "An asciinema recording of interactively rebasing a git repo with Juju in Helix."]]]
+ :slug :juju
+ :title "Juju"
+ :url "https://github.com/waddie/juju"}

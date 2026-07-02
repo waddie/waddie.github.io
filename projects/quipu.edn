@@ -1,4 +1,5 @@
-{:description
+{:category :cli
+ :description
  [[:p [:b "quipu"]
    " is a terminal keyboard entry scripting tool written in Rust. I use it to script "
    [:a

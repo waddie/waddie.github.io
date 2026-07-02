@@ -1,4 +1,5 @@
-{:clojars "dev.tomwaddington/still"
+{:category :clojure-library
+ :clojars "dev.tomwaddington/still"
  :description
  [[:p [:b "still"]
    " is a Clojure self-modifying snapshot testing library inspired by Ian Henry’s "

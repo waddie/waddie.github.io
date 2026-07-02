@@ -1,6 +1,7 @@
-{:description
+{:category :helix-plugin
+ :description
  [[:p
-   "A Paredit implementation for "
+   "A tree-sitter-based Paredit implementation for "
    [:a {:href "https://helix-editor.com/"} "Helix"]
    " (with the Steel plug-in system), inspired by "
    [:a

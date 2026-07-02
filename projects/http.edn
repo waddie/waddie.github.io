@@ -1,5 +1,5 @@
-
-{:description
+{:category :helix-plugin
+ :description
  [[:p [:b "http.hx"]
    " is a plug-in for "
    [:a
@@ -8,7 +8,47 @@
    [:code "curl"]
    ", getting the response back in a " [:code "*scratch*"]
    " buffer. It effectively mimics VSCode’s REST client
-    plug-in and uses the same syntax, without needing its own backend."]
+    plug-in and uses the same syntax, without needing its own backend. So, you can store
+    queries in plain text in your repo like this:"]
+  [:div.dathan
+   [:pre
+    [:code
+     [:span {:class "spell"} "# HTTP requests with variable substitution\n"]
+     "\n@" [:span {:class "variable"} "protocol"] " "
+     [:span {:class "operator"} "="] " https\n@"
+     [:span {:class "variable"} "baseUrl"] " " [:span {:class "operator"} "="]
+     " " [:span {:class "punctuation punctuation-bracket"} "{{"] "protocol"
+     [:span {:class "punctuation punctuation-bracket"} "}}"] "://httpbin.io\n@"
+     [:span {:class "variable"} "token"] " " [:span {:class "operator"} "="]
+     " test-token-123\n@" [:span {:class "variable"} "userId"] " "
+     [:span {:class "operator"} "="] " 42\n\n"
+     [:span {:class "spell"} "# GET with variable in URL\n"]
+     [:span {:class "function function-method"} "GET"] " "
+     [:span {:class "string string-special string-special-url"}
+      [:span {:class "punctuation punctuation-bracket"} "{{"] "baseUrl"
+      [:span {:class "punctuation punctuation-bracket"} "}}"] "/get"] "\n\n"
+     [:span {:class "spell"} "###\n"] "\n"
+     [:span {:class "spell"} "# GET with authorization header\n"]
+     [:span {:class "function function-method"} "GET"] " "
+     [:span {:class "string string-special string-special-url"}
+      [:span {:class "punctuation punctuation-bracket"} "{{"] "baseUrl"
+      [:span {:class "punctuation punctuation-bracket"} "}}"] "/bearer"] "\n"
+     [:span {:class "constant"} "Authorization"]
+     [:span {:class "punctuation punctuation-delimiter"} ":"] " Bearer "
+     [:span {:class "punctuation punctuation-bracket"} "{{"] "token"
+     [:span {:class "punctuation punctuation-bracket"} "}}"] "\n\n"
+     [:span {:class "spell"} "###\n"] "\n"
+     [:span {:class "spell"} "# GET with query parameter using variable\n"]
+     [:span {:class "function function-method"} "GET"] " "
+     [:span {:class "string string-special string-special-url"}
+      [:span {:class "punctuation punctuation-bracket"} "{{"] "baseUrl"
+      [:span {:class "punctuation punctuation-bracket"} "}}"] "/anything/"
+      [:span {:class "punctuation punctuation-bracket"} "{{"] "userId"
+      [:span {:class "punctuation punctuation-bracket"} "}}"]] "\n\n"
+     [:span {:class "spell"} "###\n"]]]]
+  [:p "Then highlight and execute them via "
+   [:code
+    "curl"] ", viewing the response in a scratch buffer:"]
   [:figure
    [:img
     {:alt     "An asciinema recording of interacting with an HTTP API in Helix"
@@ -17,7 +57,12 @@
      :src     "/static/http.gif"
      :width   1171}]
    [:figcaption
-    "An asciinema recording of interacting with an HTTP API in Helix"]]]
+    "An asciinema recording of interacting with an HTTP API in Helix"]]
+  [:p
+   "Also serves as an example of shelling out to a command from Steel, that functionality
+    is extracted to a library, "
+   [:a {:href "https://github.com/waddie/run-command.scm"} "run-command.scm"]
+   "."]]
  :slug :http
  :title "http.hx"
  :url "https://github.com/waddie/http.hx"}

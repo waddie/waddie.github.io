@@ -1,0 +1,13 @@
+{:category :cli
+ :description
+ [[:p [:b "dathan"]
+   " uses " [:a {:href "https://helix-editor.com/"} "the Helix runtime"]
+   " to render code to syntax-highlighted HTML, CSS, or ANSI escape codes."]
+  [:p
+   "Think " [:a {:href "https://pygments.org/"} "Pygments"]
+   ", but the output matches your editor
+    exactly (assuming your editor is Helix). And it has a Hiccup output mode."]
+ ]
+ :slug :dathan
+ :title "dathan"
+ :url "https://github.com/waddie/dathan"}

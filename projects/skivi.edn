@@ -1,4 +1,5 @@
-{:clojars "dev.skivi/skivi"
+{:category :clojure-library
+ :clojars "dev.skivi/skivi"
  :description
  [[:p [:b "skivi"]
    " is a Clojure/PostgreSQL job scheduling library, a bit like "

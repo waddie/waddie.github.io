@@ -17,11 +17,18 @@
 
 (def Project
   (-> [:map
+       [:category :keyword]
        [:description [:vector :some]]
        [:slug :keyword]
        [:title :string]
        [:url :string]
        [:clojars {:optional true} :string]]
+      (mu/closed-schema)))
+
+(def Category
+  (-> [:map
+       [:title :string]
+       [:description {:optional true} :some]]
       (mu/closed-schema)))
 
 (def Education
