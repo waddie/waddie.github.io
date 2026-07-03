@@ -1,10 +1,9 @@
 {:category :helix-plugin
  :description
  [[:p [:b "Juju"] " is a " [:code "git"] "/" [:code "jj"]
-   " UI. Similar to "
+   " UI. Sort of like "
    [:a {:href "https://magit.vc/"} "Magit"]
-   " for Emacs, but with Helix idioms and support for a VCS I actually
-   like."]
+   " for Emacs, but with Helix idioms and support for a VCS I enjoy using."]
   [:p
    "Very early alpha of software that could potentially nobble your repo if there are any bugs,
     although I haven’t managed to break anything yet in testing."]
