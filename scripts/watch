@@ -2,5 +2,5 @@
 watchman watch .
 
 watchman -- trigger . clj-rebuild \
-  'src/www/**' 'posts/**' 'about/**' 'cv/**' 'projects/**' 'f/**' 'static/**' \
+  'src/www/**' 'posts/**' 'about/**' 'cv/**' 'projects/**' 'f/**' 'static/**' 'categories.edn' \
   -- clojure -X:run

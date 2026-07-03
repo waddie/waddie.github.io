@@ -10,5 +10,9 @@
                 [:a {:href "https://github.com/mattwparas/steel"} "Steel"]
                 ", a dialect of Scheme."]
   :title       "Helix plug-ins"}
- :llm-tool {:title "LLM tools"}
- :nrepl-server {:title "nREPL servers"}}
+ :llm-tool {:description "Toll the great bell thrice."
+            :title       "LLM tools"}
+ :nrepl-server {:description
+                [:p [:a {:href "https://nrepl.org/"} "nREPL"]
+                 " is a language-agnostic protocol for networked REPLs."]
+                :title "nREPL servers"}}

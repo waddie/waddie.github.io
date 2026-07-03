@@ -1,7 +1,7 @@
 {:category :cli
  :description
  [[:p [:b "dathan"]
-   " uses " [:a {:href "https://helix-editor.com/"} "the Helix runtime"]
+   " leverages " [:a {:href "https://helix-editor.com/"} "the Helix runtime"]
    " to render code to syntax-highlighted HTML, CSS, or ANSI escape codes."]
   [:p
    "Think " [:a {:href "https://pygments.org/"} "Pygments"]
