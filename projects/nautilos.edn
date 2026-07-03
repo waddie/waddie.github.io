@@ -16,7 +16,9 @@
    "Nautilos is a small (~1-2MB depending on platform/architecture), native, Janet binary for macOS/Linux
     that opens a connection to any nREPL server as a daemon, maintaining the connection between commands."]
   [:p
-   "The LLM can issue commands as single CLI calls, receiving each response as a single JSON object."]]
+   "An LLM can then issue commands as their preferred single CLI calls, receiving each response as a single
+    JSON object, including support for lookup/completions to allow for exploring the codebase/library
+    functions."]]
  :slug :nautilos
  :title "Nautilos"
  :url "https://github.com/waddie/nautilos"}
