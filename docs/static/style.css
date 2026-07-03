@@ -964,7 +964,7 @@ main {
       }
 
       li {
-        a {
+        > a {
           border-bottom-color: var(--text);
           border-bottom-style: solid;
           border-bottom-width: 2px;
@@ -976,20 +976,6 @@ main {
             border-bottom-style: dotted;
             color: var(--link-visited);
           }
-        }
-      }
-
-      a {
-        border-bottom-color: var(--text);
-        border-bottom-style: solid;
-        border-bottom-width: 2px;
-        color: var(--text);
-        text-decoration-line: none;
-
-        &:visited {
-          border-bottom-color: var(--link-visited);
-          border-bottom-style: dotted;
-          color: var(--link-visited);
         }
       }
 

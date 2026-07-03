@@ -59,10 +59,12 @@
    [:figcaption
     "An asciinema recording of interacting with an HTTP API in Helix"]]
   [:p
-   "Also serves as an example of shelling out to a command from Steel, that functionality
-    is extracted to a library, "
+   "Also serves as an example of shelling out to a command from Steel with support for
+    potentially long-running and lengthy "
+   [:code "stdout"] "/" [:wbr] [:code "stderr"]
+   " output. That functionality is extracted to a library, "
    [:a {:href "https://github.com/waddie/run-command.scm"} "run-command.scm"]
-   "."]]
+   ", if you have a similar requirement."]]
  :slug :http
  :title "http.hx"
  :url "https://github.com/waddie/http.hx"}
