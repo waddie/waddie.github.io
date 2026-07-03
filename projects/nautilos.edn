@@ -1,7 +1,8 @@
 {:category :llm-tool
  :description
  [[:p [:b "Nautilos"]
-   " is a CLI/MCP server/skill/plugin for coding harnesses, improving nREPL interaction."]
+   " is a CLI/" [:wbr] "MCP server/" [:wbr] "skill/" [:wbr]
+   "plugin for coding harnesses, improving nREPL interaction."]
   [:p
    "I noticed three persistent issues with how coding harnesses use REPL-y languages:"]
   [:ul
@@ -13,12 +14,20 @@
    [:li "Starting a REPL via " [:code "tmux"]
     ", typically leaving a trail of abandoned but still-running sessions behind as it goes."]]
   [:p
-   "Nautilos is a small (~1-2MB depending on platform/architecture), native, Janet binary for macOS/Linux
+   "Nautilos is a small (~1-2MB depending on platform/" [:wbr]
+   "architecture), native, Janet binary for macOS/Linux
     that opens a connection to any nREPL server as a daemon, maintaining the connection between commands."]
   [:p
    "An LLM can then issue commands as their preferred single CLI calls, receiving each response as a single
-    JSON object, including support for lookup/completions to allow for exploring the codebase/library
-    functions."]]
+    JSON object, including support for lookups/"
+   [:wbr]
+   "completions to allow for exploring the codebase/" [:wbr]
+   "library
+    functions."]
+  [:p
+   "Obviously the command will work just fine if issued by a human too, the response is just tailored for
+    agents. You could maybe pipe it through "
+   [:code "jq"] " or something."]]
  :slug :nautilos
  :title "Nautilos"
  :url "https://github.com/waddie/nautilos"}
