@@ -78,7 +78,7 @@
                   :src    (str "https://img.shields.io/clojars/v/"
                                clojars
                                ".svg")}]]])]
-           (when (:description project) (:description project)))])
+           (:description project))])
 
 (defn category-section
   "Render a category heading and its projects."
@@ -89,7 +89,7 @@
   [category-key category projects]
   [:div {:class "category"}
    [:h2 {:id (name category-key)} (:title category)]
-   (:description category)
+   (get category :description "")
    (reduce conj [:ol {:class "project-list"}] (map project-item projects))])
 
 (defn projects
