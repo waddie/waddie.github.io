@@ -1,0 +1,8 @@
+{:category    :helix-plugin
+ :description [
+               [:p
+                "Not a plug-in: a library function for shelling out."]
+              ]
+ :slug        :run-command
+ :title       "run-command.scm"
+ :url         "https://github.com/waddie/run-command.scm"}
