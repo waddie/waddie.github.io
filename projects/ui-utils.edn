@@ -1,8 +1,8 @@
-{:category :helix-plugin
+{:category :helix-library
  :description
  [
   [:p
-   "Not a plug-in: a library of the shared UI helper functions used by nREPL.hx and Juju."]
+   "A library of the shared UI helper functions used by nREPL.hx and Juju."]
  ]
  :slug :ui-utils
  :title "ui-utils.hx"

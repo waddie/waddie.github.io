@@ -1,7 +1,7 @@
-{:category    :helix-plugin
+{:category    :helix-library
  :description [
                [:p
-                "Not a plug-in: a library function for shelling out."]
+                "Library functionn for shelling out on POSIX platforms."]
               ]
  :slug        :run-command
  :title       "run-command.scm"

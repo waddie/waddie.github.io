@@ -1,0 +1,11 @@
+{:category :helix-plugin
+ :description
+ [[:p
+   [:code ":extend_next_sibling"] "/" [:wbr]
+   [:code ":extend_prev_sibling"] " counterparts to "
+   [:code ":select_next_sibling"] "/" [:wbr]
+   [:code ":select_prev_sibling"]
+   ", because the select variants’ behaviour is surprising for many people in select mode."]]
+ :slug :extend-sibling
+ :title "extend-sibling.hx"
+ :url "https://github.com/waddie/extend-sibling.hx"}

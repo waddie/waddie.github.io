@@ -1,0 +1,8 @@
+{:category    :helix-library
+ :description [
+               [:p
+                "Helper functions for tree-sitter traversal."]
+              ]
+ :slug        :ts-utils
+ :title       "ts-utils.hx"
+ :url         "https://github.com/waddie/ts-utils.hx"}

@@ -1,5 +1,7 @@
 {:cli {:title "Command-line tools"}
  :clojure-library {:title "Clojure libraries"}
+ :helix-library {:description [:p "Shared libraries for Helix plug-ins."]
+                 :title       "Steel/Helix libraries"}
  :helix-plugin
  {:description [:p [:a {:href "https://helix-editor.com/"} "Helix"]
                 " is my favourite text editor. There’s currently a "
