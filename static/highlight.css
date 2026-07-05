@@ -14,7 +14,7 @@
     font-feature-settings: initial;
     font-variant-ligatures: none;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.25;
     min-width: fit-content;
     padding: var(--measure-small1);
   }
