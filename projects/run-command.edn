@@ -1,7 +1,7 @@
 {:category    :helix-library
  :description [
                [:p
-                "Library functionn for shelling out on POSIX platforms."]
+                "Library function for shelling out on POSIX platforms."]
               ]
  :slug        :run-command
  :title       "run-command.scm"
