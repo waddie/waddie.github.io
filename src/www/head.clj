@@ -9,9 +9,9 @@
   []
   (map #(let [f (re-find #"/f/.+" %)]
           [:link
-           {:as  "font"
-            :rel "preload"
-            :src f}])
+           {:as   "font"
+            :href f
+            :rel  "preload"}])
        (util/get-fonts)))
 
 (defn head-html
@@ -28,15 +28,15 @@
       {:content "width=device-width,initial-scale=1.0"
        :name    "viewport"}]
      [:link
-      {:as  "image"
+      {:as            "image"
        :fetchpriority "high"
-       :rel "preload"
-       :src "/static/shut_5040x1080_light.avif"}]
+       :href          "/static/shut_5040x1080_light.avif"
+       :rel           "preload"}]
      [:link
-      {:as  "image"
+      {:as            "image"
        :fetchpriority "high"
-       :rel "preload"
-       :src "/static/shut_5040x1080.avif"}]
+       :href          "/static/shut_5040x1080.avif"
+       :rel           "preload"}]
      (preload-fonts)
      [:link
       {:fetchpriority "high"
