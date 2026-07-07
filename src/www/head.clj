@@ -17,13 +17,18 @@
       {:content "width=device-width,initial-scale=1.0"
        :name    "viewport"}]
      [:link
-      {:href (str "/static/style.css?v=" cachebuster)
+      {:fetchpriority "high"
+       :href (str "/static/style.css?v=" cachebuster)
        :rel  "stylesheet"}]
      [:link
-      {:href (str "/static/highlight.css?v=" cachebuster)
+      {:fetchpriority "low"
+       :href (str "/static/highlight.css?v=" cachebuster)
        :rel  "stylesheet"}]
      [:title title]
-     [:script {:src (str "/static/htmx.min.js?v=" cachebuster)}]
+     [:script
+      {:async         true
+       :fetchpriority "low"
+       :src           (str "/static/htmx.min.js?v=" cachebuster)}]
      ; [:script {:src "/static/transition.js"}]
      [:link
       {:href "/static/favicon.ico"
