@@ -9,9 +9,10 @@
   []
   (map #(let [f (re-find #"/f/.+" %)]
           [:link
-           {:as   "font"
-            :href f
-            :rel  "preload"}])
+           {:as          "font"
+            :crossorigin "anonymous"
+            :href        f
+            :rel         "preload"}])
        (util/get-fonts)))
 
 (defn head-html
