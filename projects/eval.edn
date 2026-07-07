@@ -1,0 +1,17 @@
+{:category :helix-plugin
+ :description
+ [
+  [:p ""]
+  [:figure
+   [:img
+    {:alt
+     "An asciinema recording of evaluating code to the eval.hx buffer in Helix"
+     :height 787
+     :loading "lazy"
+     :src "/static/eval-demo.gif"
+     :width 1171}]
+   [:figcaption
+    "An asciinema recording of evaluating code to the eval.hx buffer in Helix"]]]
+ :slug :eval
+ :title "eval.hx"
+ :url "https://github.com/waddie/eval.hx"}
