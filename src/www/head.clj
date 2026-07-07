@@ -13,6 +13,16 @@
   (let [cachebuster (quot (System/currentTimeMillis) 1000)]
     [:head
      [:meta {:charset "utf-8"}]
+     [:link
+      {:as  "image"
+       :fetchpriority "high"
+       :rel "preload"
+       :src "/static/shut_5040x1080_light.avif"}]
+     [:link
+      {:as  "image"
+       :fetchpriority "high"
+       :rel "preload"
+       :src "/static/shut_5040x1080.avif"}]
      [:meta
       {:content "width=device-width,initial-scale=1.0"
        :name    "viewport"}]
