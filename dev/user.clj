@@ -1,6 +1,7 @@
 (ns user
   #_{:clj-kondo/ignore [:unused-namespace :unused-referred-var]}
   (:require [clj-async-profiler.core :as prof]
+            [clojure.pprint :refer [pprint]]
             [clojure.repl :refer [doc source]]
             [hiccup.compiler :as hc]
             [malli.core :as m]

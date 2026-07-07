@@ -1,7 +1,18 @@
 (ns www.head
   "Render the metadata section to Hiccup."
   (:require [clojure.core.match :refer [match]]
-            [www.schema :as schema]))
+            [www.schema :as schema]
+            [www.util :as util]))
+
+(defn preload-fonts
+  "Preload links for font files."
+  []
+  (map #(let [f (re-find #"/f/.+" %)]
+          [:link
+           {:as  "font"
+            :rel "preload"
+            :src f}])
+       (util/get-fonts)))
 
 (defn head-html
   "Render the head section."
@@ -13,6 +24,9 @@
   (let [cachebuster (quot (System/currentTimeMillis) 1000)]
     [:head
      [:meta {:charset "utf-8"}]
+     [:meta
+      {:content "width=device-width,initial-scale=1.0"
+       :name    "viewport"}]
      [:link
       {:as  "image"
        :fetchpriority "high"
@@ -23,9 +37,7 @@
        :fetchpriority "high"
        :rel "preload"
        :src "/static/shut_5040x1080.avif"}]
-     [:meta
-      {:content "width=device-width,initial-scale=1.0"
-       :name    "viewport"}]
+     (preload-fonts)
      [:link
       {:fetchpriority "high"
        :href (str "/static/style.css?v=" cachebuster)
