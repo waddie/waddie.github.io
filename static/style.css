@@ -41,7 +41,7 @@ select {
   --article-link-visited: var(--text);
   --article-link: rgba(102, 0, 17, 1);
   --bg: rgba(255, 254, 217, 1);
-  --header-image: url(/static/shut_5040x1080_light.png);
+  --header-image: url(/static/shut_5040x1080_light.avif);
   --link-visited: rgba(102, 114, 106, 1);
   --text-header: rgba(255, 254, 217, 1);
   --text-transparent: rgba(5, 20, 11, 0.9);
@@ -95,7 +95,7 @@ select {
     --article-link-visited: var(--text);
     --article-link: rgba(152, 163, 106, 1);
     --bg: rgba(22, 22, 29, 1);
-    --header-image: url(/static/shut_5040x1080.png);
+    --header-image: url(/static/shut_5040x1080.avif);
     --link-visited: rgba(183, 184, 194, 1);
     --text-header: rgba(245, 246, 255, 1);
     --text-transparent: rgba(22, 22, 29, 0.9);

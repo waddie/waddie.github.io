@@ -109,7 +109,7 @@
     {:alt     "A photo of the author in Cheltenham in September 2000"
      :height  1467
      :loading "lazy"
-     :src     "static/cheltenham1.jpg"
+     :src     "static/cheltenham1.avif"
      :width   1024}]
    [:figcaption
     [:p
@@ -144,7 +144,7 @@
     {:alt     "A photo of the author in Cheltenham, sometime in 2000-2001"
      :height  730
      :loading "lazy"
-     :src     "static/cheltenham2.jpg"
+     :src     "static/cheltenham2.avif"
      :width   1024}]
    [:figcaption
     [:p
