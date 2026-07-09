@@ -1,7 +1,9 @@
 {:category :helix-plugin
  :description
  [
-  [:p ""]
+  [:p "A persistent scratch buffer for " [:code ":eval-string"]
+   " wrappers: eval at prompt, by selection(s), or
+   the entire buffer."]
   [:figure
    [:img
     {:alt
