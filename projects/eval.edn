@@ -6,10 +6,10 @@
    [:img
     {:alt
      "An asciinema recording of evaluating code to the eval.hx buffer in Helix"
-     :height 787
+     :height 1171
      :loading "lazy"
      :src "/static/eval-demo.gif"
-     :width 1171}]
+     :width 1363}]
    [:figcaption
     "An asciinema recording of evaluating code to the eval.hx buffer in Helix"]]]
  :slug :eval
