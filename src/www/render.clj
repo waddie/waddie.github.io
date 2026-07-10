@@ -52,15 +52,18 @@
 
 (defn format-date-MY
   "Format inline short date as Hiccup."
-  {:malli/schema [:function [:=> [:cat :string] [:vector :some]]]}
+  {:malli/schema [:function
+                  [:=> [:cat [:maybe :string]] [:maybe [:vector :some]]]]}
   [date]
-  (let [split (s/split date #"-")
-        year  (first split)
-        month (month-names (- (parse-long (last split)) 1))]
-    [:time {:datetime date} month " " year]))
+  (when (and date (re-seq #"^\d{4}-\d{2}$" date))
+    (let [split (s/split date #"-")
+          year  (first split)
+          month (month-names (- (parse-long (last split)) 1))]
+      [:time {:datetime date} month " " year])))
 
 (snap! (format-date-MY "2008-09")
        [:time {:datetime "2008-09"} "September" " " "2008"])
+(snap! (format-date-MY nil) nil)
 
 (defn format-date-YMD
   "Format a Date in yyyy-mm-dd format."

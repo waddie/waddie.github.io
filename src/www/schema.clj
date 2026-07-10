@@ -56,7 +56,7 @@
          [:map
           [:achievements [:vector :string]]
           [:department {:optional true} :string]
-          [:end-date :string]
+          [:end-date [:maybe :string]]
           [:start-date :string]
           [:title :string]
           [:type {:optional true} :keyword]]]]]

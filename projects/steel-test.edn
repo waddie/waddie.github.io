@@ -1,0 +1,9 @@
+{:category    :helix-library
+ :description [
+               [:p
+                "A Steel Scheme unit testing library inspired by "
+                [:code "clojure.test"] "."]
+              ]
+ :slug        :steel-test
+ :title       "steel-test"
+ :url         "https://github.com/waddie/steel-test"}

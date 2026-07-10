@@ -1,0 +1,30 @@
+{:body
+ [[:p "News"]
+  [:h2 "eval.hx"]
+  [:figure
+   [:img
+    {:alt
+     "An asciinema recording of evaluating code to the eval.hx buffer in Helix"
+     :height 1171
+     :loading "lazy"
+     :src "/static/eval-demo.gif"
+     :width 1363}]
+   [:figcaption
+    "An asciinema recording of evaluating code to the eval.hx buffer in Helix"]]
+  [:h2 "Nautilos"]
+  [:p ""]
+  [:h2 "nREPL.hx sessions"]
+  [:h2 "BEAM support"]
+  [:p "Bozhidar Batsov published "
+   [:a {:href "https://github.com/nrepl/nrepl-beam"} "nrepl-beam"]
+   " yesterday – nREPL servers for Elixir and Erlang."]
+  [:p
+   "Coincidentally, I’ve been slowly and intermittently working my way through "
+   [:a {:href "https://pragprog.com/titles/elixir16/programming-elixir-1-6/"}
+    "Programming Elixir 1.6"]
+   " for a couple of weeks now. So, I’ve added Elixir/Erlang
+   adapters to nREPL.hx for first-class support with jack-in:"]]
+ ; :published #inst "2026-07-13T17:00:00+01:00"
+ :slug :news-from-the-matrix
+ :synopsis "Updates for my REPL-related software."
+ :title "News from the matrix"}

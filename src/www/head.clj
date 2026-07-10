@@ -54,10 +54,11 @@
        :src           (str "/static/htmx.min.js?v=" cachebuster)}]
      ; [:script {:src "/static/transition.js"}]
      [:link
-      {:href "/static/favicon.ico"
-       :rel  "icon"}]
+      {:href "/static/favicon.svg"
+       :rel  "icon"
+       :type "image/svg+xml"}]
      [:link
-      {:href "/static/apple-touch-icon.png"
+      {:href "/static/favicon.svg"
        :rel  "apple-touch-icon"}]
      [:link
       {:href  "/feed.atom"

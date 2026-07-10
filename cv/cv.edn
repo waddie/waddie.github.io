@@ -10,6 +10,18 @@
    :url "https://www.shu.ac.uk/"}]
  :experience
  [{:arrangement :hybrid
+   :company "Kaplan"
+   :location "London, United Kingdom"
+   :overview
+   "Kaplan is an international educational services company that provides educational and training
+    services to colleges, universities, businesses, and individuals around the world."
+   :roles [{:achievements ["It’s my first day."]
+            :end-date     nil
+            :start-date   "2026-07"
+            :title        "Head of Architecture and Deployment"}]
+   :slug :kaplan
+   :url "https://kaplan.com/"}
+  {:arrangement :hybrid
    :company "Real Links"
    :location "London, United Kingdom"
    :overview
