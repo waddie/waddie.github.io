@@ -12,7 +12,7 @@
     {:alt ""
      :fetchpriority "high"
      :height 1080
-     :src "/static/avatar.png"
+     :src "/static/avatar.avif"
      :title
      "If you’re putting your actual face on the public internet nowadays, for anyone with genAI to abuse, you must be out of your goddamn mind."
      :width 1080}]
