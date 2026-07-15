@@ -28,7 +28,7 @@
    [:a
     {:href "https://github.com/waddie/paredit.hx"} "paredit.hx"]
    " is a Helix plug-in that completes the set of Paredit operations in what I hope is a suitably Helix-ish
-    fashion. Support is currently built-in for Clojure, Common Lisp, Fennel, Janet and Scheme."]
+    fashion. Support is currently built-in for Clojure, Common Lisp, Fennel, Janet, and Scheme."]
   [:p
    "I’ve provided suggested keybindings for normal and select modes that puts these operations under "
    [:code "&lt;space&gt;.&lt;"] " and " [:code "&lt;space&gt;.&gt;"]

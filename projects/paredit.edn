@@ -9,7 +9,7 @@
    "."]
   [:p
    "Just the bits Helix doesn’t already do with tree-sitter nodes and textobjects: slurping, barfing, dragging,
-    raising and splicing, for Clojure, Common Lisp, Fennel, Janet and Scheme."]
+    raising and splicing, for Clojure, Common Lisp, Fennel, Janet, and Scheme."]
   [:figure
    [:img
     {:alt    "Barfing and slurping in Helix with paredit.hx"

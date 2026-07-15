@@ -4,7 +4,9 @@
    " is a CLI/" [:wbr] "MCP server/" [:wbr] "skill/" [:wbr]
    "plugin for coding harnesses, improving nREPL interaction."]
   [:p
-   "I noticed three persistent issues with how coding harnesses use REPL-y languages:"]
+   "I noticed three persistent issues with how coding harnesses use "
+   [:span.nobr "REPL-y"]
+   " languages:"]
   [:ul
    [:li
     "Running one-off commands repeatedly, with ever-growing state recreated every time."]

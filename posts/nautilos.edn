@@ -25,6 +25,6 @@
    " for a couple of weeks now. So, I’ve added Elixir/Erlang
    adapters to nREPL.hx for first-class support with jack-in:"]]
  ; :published #inst "2026-07-13T17:00:00+01:00"
- :slug :news-from-the-matrix
+ :slug :repl-roundup
  :synopsis "Updates for my REPL-related software."
- :title "News from the matrix"}
+ :title "REPL roundup"}

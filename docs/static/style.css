@@ -1031,3 +1031,7 @@ footer {
     text-align: center;
   }
 }
+
+.nobr {
+  white-space: nowrap;
+}
