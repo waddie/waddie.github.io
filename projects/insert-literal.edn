@@ -1,0 +1,7 @@
+{:category :helix-plugin
+ :description
+ [[:p
+   "Insert the next keypress literally, or just suppress auto-pairing."]]
+ :slug :insert-literal
+ :title "insert-literal.hx"
+ :url "https://github.com/waddie/insert-literal.hx"}
