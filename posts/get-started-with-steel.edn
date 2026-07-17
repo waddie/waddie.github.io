@@ -479,6 +479,11 @@
      {:href "https://ds26gte.github.io/tyscheme/index-Z-H-1.html"}
      "Teach Yourself Scheme in Fixnum Days"]
     " is a free introductory book for the Scheme language."]
+   [:li "Abelson, Sussman and Sussman’s "
+    [:a {:href "https://web.mit.edu/6.001/6.037/sicp.pdf"}
+     "Structure and Interpretation of Computer Programs, Second Edition"]
+    " is a free introduction to " [:em "computer science"]
+    ", which happens to use Scheme as its implementation language."]
    [:li "Daniel P. Friedman and Matthias Felleisen’s "
     [:a
      {:href "https://mitpress.mit.edu/9780262560993/the-little-schemer/"}
