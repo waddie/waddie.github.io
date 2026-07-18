@@ -1,0 +1,16 @@
+{:category :helix-plugin
+ :description
+ [
+  [:p
+   "Create selections in Helix based on ad hoc tree-sitter queries. Narrows existing selections if they exist."]
+  [:figure
+   [:img
+    {:alt    "Selecting all Go function names with a tree-sitter query"
+     :height 1171
+     :src    "/static/ts-select.gif"
+     :width  1171}]
+   [:figcaption
+    "Selecting all Go function names with a tree-sitter query"]]]
+ :slug :ts-select
+ :title "ts-select.hx"
+ :url "https://github.com/waddie/ts-select.hx"}
