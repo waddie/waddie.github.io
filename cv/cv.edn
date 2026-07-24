@@ -17,7 +17,7 @@
     services to colleges, universities, businesses, and individuals around the world."
    :roles [{:achievements ["It’s my first day."]
             :end-date     nil
-            :start-date   "2026-07"
+            :start-date   "2026-08"
             :title        "Head of Architecture and Deployment"}]
    :slug :kaplan
    :url "https://kaplan.com/"}
