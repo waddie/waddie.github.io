@@ -1,0 +1,10 @@
+{:category :helix-plugin
+ :description
+ [
+  [:p
+   "Additional motions for Helix: moving lines, motions that respect line
+boundaries, word motions where a count selects everything it passes over, and
+matching the next or previous character pair."]]
+ :slug :emotional
+ :title "emotional.hx"
+ :url "https://github.com/waddie/emotional.hx"}

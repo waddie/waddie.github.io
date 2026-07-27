@@ -1,0 +1,8 @@
+{:category :helix-plugin
+ :description
+ [
+  [:p
+   "A unified history picker for yanks, searches, and typed commands."]]
+ :slug :previously
+ :title "previously.hx"
+ :url "https://github.com/waddie/previously.hx"}
