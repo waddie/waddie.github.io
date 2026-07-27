@@ -11,6 +11,6 @@
      :width  1171}]
    [:figcaption
     "Selecting all Go function names with a tree-sitter query"]]]
- :slug :ts-select
- :title "ts-select.hx"
- :url "https://github.com/waddie/ts-select.hx"}
+ :slug :select-ts
+ :title "select-ts.hx"
+ :url "https://github.com/waddie/select-ts.hx"}

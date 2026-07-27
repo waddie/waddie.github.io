@@ -24,7 +24,7 @@
     "Programming Elixir 1.6"]
    " for a couple of weeks now. So, I’ve added Elixir/Erlang
    adapters to nREPL.hx for first-class support with jack-in:"]]
- ; :published #inst "2026-07-17T17:00:00+01:00"
+ ; :published #inst "2026-07-27T17:00:00+01:00"
  :slug :repl-roundup
  :synopsis "Updates for my REPL-related software."
  :title "REPL roundup"}
