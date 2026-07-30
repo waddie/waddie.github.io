@@ -1,0 +1,19 @@
+{:category :helix-plugin
+ :description
+ [
+  [:p
+   "Zen mode for Helix: commands to centre buffers, and zoom/restore splits,
+    plus a convenience function to do both at once. Configurable width, soft wrapping,
+    and bufferline hiding."]
+  [:figure
+   [:img
+    {:alt     "An asciinema recording of matte.hx in action"
+     :height  710
+     :loading "lazy"
+     :src     "/static/matte.gif"
+     :width   1171}]
+   [:figcaption
+    "An asciinema recording of matte.hx in action."]]]
+ :slug :nrepl
+ :title "matte.hx"
+ :url "https://github.com/waddie/matte.hx"}
