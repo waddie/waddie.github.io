@@ -506,7 +506,8 @@
     "There are few sites now attempting to catalogue Helix plugins out in the wild. Check where they’re sending you
      carefully, at least one popular site was abandoned and is now serving spam."
     [:ul
-     [:li [:a {:href "https://helix-editor-plugins"} "Helix Editor Plugins"]]
+     [:li
+      [:a {:href "https://helix-editor-plugins.com"} "Helix Editor Plugins"]]
      [:li [:a {:href "https://helixplugins.xyz"} "Helix Plugins XYZ"]]
      [:li
       [:a {:href "https://github.com/npupko/awesome-helix#plugins"}
