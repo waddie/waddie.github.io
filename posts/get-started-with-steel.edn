@@ -503,9 +503,19 @@
      "main Steel repository"]
     " has a great collection of example code to learn from."]
    [:li
-    [:a
-     {:href "https://helix-plugins.com/"} "Helix Plugins"]
-    " maintains a list of plug-ins that have been built for the new system."]]
+    "There are few sites now attempting to catalogue Helix plugins out in the wild. Check where they’re sending you
+     carefully, at least one popular site was abandoned and is now serving spam."
+    [:ul
+     [:li [:a {:href "https://helix-editor-plugins"} "Helix Editor Plugins"]]
+     [:li [:a {:href "https://helixplugins.xyz"} "Helix Plugins XYZ"]]
+     [:li
+      [:a {:href "https://github.com/npupko/awesome-helix#plugins"}
+       "The Awesome Helix Repo"]]
+     [:li "You can find all of my Helix/Steel related projects "
+      [:a
+       {:href
+        "https://github.com/stars/waddie/lists/helix-plugins-steel-libraries"}
+       "on GitHub in this list"] "."]]]]
   [:div.embed.end
    [:iframe
     {:allow
@@ -516,9 +526,13 @@
      :referrerpolicy "strict-origin-when-cross-origin"
      :src "https://www.youtube-nocookie.com/embed/4r454dad7tc"
      :title "Non, je ne regrette rien – Édith Piaf"
-     :width 560}]]]
+     :width 560}]]
+  [:h2 "Post updated on 2026-10-06"]
+  [:p
+   "Replaced links to external plugin sites."]]
  :published #inst "2026-06-16T18:45:00+01:00"
  :slug :steel-helix-first-steps
  :synopsis
  "For the parens-curious, a tutorial for setting up a Steel Scheme development environment in Helix."
- :title "Up and running with Helix and Steel Scheme"}
+ :title "Up and running with Helix and Steel Scheme"
+ :updated #inst "2026-10-06T16:35:45Z"}

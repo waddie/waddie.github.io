@@ -199,10 +199,6 @@
    "The biggest known flaw is that there is currently no way to interrupt an in-progress request (an early decision
     to ensure each RE and P would arrive in the order of submission that I didn’t think through properly), but it
     does have a configurable timeout, so I haven’t really missed it so far."]
-  [:p
-   "Note that you can find links to this and to other early Helix plug-ins at "
-   [:a
-    {:href "https://www.helix-plug-ins.com/"} "Helix Plugins"] "."]
   [:div.embed.end
    [:iframe
     {:allow
